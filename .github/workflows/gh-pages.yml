@@ -33,7 +33,7 @@ jobs:
       - name: Prepare gh-pages anew
         run: |
           git checkout --orphan gh-pages
-          rm -R `ls -A | grep -v -E "^(.git|doxygen|index.html)$"`
+          rm -R `ls -A | grep -v -E "^(.git|docs)$"`
           git add .
           git commit -m "publish site"
           git push --force --set-upstream origin gh-pages
