@@ -28,7 +28,7 @@ jobs:
       - name: Build Documentation
         run: |
           cd docs
-          doxygen generate.txt
+          doxygen
 
       - name: Prepare gh-pages anew
         run: |
