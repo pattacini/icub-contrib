@@ -27,12 +27,13 @@ jobs:
 
       - name: Build Documentation
         run: |
-          doxygen doxygen/generate.txt
+          cd doxygen
+          doxygen generate.txt
 
       - name: Prepare gh-pages anew
         run: |
           git checkout --orphan gh-pages
-          rm -R `ls -A | grep -v -E "^(.git|doc|index.html)$"`
+          rm -R `ls -A | grep -v -E "^(.git|doxygen|index.html)$"`
           git add .
           git commit -m "publish site"
           git push --force --set-upstream origin gh-pages
