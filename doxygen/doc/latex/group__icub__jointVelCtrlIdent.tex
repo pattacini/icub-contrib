@@ -1,0 +1,74 @@
+\section{joint\+Vel\+Ctrl\+Ident}
+\label{group__icub__jointVelCtrlIdent}\index{joint\+Vel\+Ctrl\+Ident@{joint\+Vel\+Ctrl\+Ident}}
+
+
+Identification of the joint plant when controlled in velocity mode.  
+
+
+Identification of the joint plant when controlled in velocity mode. 
+
+\hypertarget{group__icub__signalScope_intro_sec}{}\subsection{Description}\label{group__icub__signalScope_intro_sec}
+This module allows for system identification of the joint when controlled in velocity mode. Ideally, the plant should be represented by a pure integrator, but the behavior might deviate from the baseline due to the presence of poles and zero. To this end the joint is controlled with a {\itshape chirp} profile in velocity whose output is then sent to a yarp port for logging purpose.
+
+The joint is controlled in three different modalities that follow one another\+:
+\begin{DoxyItemize}
+\item mode 0\+: the joint is subject to the chirp signal in velocity.
+\item mode 1\+: the joint is steered to reach for a target value under the action of a minimum-\/jerk controller that does not account for plant dynamics.
+\item mode 2\+: the joint is steered to the target under the action of a minimum-\/jerk compensator that accounts for the identified plant dynamics.
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_lib_sec}{}\subsection{Libraries}\label{group__icub__signalScope_lib_sec}
+
+\begin{DoxyItemize}
+\item Y\+A\+RP.
+\item ctrl\+Lib.
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_parameters_sec}{}\subsection{Parameters}\label{group__icub__signalScope_parameters_sec}
+--name {\itshape name} 
+\begin{DoxyItemize}
+\item specify the module stem-\/name.
+\end{DoxyItemize}
+
+--robot {\itshape robot} 
+\begin{DoxyItemize}
+\item select the robot to connect to.
+\end{DoxyItemize}
+
+--period {\itshape Ts} 
+\begin{DoxyItemize}
+\item specify the controller period given in \mbox{[}ms\mbox{]}.
+\end{DoxyItemize}
+
+--part {\itshape part} 
+\begin{DoxyItemize}
+\item select the part to control. The special part \char`\"{}head\+\_\+v2\char`\"{} is also available.
+\end{DoxyItemize}
+
+--joint {\itshape joint} 
+\begin{DoxyItemize}
+\item select the joint to control.
+\end{DoxyItemize}
+
+The chirp signal is\+:
+
+\[ gain\cdot\sin\left(2\pi\left(f_{min}+\frac{f_{max}-f_{min}}{T}t\right)t\right), \]
+
+therefore the following parameters can be assigned through command-\/line options\+: {\itshape gain}, {\itshape fmin}, {\itshape fmax}, {\itshape T}.
+
+The model of the identified plant is\+:
+
+\[ P\left(s\right)=\frac{K_p}{s}\cdot\frac{1+T_zs}{1+2\zeta T_ws+\left(T_ws\right)^2}, \]
+
+therefore the following parameters can be assigned through command-\/line options\+: {\itshape Kp}, {\itshape Tz}, {\itshape Tw}, {\itshape Zeta}.
+
+Moreover, the reactivity of the minimum-\/jerk controllers can be tuned by changing their point-\/to-\/point trajectory time through the {\itshape Ttraj} command-\/line parameter.
+
+User might want also to tune the low-\/level P\+ID controller, and to this purpose the following command-\/line options are available\+: {\itshape P\+I\+D\+\_\+\+Kp}, {\itshape P\+I\+D\+\_\+\+Ki}, {\itshape P\+I\+D\+\_\+\+Kd}.\hypertarget{group__icub__signalScope_portsc_sec}{}\subsection{Ports Created}\label{group__icub__signalScope_portsc_sec}
+{\itshape /} $<$mode\+Name$>$\+:o streams out the following data\+:
+
+$<$cnt$>$ $<$vel$>$ $<$ref$>$ $<$pwm\+\_\+1$>$ \mbox{[}... $<$pwm\+\_\+n$>$\mbox{]} $<$fb$>$ $<$dfb$>$
+
+where {\itshape cnt} is a progress number accounting for the mode type such that mode=mod(cnt,3), {\itshape vel} is the commanded velocity in \mbox{[}deg/s\mbox{]}, {\itshape ref} is the reference position as integrated by the board given in \mbox{[}deg\mbox{]}, {\itshape pwm} is the pid output in \mbox{[}V\mbox{]} and {\itshape fb} represents the joint encoder feedback in \mbox{[}deg\mbox{]}. The last term {\itshape dfb} is the estimated derivative of the feedback. ~\newline
+ Importantly, the quantity {\itshape pwm} is retrieved only if the low level board broadcasts it out.\hypertarget{group__icub__signalScope_tested_os_sec}{}\subsection{Tested OS}\label{group__icub__signalScope_tested_os_sec}
+Windows, Linux
+
+\begin{DoxyAuthor}{Author}
+Ugo Pattacini 
+\end{DoxyAuthor}
