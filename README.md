@@ -3,5 +3,5 @@ icub-contrib
 
 iCub contrib apps
 
-Documentation available here: [http://pattacini.github.com/icub-contrib](http://pattacini.github.com/icub-contrib).
+Documentation available at http://pattacini.github.io/icub-contrib.
 
