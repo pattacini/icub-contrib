@@ -1,5 +1,5 @@
 iCub contrib apps
 =================
 
-Documentation available at http://pattacini.github.io/icub-contrib.
+Documentation available at https://pattacini.github.io/icub-contrib.
 
