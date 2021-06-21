@@ -63,7 +63,7 @@ follow one another:
 The chirp signal is:
 
 \f[
-gain\cdot\sin\left(2\pi\left(f_{min}+\frac{f_{max}-f_{min}}{T}t\right)t\right),
+\text{gain}\cdot\sin\left(2\pi\left(f_{\text{min}}+\frac{f_{\text{max}}-f_{\text{min}}}{T}t\right)t\right),
 \f]
 
 therefore the following parameters can be assigned through
