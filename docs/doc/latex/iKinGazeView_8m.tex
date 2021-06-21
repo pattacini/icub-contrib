@@ -1,0 +1,597 @@
+\hypertarget{iKinGazeView_8m}{}\doxysection{/home/runner/work/icub-\/contrib/icub-\/contrib/matlab\+Viewers/app/scripts/i\+Kin\+Gaze\+View.m File Reference}
+\label{iKinGazeView_8m}\index{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/iKinGazeView.m@{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/iKinGazeView.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function i\+Kin\+Gaze\+View(varargin) \% \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}} viewer for the i\+Cub gaze controlled \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} a yarp module \% Author \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} ($\sim$\mbox{\hyperlink{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}{strcmpi}}(\mbox{\hyperlink{iKinGazeView_8m_ad1af8801c61e5f118dc9540d317c9319}{head\+Type}}, \textquotesingle{}v2\textquotesingle{}) \&\&$\sim$\mbox{\hyperlink{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}{strcmpi}}(\mbox{\hyperlink{iKinGazeView_8m_ad1af8801c61e5f118dc9540d317c9319}{head\+Type}}, \textquotesingle{}v1\textquotesingle{})) \mbox{\hyperlink{iKinGazeView_8m_ad1af8801c61e5f118dc9540d317c9319}{head\+Type}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a9fa48e30290d8859a640954993859b4a}{title}} (\textquotesingle{}Select a target point to gaze at\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a23882f684009a79a64d6c9735822d214}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Toolbar\textquotesingle{}, \textquotesingle{}figure\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_af1f541d04433e3a53c08be957cdbab91}{view}} (3)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_acc24bfd3fde8697149ee8c0d7bb14a21}{xlim}} (\mbox{[}-\/0.\+6 0.\+2\mbox{]})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a5f6237a1980cd822ac1a1a99438383ee}{xlabel}} (\textquotesingle{}x\mbox{[}m\mbox{]}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a5b4b12c85a75bf2dcfda86802cf372a3}{ylim}} (\mbox{[}-\/0.\+6 0.\+6\mbox{]})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_abfbc59a5f2d56b17236971364f6a94ec}{ylabel}} (\textquotesingle{}y\mbox{[}m\mbox{]}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a9d8c24669feec8ab5d5697cda1797607}{zlim}} (\mbox{[}-\/0.\+6 0.\+6\mbox{]})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ab0ff54a52579aab5b2de13b1e23fde55}{zlabel}} (\textquotesingle{}z\mbox{[}m\mbox{]}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_adc388f8dd2c7927d0f01cff464d9ec66}{set}} (\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}}, \textquotesingle{}Data\+Aspect\+Ratio\textquotesingle{},\mbox{[}1 1 1\mbox{]})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_aae00375050609a84574d2e7792fd6df9}{quiver3}} (0, 0, 0, \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}, 0, 0, \textquotesingle{}Color\textquotesingle{}, \textquotesingle{}r\textquotesingle{}, \textquotesingle{}Linewidth\textquotesingle{}, 2)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a76fad204a41cb0524d12d328e885730e}{quiver3}} (0, 0, 0, 0, \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}, 0, \textquotesingle{}Color\textquotesingle{}, \textquotesingle{}g\textquotesingle{}, \textquotesingle{}Linewidth\textquotesingle{}, 2)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_aa43b3a88ebb61e06d02cbf253a33ad6f}{quiver3}} (0, 0, 0, 0, 0, \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}, \textquotesingle{}Color\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}Linewidth\textquotesingle{}, 2)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a2b6e42eb704f7a050f0ab4755fc0e001}{assignin}} (\textquotesingle{}base\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{},\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a0ae3d0ea10f9d0ab1f463e1e4afd42dc}{set}} (\mbox{\hyperlink{iKinGazeView_8m_a0ea2f5484a6700d7c01752b7384d17f6}{tg}}, \textquotesingle{}Parent\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ad306676b857bbbe9cba6fb53cb6bc93a}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} \mbox{\hyperlink{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}{mode\+Once}} \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} \mbox{\hyperlink{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}{xd\+\_\+ml}} \mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}}\})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a47b787e80950abaa67e0e7ff467d0a52}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Text\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300+25 80 15\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Target sliders\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ac0e582d369632d743f74f44412713984}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(1), \textquotesingle{}Max\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(2), \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{1\})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_adc1ce594b8b098cb027b69c9ac9d45c1}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(3), \textquotesingle{}Max\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(4), \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{2\})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ae1af4370564d7b82f3722036ded90379}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$2 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(5), \textquotesingle{}Max\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(6), \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{3\})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ac72e3d110a0fd2eaecdb250b4f7b9f30}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Text\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$3 60 15\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}At once\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_affc8fcc3ad62b4015a81e2aa63d594d4}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Checkbox\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}70 300-\/30 $\ast$3 16 16\mbox{]},... \textquotesingle{}Value\textquotesingle{}, true, \textquotesingle{}Callback\textquotesingle{}, @Switch\+Mode)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a77aaa12b1cbbdb9f8755597901ff98f7}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Pushbutton\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$4 80 20\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Apply Target\textquotesingle{}, \textquotesingle{}Callback\textquotesingle{}, @Apply\+Target)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a902011b0280891bcd63e19529ef3ab8e}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Pushbutton\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$5 80 20\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Plot Traj.\textquotesingle{}, \textquotesingle{}Callback\textquotesingle{}, @Plot\+Data)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a6c1f48c5827d313fa3ce306a99fe726c}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Close\+Request\+Fcn\textquotesingle{}, @Quit)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a140d0cd9eb831be1b5108157912e0581}{start}} (\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}})
+\item 
+src, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{} \mbox{\hyperlink{iKinGazeView_8m_abe5779ea815ee5b3936cc573b7cef347}{get}} ()
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a2eeccebaa749300e0171f40a8f85ca8d}{stop}} (\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ac904cd78e11f6993a2229e10d8bea3ab}{delete}} (src)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}{state}} \mbox{\hyperlink{iKinGazeView_8m_af8df50e8f8dbea30ae08780cf78102a6}{set}} (\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}, \textquotesingle{}Enable\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}\textquotesingle{})
+\item 
+else \mbox{\hyperlink{iKinGazeView_8m_a8c36b5117baa9a33e008d69eb5586f7b}{set}} (\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}, \textquotesingle{}Enable\textquotesingle{}, \textquotesingle{}off\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ae4e8790f6b5631869b713d5a71de1569}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_aac81aebd6dea11165957725a5bf73ef6}{assignin}} (\textquotesingle{}base\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{})
+\item 
+\textquotesingle{}base\textquotesingle{}, \textquotesingle{}Buffer\textquotesingle{} \mbox{\hyperlink{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}{evalin}} ()
+\item 
+catch \mbox{\hyperlink{iKinGazeView_8m_a635face6c09c7892685106e1c662d817}{warndlg}} (\textquotesingle{}Nothing to display\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} else \mbox{\hyperlink{iKinGazeView_8m_ad1af8801c61e5f118dc9540d317c9319}{head\+Type}} =\textquotesingle{}v1\textquotesingle{}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} global \mbox{\hyperlink{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}{R}} \{1\}.D=0
+\item 
+global \mbox{\hyperlink{iKinGazeView_8m_a4f0fc4c3618880ebc1c43738d9fadbaa}{L}} =\mbox{\hyperlink{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}{R}}
+\item 
+global \mbox{\hyperlink{iKinGazeView_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}{C}} =\mbox{\hyperlink{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}{R}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}} =figure(\textquotesingle{}Name\textquotesingle{},\textquotesingle{}i\+Cub Gaze\textquotesingle{})
+\item 
+hold \mbox{\hyperlink{iKinGazeView_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}{grid}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Current\+Axes\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}} =axis
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} =max(abs(\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}))$\ast$0.\+1
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}} =zeros(9,1)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_acb2377703f0c61135c5b216220c9e86a}{hg1}} =draw\+Gaze(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},xR,xL,xC,axR,axL,axC)
+\item 
+init with empty value \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} =\mbox{[}0 0 0\mbox{]}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a0ea2f5484a6700d7c01752b7384d17f6}{tg}} =plot3(\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}(1),\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}(2),\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}(3),\textquotesingle{}ro\textquotesingle{},\textquotesingle{}Marker\+Face\+Color\textquotesingle{},\textquotesingle{}r\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}} =hgtransform(\textquotesingle{}Parent\textquotesingle{},\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_aaccc9105df5383111407fd5b41255e23}{t}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}{mode\+Once}} =true
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}{xd\+\_\+ml}} =\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}} =findobj(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Style\textquotesingle{},\textquotesingle{}Pushbutton\textquotesingle{},\textquotesingle{}String\textquotesingle{},\textquotesingle{}Apply Target\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}User\+Data\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}{state}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(src,\textquotesingle{}Value\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a49654e4709f40aecccada266daa32fc6}{idx}} =\mbox{\hyperlink{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}{evalin}}(\textquotesingle{}base\textquotesingle{},\textquotesingle{}idx\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{iKinGazeView_8m_a3ba4e5ca01ba62ba925034c719048c4e}{sel}} =2\+:10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{iKinGazeView_8m_aac81aebd6dea11165957725a5bf73ef6}\label{iKinGazeView_8m_aac81aebd6dea11165957725a5bf73ef6}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!assignin@{assignin}}
+\index{assignin@{assignin}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{assignin()}{assignin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily assignin (\begin{DoxyParamCaption}\item[{\textquotesingle{}base\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a2b6e42eb704f7a050f0ab4755fc0e001}\label{iKinGazeView_8m_a2b6e42eb704f7a050f0ab4755fc0e001}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!assignin@{assignin}}
+\index{assignin@{assignin}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{assignin()}{assignin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily assignin (\begin{DoxyParamCaption}\item[{\textquotesingle{}base\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ac904cd78e11f6993a2229e10d8bea3ab}\label{iKinGazeView_8m_ac904cd78e11f6993a2229e10d8bea3ab}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!delete@{delete}}
+\index{delete@{delete}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{src}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}\label{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!evalin@{evalin}}
+\index{evalin@{evalin}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{evalin()}{evalin()}}
+{\footnotesize\ttfamily \textquotesingle{}base\textquotesingle{},\textquotesingle{}Buffer\textquotesingle{} evalin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{iKinGazeView_8m_abe5779ea815ee5b3936cc573b7cef347}\label{iKinGazeView_8m_abe5779ea815ee5b3936cc573b7cef347}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!get@{get}}
+\index{get@{get}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily src,\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{} get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}\label{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!if@{if}}
+\index{if@{if}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily function i\+Kin\+Gaze\+View (varargin) \% \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}} viewer for the i\+Cub gaze controlled \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} a yarp module \% Author if (\begin{DoxyParamCaption}\item[{$\sim$}]{strcmpihead\+Type, \textquotesingle{}v2\textquotesingle{}) \&\&$\sim$strcmpi(head\+Type, \textquotesingle{}v1\textquotesingle{} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_aa43b3a88ebb61e06d02cbf253a33ad6f}\label{iKinGazeView_8m_aa43b3a88ebb61e06d02cbf253a33ad6f}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!quiver3@{quiver3}}
+\index{quiver3@{quiver3}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{quiver3()}{quiver3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily quiver3 (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}}]{,  }\item[{\textquotesingle{}Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}b\textquotesingle{}}]{,  }\item[{\textquotesingle{}Linewidth\textquotesingle{}}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a76fad204a41cb0524d12d328e885730e}\label{iKinGazeView_8m_a76fad204a41cb0524d12d328e885730e}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!quiver3@{quiver3}}
+\index{quiver3@{quiver3}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{quiver3()}{quiver3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily quiver3 (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}}]{,  }\item[{0}]{,  }\item[{\textquotesingle{}Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}g\textquotesingle{}}]{,  }\item[{\textquotesingle{}Linewidth\textquotesingle{}}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_aae00375050609a84574d2e7792fd6df9}\label{iKinGazeView_8m_aae00375050609a84574d2e7792fd6df9}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!quiver3@{quiver3}}
+\index{quiver3@{quiver3}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{quiver3()}{quiver3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily quiver3 (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\textquotesingle{}Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}r\textquotesingle{}}]{,  }\item[{\textquotesingle{}Linewidth\textquotesingle{}}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_adc388f8dd2c7927d0f01cff464d9ec66}\label{iKinGazeView_8m_adc388f8dd2c7927d0f01cff464d9ec66}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}}}]{,  }\item[{\textquotesingle{}Data\+Aspect\+Ratio\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a8c36b5117baa9a33e008d69eb5586f7b}\label{iKinGazeView_8m_a8c36b5117baa9a33e008d69eb5586f7b}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily else set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}}]{,  }\item[{\textquotesingle{}Enable\textquotesingle{}}]{,  }\item[{\textquotesingle{}off\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_af8df50e8f8dbea30ae08780cf78102a6}\label{iKinGazeView_8m_af8df50e8f8dbea30ae08780cf78102a6}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}{state}} set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}}]{,  }\item[{\textquotesingle{}Enable\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a6c1f48c5827d313fa3ce306a99fe726c}\label{iKinGazeView_8m_a6c1f48c5827d313fa3ce306a99fe726c}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Close\+Request\+Fcn\textquotesingle{}}]{,  }\item[{@}]{Quit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a23882f684009a79a64d6c9735822d214}\label{iKinGazeView_8m_a23882f684009a79a64d6c9735822d214}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Toolbar\textquotesingle{}}]{,  }\item[{\textquotesingle{}figure\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ae4e8790f6b5631869b713d5a71de1569}\label{iKinGazeView_8m_ae4e8790f6b5631869b713d5a71de1569}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ad306676b857bbbe9cba6fb53cb6bc93a}\label{iKinGazeView_8m_ad306676b857bbbe9cba6fb53cb6bc93a}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} \mbox{\hyperlink{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}{mode\+Once}} \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} \mbox{\hyperlink{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}{xd\+\_\+ml}} \mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}}\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a0ae3d0ea10f9d0ab1f463e1e4afd42dc}\label{iKinGazeView_8m_a0ae3d0ea10f9d0ab1f463e1e4afd42dc}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!set@{set}}
+\index{set@{set}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_a0ea2f5484a6700d7c01752b7384d17f6}{tg}}}]{,  }\item[{\textquotesingle{}Parent\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a140d0cd9eb831be1b5108157912e0581}\label{iKinGazeView_8m_a140d0cd9eb831be1b5108157912e0581}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!start@{start}}
+\index{start@{start}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a2eeccebaa749300e0171f40a8f85ca8d}\label{iKinGazeView_8m_a2eeccebaa749300e0171f40a8f85ca8d}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!stop@{stop}}
+\index{stop@{stop}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a9fa48e30290d8859a640954993859b4a}\label{iKinGazeView_8m_a9fa48e30290d8859a640954993859b4a}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!title@{title}}
+\index{title@{title}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Select a target point to gaze at\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_affc8fcc3ad62b4015a81e2aa63d594d4}\label{iKinGazeView_8m_affc8fcc3ad62b4015a81e2aa63d594d4}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Checkbox\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Value\textquotesingle{}}]{,  }\item[{true}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Switch\+Mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a77aaa12b1cbbdb9f8755597901ff98f7}\label{iKinGazeView_8m_a77aaa12b1cbbdb9f8755597901ff98f7}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Pushbutton\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Apply Target\textquotesingle{}}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Apply\+Target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a902011b0280891bcd63e19529ef3ab8e}\label{iKinGazeView_8m_a902011b0280891bcd63e19529ef3ab8e}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Pushbutton\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Plot Traj.\textquotesingle{}}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Plot\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ac0e582d369632d743f74f44412713984}\label{iKinGazeView_8m_ac0e582d369632d743f74f44412713984}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(1)}]{,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(2)}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{1\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ae1af4370564d7b82f3722036ded90379}\label{iKinGazeView_8m_ae1af4370564d7b82f3722036ded90379}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(5)}]{,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(6)}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{3\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_adc1ce594b8b098cb027b69c9ac9d45c1}\label{iKinGazeView_8m_adc1ce594b8b098cb027b69c9ac9d45c1}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(3)}]{,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(4)}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{2\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a47b787e80950abaa67e0e7ff467d0a52}\label{iKinGazeView_8m_a47b787e80950abaa67e0e7ff467d0a52}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Text\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Target sliders\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ac72e3d110a0fd2eaecdb250b4f7b9f30}\label{iKinGazeView_8m_ac72e3d110a0fd2eaecdb250b4f7b9f30}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Text\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}At once\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_af1f541d04433e3a53c08be957cdbab91}\label{iKinGazeView_8m_af1f541d04433e3a53c08be957cdbab91}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!view@{view}}
+\index{view@{view}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily view (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a635face6c09c7892685106e1c662d817}\label{iKinGazeView_8m_a635face6c09c7892685106e1c662d817}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!warndlg@{warndlg}}
+\index{warndlg@{warndlg}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{warndlg()}{warndlg()}}
+{\footnotesize\ttfamily catch warndlg (\begin{DoxyParamCaption}\item[{\textquotesingle{}Nothing to display\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a5f6237a1980cd822ac1a1a99438383ee}\label{iKinGazeView_8m_a5f6237a1980cd822ac1a1a99438383ee}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}x\textquotesingle{}}]{\mbox{[}m\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_acc24bfd3fde8697149ee8c0d7bb14a21}\label{iKinGazeView_8m_acc24bfd3fde8697149ee8c0d7bb14a21}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!xlim@{xlim}}
+\index{xlim@{xlim}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{xlim()}{xlim()}}
+{\footnotesize\ttfamily xlim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_abfbc59a5f2d56b17236971364f6a94ec}\label{iKinGazeView_8m_abfbc59a5f2d56b17236971364f6a94ec}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}y\textquotesingle{}}]{\mbox{[}m\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a5b4b12c85a75bf2dcfda86802cf372a3}\label{iKinGazeView_8m_a5b4b12c85a75bf2dcfda86802cf372a3}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!ylim@{ylim}}
+\index{ylim@{ylim}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{ylim()}{ylim()}}
+{\footnotesize\ttfamily ylim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_ab0ff54a52579aab5b2de13b1e23fde55}\label{iKinGazeView_8m_ab0ff54a52579aab5b2de13b1e23fde55}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!zlabel@{zlabel}}
+\index{zlabel@{zlabel}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{zlabel()}{zlabel()}}
+{\footnotesize\ttfamily zlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}z\textquotesingle{}}]{\mbox{[}m\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinGazeView_8m_a9d8c24669feec8ab5d5697cda1797607}\label{iKinGazeView_8m_a9d8c24669feec8ab5d5697cda1797607}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!zlim@{zlim}}
+\index{zlim@{zlim}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{zlim()}{zlim()}}
+{\footnotesize\ttfamily zlim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{iKinGazeView_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}\label{iKinGazeView_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!A@{A}}
+\index{A@{A}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily A =max(abs(\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}))$\ast$0.\+1}
+
+
+
+Definition at line 54 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}\label{iKinGazeView_8m_aaa53ca0b650dfd85c4f59fa156f7a2cc}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!C@{C}}
+\index{C@{C}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily C =\mbox{\hyperlink{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}{R}}}
+
+
+
+Definition at line 16 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}\label{iKinGazeView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!grid@{grid}}
+\index{grid@{grid}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily grid}
+
+
+
+Definition at line 45 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}\label{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!hax@{hax}}
+\index{hax@{hax}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{hax}{hax}}
+{\footnotesize\ttfamily hax =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Current\+Axes\textquotesingle{})}
+
+
+
+Definition at line 50 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}\label{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!hdl@{hdl}}
+\index{hdl@{hdl}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{hdl}{hdl}}
+{\footnotesize\ttfamily hdl =findobj(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Style\textquotesingle{},\textquotesingle{}Pushbutton\textquotesingle{},\textquotesingle{}String\textquotesingle{},\textquotesingle{}Apply Target\textquotesingle{})}
+
+
+
+Definition at line 127 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_ad1af8801c61e5f118dc9540d317c9319}\label{iKinGazeView_8m_ad1af8801c61e5f118dc9540d317c9319}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!headType@{headType}}
+\index{headType@{headType}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{headType}{headType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} head\+Type =\textquotesingle{}v1\textquotesingle{}}
+
+
+
+Definition at line 11 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}\label{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!hfig@{hfig}}
+\index{hfig@{hfig}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{hfig}{hfig}}
+{\footnotesize\ttfamily hfig =figure(\textquotesingle{}Name\textquotesingle{},\textquotesingle{}i\+Cub Gaze\textquotesingle{})}
+
+
+
+Definition at line 42 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_acb2377703f0c61135c5b216220c9e86a}\label{iKinGazeView_8m_acb2377703f0c61135c5b216220c9e86a}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!hg1@{hg1}}
+\index{hg1@{hg1}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{hg1}{hg1}}
+{\footnotesize\ttfamily hg1 =draw\+Gaze(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},xR,xL,xC,axR,axL,axC)}
+
+
+
+Definition at line 64 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}\label{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!hg2@{hg2}}
+\index{hg2@{hg2}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{hg2}{hg2}}
+{\footnotesize\ttfamily hg2 =hgtransform(\textquotesingle{}Parent\textquotesingle{},\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}})}
+
+
+
+Definition at line 70 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a49654e4709f40aecccada266daa32fc6}\label{iKinGazeView_8m_a49654e4709f40aecccada266daa32fc6}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!idx@{idx}}
+\index{idx@{idx}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily idx =\mbox{\hyperlink{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}{evalin}}(\textquotesingle{}base\textquotesingle{},\textquotesingle{}idx\textquotesingle{})}
+
+
+
+Definition at line 157 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a4f0fc4c3618880ebc1c43738d9fadbaa}\label{iKinGazeView_8m_a4f0fc4c3618880ebc1c43738d9fadbaa}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!L@{L}}
+\index{L@{L}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{L}{L}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} L =\mbox{\hyperlink{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}{R}}}
+
+
+
+Definition at line 15 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}\label{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!lim@{lim}}
+\index{lim@{lim}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{lim}{lim}}
+{\footnotesize\ttfamily lim =axis}
+
+
+
+Definition at line 53 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}\label{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!modeOnce@{modeOnce}}
+\index{modeOnce@{modeOnce}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{modeOnce}{modeOnce}}
+{\footnotesize\ttfamily mode\+Once =true}
+
+
+
+Definition at line 77 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a58ab1fd68e97078232808206b850161b}\label{iKinGazeView_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!on@{on}}
+\index{on@{on}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+
+
+Definition at line 45 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a099b3b060154898840f0ebdfb46ec78f}\label{iKinGazeView_8m_a099b3b060154898840f0ebdfb46ec78f}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!q@{q}}
+\index{q@{q}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily q =zeros(9,1)}
+
+
+
+Definition at line 60 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}\label{iKinGazeView_8m_ace3fdf821957e9266501abadd2926b1c}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!R@{R}}
+\index{R@{R}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily else R \{1\}.D=0}
+
+
+
+Definition at line 14 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!return@{return}}
+\index{return@{return}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+
+
+Definition at line 160 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a3ba4e5ca01ba62ba925034c719048c4e}\label{iKinGazeView_8m_a3ba4e5ca01ba62ba925034c719048c4e}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!sel@{sel}}
+\index{sel@{sel}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{sel}{sel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} sel =2\+:10}
+
+
+
+Definition at line 163 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}\label{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!state@{state}}
+\index{state@{state}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily state =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(src,\textquotesingle{}Value\textquotesingle{})}
+
+
+
+Definition at line 130 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_aaccc9105df5383111407fd5b41255e23}\label{iKinGazeView_8m_aaccc9105df5383111407fd5b41255e23}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!t@{t}}
+\index{t@{t}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=timer(\textcolor{stringliteral}{'Period'},0.05,\textcolor{stringliteral}{'ExecutionMode'},\textcolor{stringliteral}{'fixedRate'},...}
+\DoxyCodeLine{        \textcolor{stringliteral}{'TimerFcn'},@PlotGaze,\textcolor{stringliteral}{'StopFcn'},@StopFcn,...}
+\DoxyCodeLine{        \textcolor{stringliteral}{'UserData'},\{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \mbox{\hyperlink{iKinGazeView_8m_acb2377703f0c61135c5b216220c9e86a}{hg1}} \mbox{\hyperlink{iKinGazeView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}\})}
+
+\end{DoxyCode}
+
+
+Definition at line 73 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a0ea2f5484a6700d7c01752b7384d17f6}\label{iKinGazeView_8m_a0ea2f5484a6700d7c01752b7384d17f6}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!tg@{tg}}
+\index{tg@{tg}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{tg}{tg}}
+{\footnotesize\ttfamily tg =plot3(\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}(1),\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}(2),\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}(3),\textquotesingle{}ro\textquotesingle{},\textquotesingle{}Marker\+Face\+Color\textquotesingle{},\textquotesingle{}r\textquotesingle{})}
+
+
+
+Definition at line 68 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}\label{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!UserData@{UserData}}
+\index{UserData@{UserData}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{UserData}{UserData}}
+{\footnotesize\ttfamily User\+Data =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}User\+Data\textquotesingle{})}
+
+
+
+Definition at line 128 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}\label{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!xd@{xd}}
+\index{xd@{xd}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{xd}{xd}}
+{\footnotesize\ttfamily xd =\mbox{[}0 0 0\mbox{]}}
+
+
+
+Definition at line 67 of file i\+Kin\+Gaze\+View.\+m.
+
+\mbox{\Hypertarget{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}\label{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}} 
+\index{iKinGazeView.m@{iKinGazeView.m}!xd\_ml@{xd\_ml}}
+\index{xd\_ml@{xd\_ml}!iKinGazeView.m@{iKinGazeView.m}}
+\doxysubsubsection{\texorpdfstring{xd\_ml}{xd\_ml}}
+{\footnotesize\ttfamily xd\+\_\+ml =\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}}
+
+
+
+Definition at line 78 of file i\+Kin\+Gaze\+View.\+m.
+

@@ -1,0 +1,89 @@
+\hypertarget{group__icub__iKinArmView}{}\doxysection{i\+Kin\+Arm\+View}
+\label{group__icub__iKinArmView}\index{iKinArmView@{iKinArmView}}
+Collaboration diagram for i\+Kin\+Arm\+View\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{group__icub__iKinArmView}
+\end{center}
+\end{figure}
+A viewer for the i\+Cub arm implemented in M\+A\+T\+L\+AB.
+
+Copyright (C) 2010 Robot\+Cub Consortium
+
+Author\+: Ugo Pattacini
+
+Copy\+Policy\+: Released under the terms of the G\+NU G\+PL v2.\+0.\hypertarget{group__icub__signalScope_intro_sec}{}\doxysubsection{Description}\label{group__icub__signalScope_intro_sec}
+This module handles the communication between Y\+A\+RP based program such as i\+Kin\+Arm\+Ctrl and the G\+UI developed in M\+A\+T\+L\+AB with the purpose to display the actual i\+Cub arm configuration. It requires the user just to connect some ports whose description is detailed hereafter.
+
+The G\+UI will look like this\+: 
+
+Installation notes\+:
+
+Within C\+Make please assign the following two paths (example for Windows is given)\+:
+
+
+\begin{DoxyItemize}
+\item M\+A\+T\+L\+A\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/extern/include
+\item M\+A\+T\+L\+A\+B\+\_\+\+L\+I\+B\+R\+A\+R\+I\+E\+S\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/extern/lib/win32/microsoft
+\end{DoxyItemize}
+
+For a Linux platform something like the following should hold\+:
+
+
+\begin{DoxyItemize}
+\item M\+A\+T\+L\+A\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/extern/include
+\item M\+A\+T\+L\+A\+B\+\_\+\+L\+I\+B\+R\+A\+R\+I\+E\+S\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/bin/glnxa64
+\end{DoxyItemize}
+
+For Windows users only\+: if you did not register M\+A\+T\+L\+AB as C\+OM server during installation, on the command line you can issue the following\+: matlab /regserver
+
+For Linux users only\+: make sure that {\itshape csh} shell is installed and M\+A\+T\+L\+AB is in the path.\hypertarget{group__icub__signalScope_lib_sec}{}\doxysubsection{Libraries}\label{group__icub__signalScope_lib_sec}
+
+\begin{DoxyItemize}
+\item Y\+A\+RP libraries.
+\item M\+A\+T\+L\+AB installed.
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_parameters_sec}{}\doxysubsection{Parameters}\label{group__icub__signalScope_parameters_sec}
+--name {\itshape name} 
+\begin{DoxyItemize}
+\item The parameter {\itshape name} identifies the module\textquotesingle{}s name; all the open ports will be tagged with the prefix $<$name$>$/. If not specified {\itshape /i\+Kin\+Arm\+View} is assumed.
+\end{DoxyItemize}
+
+--arm {\itshape arm} 
+\begin{DoxyItemize}
+\item The parameter {\itshape arm} selects the type of i\+Cub arm to display. It can be {\itshape right} or {\itshape left}; if not specified {\itshape right} is assumed.
+\end{DoxyItemize}
+
+--visibility {\itshape switch} 
+\begin{DoxyItemize}
+\item The parameter {\itshape switch} set M\+A\+T\+L\+AB session visibility on/off (off by default).
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_portsa_sec}{}\doxysubsection{Ports Accessed}\label{group__icub__signalScope_portsa_sec}
+The ports the module is connected to.\hypertarget{group__icub__signalScope_portsc_sec}{}\doxysubsection{Ports Created}\label{group__icub__signalScope_portsc_sec}
+
+\begin{DoxyItemize}
+\item {\itshape } $<$name$>$/xd\+:o the port where the target end-\/effector pose selected through the graphical interface is sent. The pose comprises 7 double\+: 3 for xyz and 4 for orientation in angle/axis mode.
+\item {\itshape } $<$name$>$/q\+:i receives the joints angles in order to display the arm configuration (Vector of 10 double\+: 3 torso\+\_\+angles + 7 arm\+\_\+angles). The order for torso\+\_\+angles is the one defined by kinematic chain (reversed order).
+\item {\itshape } $<$name$>$/rpc remote procedure call port useful to shut down the module remotely by sending to this port the \textquotesingle{}quit\textquotesingle{} command.
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_in_files_sec}{}\doxysubsection{Input Data Files}\label{group__icub__signalScope_in_files_sec}
+None.\hypertarget{group__icub__signalScope_out_data_sec}{}\doxysubsection{Output Data Files}\label{group__icub__signalScope_out_data_sec}
+None.\hypertarget{group__icub__signalScope_conf_file_sec}{}\doxysubsection{Configuration Files}\label{group__icub__signalScope_conf_file_sec}
+None.\hypertarget{group__icub__signalScope_tested_os_sec}{}\doxysubsection{Tested OS}\label{group__icub__signalScope_tested_os_sec}
+Windows and Linux.\hypertarget{group__icub__signalScope_example_sec}{}\doxysubsection{Example}\label{group__icub__signalScope_example_sec}
+Try with the following\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{iKinArmView_8m_a58ab1fd68e97078232808206b850161b}{on}} terminal 1: iKinArmCtrl }
+\DoxyCodeLine{ }
+\DoxyCodeLine{\mbox{\hyperlink{iKinArmView_8m_a58ab1fd68e97078232808206b850161b}{on}} terminal 2: iKinArmView }
+\DoxyCodeLine{ }
+\DoxyCodeLine{\mbox{\hyperlink{iKinArmView_8m_a58ab1fd68e97078232808206b850161b}{on}} terminal 3: }
+\DoxyCodeLine{-\/ yarp connect /iKinArmCtrl/\mbox{\hyperlink{iKinArmView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}:o  /iKinArmView/\mbox{\hyperlink{iKinArmView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}:i }
+\DoxyCodeLine{-\/ yarp connect /iKinArmView/\mbox{\hyperlink{iKinArmView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}:o /iKinArmCtrl/\mbox{\hyperlink{iKinArmView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}:i }
+\end{DoxyCode}
+
+
+\begin{DoxyAuthor}{Author}
+Ugo Pattacini 
+\end{DoxyAuthor}

@@ -1,0 +1,315 @@
+\hypertarget{classTestModule}{}\doxysection{Test\+Module Class Reference}
+\label{classTestModule}\index{TestModule@{TestModule}}
+
+
+Inheritance diagram for Test\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classTestModule__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTestModule_abda92bd2218a92661b4049ec4879d9e9}{configure}} (Resource\+Finder \&rf)
+\item 
+bool \mbox{\hyperlink{classTestModule_a5f7a953fcf6fe3f6f0b74d5444ff1d60}{interrupt\+Module}} ()
+\item 
+bool \mbox{\hyperlink{classTestModule_a1d736f19cd275f49b84013e4e6afc8dd}{close}} ()
+\item 
+double \mbox{\hyperlink{classTestModule_aa1a1aa0b69e10f3ec3cdc76e47167756}{get\+Period}} ()
+\item 
+bool \mbox{\hyperlink{classTestModule_a0da5f4bca7bf5e697cc771bd9d956c00}{update\+Module}} ()
+\item 
+bool \mbox{\hyperlink{classTestModule_aee47ac518134483e2ff755897f1101b0}{respond}} (const Bottle \&command, Bottle \&reply)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classTestModule_ad6f4f5fa5bd4f42bf096f8c8462490c7}{read}} (Connection\+Reader \&connection)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ cv\+::\+Point $>$ \mbox{\hyperlink{classTestModule_a07a86a5a956f2aed36cc0f26a03ef500}{contour}}
+\item 
+vector$<$ cv\+::\+Point $>$ \mbox{\hyperlink{classTestModule_ae0605adbb7d63a4cfa6d9d69a4936dbc}{flood\+Points}}
+\item 
+string \mbox{\hyperlink{classTestModule_abf3d60749a046719db2155b7f8550171}{home\+Context\+Path}}
+\item 
+int \mbox{\hyperlink{classTestModule_ab64c731c8cf485f79e9b1b380f70bab9}{downsampling}}
+\item 
+double \mbox{\hyperlink{classTestModule_a96fa52374449c754caff0226b96f8453}{spatial\+\_\+distance}}
+\item 
+int \mbox{\hyperlink{classTestModule_acafa57313e229d872be236755b70ec57}{color\+\_\+distance}}
+\item 
+Mutex \mbox{\hyperlink{classTestModule_a824673b765c46f4c350ea8ee1713c054}{mutex}}
+\item 
+bool \mbox{\hyperlink{classTestModule_ab1b3d34e7b793561a6e1c649f14402ae}{go}}
+\item 
+bool \mbox{\hyperlink{classTestModule_a2f604ade9e63db46dfc93b838c067948}{flood3d}}
+\item 
+bool \mbox{\hyperlink{classTestModule_a8e4ba9dc3de0e308bc1af8a2eb09053b}{flood}}
+\item 
+Buffered\+Port$<$ Image\+Of$<$ Pixel\+Mono $>$ $>$ \mbox{\hyperlink{classTestModule_a5461fbc3298ebb87fc4167148ba2590b}{port\+Disp\+In}}
+\item 
+Buffered\+Port$<$ Image\+Of$<$ Pixel\+Rgb $>$ $>$ \mbox{\hyperlink{classTestModule_a9d0402f53fc0f9621545db11e5ebc450}{port\+Disp\+Out}}
+\item 
+Buffered\+Port$<$ Image\+Of$<$ Pixel\+Rgb $>$ $>$ \mbox{\hyperlink{classTestModule_a663d628c4e49688a3104478f642c0ed5}{port\+Img\+In}}
+\item 
+Port \mbox{\hyperlink{classTestModule_ab84e60b21fee0541ae33a69fc9bcd7a5}{port\+Contour}}
+\item 
+Rpc\+Client \mbox{\hyperlink{classTestModule_a9fbcfb1facde3cd0258aa45ceb5993c5}{port\+S\+FM}}
+\item 
+Rpc\+Server \mbox{\hyperlink{classTestModule_ad94e4485b60a11b216a4b765ea0c2e58}{port\+Rpc}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 37 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTestModule_a1d736f19cd275f49b84013e4e6afc8dd}\label{classTestModule_a1d736f19cd275f49b84013e4e6afc8dd}} 
+\index{TestModule@{TestModule}!close@{close}}
+\index{close@{close}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Test\+Module\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 106 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_abda92bd2218a92661b4049ec4879d9e9}\label{classTestModule_abda92bd2218a92661b4049ec4879d9e9}} 
+\index{TestModule@{TestModule}!configure@{configure}}
+\index{configure@{configure}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily bool Test\+Module\+::configure (\begin{DoxyParamCaption}\item[{Resource\+Finder \&}]{rf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 72 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_aa1a1aa0b69e10f3ec3cdc76e47167756}\label{classTestModule_aa1a1aa0b69e10f3ec3cdc76e47167756}} 
+\index{TestModule@{TestModule}!getPeriod@{getPeriod}}
+\index{getPeriod@{getPeriod}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{getPeriod()}{getPeriod()}}
+{\footnotesize\ttfamily double Test\+Module\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 118 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a5f7a953fcf6fe3f6f0b74d5444ff1d60}\label{classTestModule_a5f7a953fcf6fe3f6f0b74d5444ff1d60}} 
+\index{TestModule@{TestModule}!interruptModule@{interruptModule}}
+\index{interruptModule@{interruptModule}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{interruptModule()}{interruptModule()}}
+{\footnotesize\ttfamily bool Test\+Module\+::interrupt\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 94 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_ad6f4f5fa5bd4f42bf096f8c8462490c7}\label{classTestModule_ad6f4f5fa5bd4f42bf096f8c8462490c7}} 
+\index{TestModule@{TestModule}!read@{read}}
+\index{read@{read}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool Test\+Module\+::read (\begin{DoxyParamCaption}\item[{Connection\+Reader \&}]{connection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 57 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_aee47ac518134483e2ff755897f1101b0}\label{classTestModule_aee47ac518134483e2ff755897f1101b0}} 
+\index{TestModule@{TestModule}!respond@{respond}}
+\index{respond@{respond}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{respond()}{respond()}}
+{\footnotesize\ttfamily bool Test\+Module\+::respond (\begin{DoxyParamCaption}\item[{const Bottle \&}]{command,  }\item[{Bottle \&}]{reply }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 260 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a0da5f4bca7bf5e697cc771bd9d956c00}\label{classTestModule_a0da5f4bca7bf5e697cc771bd9d956c00}} 
+\index{TestModule@{TestModule}!updateModule@{updateModule}}
+\index{updateModule@{updateModule}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{updateModule()}{updateModule()}}
+{\footnotesize\ttfamily bool Test\+Module\+::update\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 124 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classTestModule_acafa57313e229d872be236755b70ec57}\label{classTestModule_acafa57313e229d872be236755b70ec57}} 
+\index{TestModule@{TestModule}!color\_distance@{color\_distance}}
+\index{color\_distance@{color\_distance}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{color\_distance}{color\_distance}}
+{\footnotesize\ttfamily int Test\+Module\+::color\+\_\+distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a07a86a5a956f2aed36cc0f26a03ef500}\label{classTestModule_a07a86a5a956f2aed36cc0f26a03ef500}} 
+\index{TestModule@{TestModule}!contour@{contour}}
+\index{contour@{contour}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{contour}{contour}}
+{\footnotesize\ttfamily vector$<$cv\+::\+Point$>$ Test\+Module\+::contour\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_ab64c731c8cf485f79e9b1b380f70bab9}\label{classTestModule_ab64c731c8cf485f79e9b1b380f70bab9}} 
+\index{TestModule@{TestModule}!downsampling@{downsampling}}
+\index{downsampling@{downsampling}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{downsampling}{downsampling}}
+{\footnotesize\ttfamily int Test\+Module\+::downsampling\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a8e4ba9dc3de0e308bc1af8a2eb09053b}\label{classTestModule_a8e4ba9dc3de0e308bc1af8a2eb09053b}} 
+\index{TestModule@{TestModule}!flood@{flood}}
+\index{flood@{flood}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{flood}{flood}}
+{\footnotesize\ttfamily bool Test\+Module\+::flood\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a2f604ade9e63db46dfc93b838c067948}\label{classTestModule_a2f604ade9e63db46dfc93b838c067948}} 
+\index{TestModule@{TestModule}!flood3d@{flood3d}}
+\index{flood3d@{flood3d}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{flood3d}{flood3d}}
+{\footnotesize\ttfamily bool Test\+Module\+::flood3d\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_ae0605adbb7d63a4cfa6d9d69a4936dbc}\label{classTestModule_ae0605adbb7d63a4cfa6d9d69a4936dbc}} 
+\index{TestModule@{TestModule}!floodPoints@{floodPoints}}
+\index{floodPoints@{floodPoints}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{floodPoints}{floodPoints}}
+{\footnotesize\ttfamily vector$<$cv\+::\+Point$>$ Test\+Module\+::flood\+Points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 41 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_ab1b3d34e7b793561a6e1c649f14402ae}\label{classTestModule_ab1b3d34e7b793561a6e1c649f14402ae}} 
+\index{TestModule@{TestModule}!go@{go}}
+\index{go@{go}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{go}{go}}
+{\footnotesize\ttfamily bool Test\+Module\+::go\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_abf3d60749a046719db2155b7f8550171}\label{classTestModule_abf3d60749a046719db2155b7f8550171}} 
+\index{TestModule@{TestModule}!homeContextPath@{homeContextPath}}
+\index{homeContextPath@{homeContextPath}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{homeContextPath}{homeContextPath}}
+{\footnotesize\ttfamily string Test\+Module\+::home\+Context\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a824673b765c46f4c350ea8ee1713c054}\label{classTestModule_a824673b765c46f4c350ea8ee1713c054}} 
+\index{TestModule@{TestModule}!mutex@{mutex}}
+\index{mutex@{mutex}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily Mutex Test\+Module\+::mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_ab84e60b21fee0541ae33a69fc9bcd7a5}\label{classTestModule_ab84e60b21fee0541ae33a69fc9bcd7a5}} 
+\index{TestModule@{TestModule}!portContour@{portContour}}
+\index{portContour@{portContour}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{portContour}{portContour}}
+{\footnotesize\ttfamily Port Test\+Module\+::port\+Contour\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a5461fbc3298ebb87fc4167148ba2590b}\label{classTestModule_a5461fbc3298ebb87fc4167148ba2590b}} 
+\index{TestModule@{TestModule}!portDispIn@{portDispIn}}
+\index{portDispIn@{portDispIn}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{portDispIn}{portDispIn}}
+{\footnotesize\ttfamily Buffered\+Port$<$Image\+Of$<$Pixel\+Mono$>$ $>$ Test\+Module\+::port\+Disp\+In\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a9d0402f53fc0f9621545db11e5ebc450}\label{classTestModule_a9d0402f53fc0f9621545db11e5ebc450}} 
+\index{TestModule@{TestModule}!portDispOut@{portDispOut}}
+\index{portDispOut@{portDispOut}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{portDispOut}{portDispOut}}
+{\footnotesize\ttfamily Buffered\+Port$<$Image\+Of$<$Pixel\+Rgb$>$ $>$ Test\+Module\+::port\+Disp\+Out\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a663d628c4e49688a3104478f642c0ed5}\label{classTestModule_a663d628c4e49688a3104478f642c0ed5}} 
+\index{TestModule@{TestModule}!portImgIn@{portImgIn}}
+\index{portImgIn@{portImgIn}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{portImgIn}{portImgIn}}
+{\footnotesize\ttfamily Buffered\+Port$<$Image\+Of$<$Pixel\+Rgb$>$ $>$ Test\+Module\+::port\+Img\+In\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 51 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_ad94e4485b60a11b216a4b765ea0c2e58}\label{classTestModule_ad94e4485b60a11b216a4b765ea0c2e58}} 
+\index{TestModule@{TestModule}!portRpc@{portRpc}}
+\index{portRpc@{portRpc}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{portRpc}{portRpc}}
+{\footnotesize\ttfamily Rpc\+Server Test\+Module\+::port\+Rpc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a9fbcfb1facde3cd0258aa45ceb5993c5}\label{classTestModule_a9fbcfb1facde3cd0258aa45ceb5993c5}} 
+\index{TestModule@{TestModule}!portSFM@{portSFM}}
+\index{portSFM@{portSFM}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{portSFM}{portSFM}}
+{\footnotesize\ttfamily Rpc\+Client Test\+Module\+::port\+S\+FM\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file main.\+cpp.
+
+\mbox{\Hypertarget{classTestModule_a96fa52374449c754caff0226b96f8453}\label{classTestModule_a96fa52374449c754caff0226b96f8453}} 
+\index{TestModule@{TestModule}!spatial\_distance@{spatial\_distance}}
+\index{spatial\_distance@{spatial\_distance}!TestModule@{TestModule}}
+\doxysubsubsection{\texorpdfstring{spatial\_distance}{spatial\_distance}}
+{\footnotesize\ttfamily double Test\+Module\+::spatial\+\_\+distance\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file main.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/icub-\/contrib/icub-\/contrib/test-\/3d-\/points/src/\mbox{\hyperlink{test-3d-points_2src_2main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

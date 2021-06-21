@@ -1,0 +1,264 @@
+\hypertarget{classFingerModule}{}\doxysection{Finger\+Module Class Reference}
+\label{classFingerModule}\index{FingerModule@{FingerModule}}
+
+
+Inheritance diagram for Finger\+Module\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classFingerModule__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classFingerModule_aed9a1145fa5067a2e35e34869d09845a}{configure}} (Resource\+Finder \&rf)
+\item 
+double \mbox{\hyperlink{classFingerModule_a213ca71f97658375366b9c63ff3e4e3e}{get\+Period}} ()
+\item 
+bool \mbox{\hyperlink{classFingerModule_ab8ecb3dc28eee291014d54fc0d6d0af8}{update\+Module}} ()
+\item 
+void \mbox{\hyperlink{classFingerModule_a80edf3788deab0d53496c54becbf4143}{terminate}} ()
+\item 
+bool \mbox{\hyperlink{classFingerModule_a53b35373ec385fc389fb6b266ebe947a}{interrupt\+Module}} ()
+\item 
+bool \mbox{\hyperlink{classFingerModule_a6c580ba19b7976a1867c7e3b6a6404e3}{close}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+i\+Cub\+Finger \mbox{\hyperlink{classFingerModule_a4478e4f64a3a7819dbef5f4846b64bfd}{finger}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{classFingerModule_a9a6de55fff6202a27f38eaf11b3af2a1}{cam\+Sel}}
+\item 
+int \mbox{\hyperlink{classFingerModule_a043140bc42f33404b5fb09ed314569d3}{n\+Encs}}
+\item 
+Poly\+Driver \mbox{\hyperlink{classFingerModule_a78eb4623c68bc3beceaeb380c7c1b73f}{drv\+Analog}}
+\item 
+Poly\+Driver \mbox{\hyperlink{classFingerModule_a3670fdc23a8a3b4a46f91bc677e175fa}{drv\+Arm}}
+\item 
+Poly\+Driver \mbox{\hyperlink{classFingerModule_a7d0d1bb564c00f2dc10b5f6ef22c1965}{drv\+Cart}}
+\item 
+Poly\+Driver \mbox{\hyperlink{classFingerModule_a43bca58e19d8b35161f486f1efda93ff}{drv\+Gaze}}
+\item 
+I\+Analog\+Sensor $\ast$ \mbox{\hyperlink{classFingerModule_ad3f0b33ff7cfe82cd69a8ece4aae8b21}{ianalog}}
+\item 
+I\+Encoders $\ast$ \mbox{\hyperlink{classFingerModule_a8b66559b120e889e6c2ddef364485f79}{iencs}}
+\item 
+I\+Cartesian\+Control $\ast$ \mbox{\hyperlink{classFingerModule_aa3efb4d6325cd32cdbe8cf29515ff1f7}{iarm}}
+\item 
+I\+Gaze\+Control $\ast$ \mbox{\hyperlink{classFingerModule_af23d67addd593bf09bf26f2c82d71422}{igaze}}
+\item 
+Buffered\+Port$<$ Image\+Of$<$ Pixel\+Rgb $>$ $>$ \mbox{\hyperlink{classFingerModule_a5c57631e5fac11f79de10882961b2a54}{img\+In\+Port}}
+\item 
+Buffered\+Port$<$ Image\+Of$<$ Pixel\+Rgb $>$ $>$ \mbox{\hyperlink{classFingerModule_a2468dd03d07f6497fbd8bde2961122b7}{img\+Out\+Port}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 44 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFingerModule_a6c580ba19b7976a1867c7e3b6a6404e3}\label{classFingerModule_a6c580ba19b7976a1867c7e3b6a6404e3}} 
+\index{FingerModule@{FingerModule}!close@{close}}
+\index{close@{close}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily bool Finger\+Module\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 252 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_aed9a1145fa5067a2e35e34869d09845a}\label{classFingerModule_aed9a1145fa5067a2e35e34869d09845a}} 
+\index{FingerModule@{FingerModule}!configure@{configure}}
+\index{configure@{configure}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily bool Finger\+Module\+::configure (\begin{DoxyParamCaption}\item[{Resource\+Finder \&}]{rf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 60 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a213ca71f97658375366b9c63ff3e4e3e}\label{classFingerModule_a213ca71f97658375366b9c63ff3e4e3e}} 
+\index{FingerModule@{FingerModule}!getPeriod@{getPeriod}}
+\index{getPeriod@{getPeriod}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{getPeriod()}{getPeriod()}}
+{\footnotesize\ttfamily double Finger\+Module\+::get\+Period (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 153 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a53b35373ec385fc389fb6b266ebe947a}\label{classFingerModule_a53b35373ec385fc389fb6b266ebe947a}} 
+\index{FingerModule@{FingerModule}!interruptModule@{interruptModule}}
+\index{interruptModule@{interruptModule}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{interruptModule()}{interruptModule()}}
+{\footnotesize\ttfamily bool Finger\+Module\+::interrupt\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 245 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a80edf3788deab0d53496c54becbf4143}\label{classFingerModule_a80edf3788deab0d53496c54becbf4143}} 
+\index{FingerModule@{FingerModule}!terminate@{terminate}}
+\index{terminate@{terminate}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily void Finger\+Module\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 223 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_ab8ecb3dc28eee291014d54fc0d6d0af8}\label{classFingerModule_ab8ecb3dc28eee291014d54fc0d6d0af8}} 
+\index{FingerModule@{FingerModule}!updateModule@{updateModule}}
+\index{updateModule@{updateModule}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{updateModule()}{updateModule()}}
+{\footnotesize\ttfamily bool Finger\+Module\+::update\+Module (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 159 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classFingerModule_a9a6de55fff6202a27f38eaf11b3af2a1}\label{classFingerModule_a9a6de55fff6202a27f38eaf11b3af2a1}} 
+\index{FingerModule@{FingerModule}!camSel@{camSel}}
+\index{camSel@{camSel}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{camSel}{camSel}}
+{\footnotesize\ttfamily int Finger\+Module\+::cam\+Sel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 48 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a78eb4623c68bc3beceaeb380c7c1b73f}\label{classFingerModule_a78eb4623c68bc3beceaeb380c7c1b73f}} 
+\index{FingerModule@{FingerModule}!drvAnalog@{drvAnalog}}
+\index{drvAnalog@{drvAnalog}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{drvAnalog}{drvAnalog}}
+{\footnotesize\ttfamily Poly\+Driver Finger\+Module\+::drv\+Analog\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a3670fdc23a8a3b4a46f91bc677e175fa}\label{classFingerModule_a3670fdc23a8a3b4a46f91bc677e175fa}} 
+\index{FingerModule@{FingerModule}!drvArm@{drvArm}}
+\index{drvArm@{drvArm}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{drvArm}{drvArm}}
+{\footnotesize\ttfamily Poly\+Driver Finger\+Module\+::drv\+Arm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a7d0d1bb564c00f2dc10b5f6ef22c1965}\label{classFingerModule_a7d0d1bb564c00f2dc10b5f6ef22c1965}} 
+\index{FingerModule@{FingerModule}!drvCart@{drvCart}}
+\index{drvCart@{drvCart}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{drvCart}{drvCart}}
+{\footnotesize\ttfamily Poly\+Driver Finger\+Module\+::drv\+Cart\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a43bca58e19d8b35161f486f1efda93ff}\label{classFingerModule_a43bca58e19d8b35161f486f1efda93ff}} 
+\index{FingerModule@{FingerModule}!drvGaze@{drvGaze}}
+\index{drvGaze@{drvGaze}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{drvGaze}{drvGaze}}
+{\footnotesize\ttfamily Poly\+Driver Finger\+Module\+::drv\+Gaze\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a4478e4f64a3a7819dbef5f4846b64bfd}\label{classFingerModule_a4478e4f64a3a7819dbef5f4846b64bfd}} 
+\index{FingerModule@{FingerModule}!finger@{finger}}
+\index{finger@{finger}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{finger}{finger}}
+{\footnotesize\ttfamily i\+Cub\+Finger Finger\+Module\+::finger\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_ad3f0b33ff7cfe82cd69a8ece4aae8b21}\label{classFingerModule_ad3f0b33ff7cfe82cd69a8ece4aae8b21}} 
+\index{FingerModule@{FingerModule}!ianalog@{ianalog}}
+\index{ianalog@{ianalog}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{ianalog}{ianalog}}
+{\footnotesize\ttfamily I\+Analog\+Sensor$\ast$ Finger\+Module\+::ianalog\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 51 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_aa3efb4d6325cd32cdbe8cf29515ff1f7}\label{classFingerModule_aa3efb4d6325cd32cdbe8cf29515ff1f7}} 
+\index{FingerModule@{FingerModule}!iarm@{iarm}}
+\index{iarm@{iarm}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{iarm}{iarm}}
+{\footnotesize\ttfamily I\+Cartesian\+Control$\ast$ Finger\+Module\+::iarm\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a8b66559b120e889e6c2ddef364485f79}\label{classFingerModule_a8b66559b120e889e6c2ddef364485f79}} 
+\index{FingerModule@{FingerModule}!iencs@{iencs}}
+\index{iencs@{iencs}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{iencs}{iencs}}
+{\footnotesize\ttfamily I\+Encoders$\ast$ Finger\+Module\+::iencs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 52 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_af23d67addd593bf09bf26f2c82d71422}\label{classFingerModule_af23d67addd593bf09bf26f2c82d71422}} 
+\index{FingerModule@{FingerModule}!igaze@{igaze}}
+\index{igaze@{igaze}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{igaze}{igaze}}
+{\footnotesize\ttfamily I\+Gaze\+Control$\ast$ Finger\+Module\+::igaze\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a5c57631e5fac11f79de10882961b2a54}\label{classFingerModule_a5c57631e5fac11f79de10882961b2a54}} 
+\index{FingerModule@{FingerModule}!imgInPort@{imgInPort}}
+\index{imgInPort@{imgInPort}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{imgInPort}{imgInPort}}
+{\footnotesize\ttfamily Buffered\+Port$<$Image\+Of$<$Pixel\+Rgb$>$ $>$ Finger\+Module\+::img\+In\+Port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a2468dd03d07f6497fbd8bde2961122b7}\label{classFingerModule_a2468dd03d07f6497fbd8bde2961122b7}} 
+\index{FingerModule@{FingerModule}!imgOutPort@{imgOutPort}}
+\index{imgOutPort@{imgOutPort}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{imgOutPort}{imgOutPort}}
+{\footnotesize\ttfamily Buffered\+Port$<$Image\+Of$<$Pixel\+Rgb$>$ $>$ Finger\+Module\+::img\+Out\+Port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 56 of file main.\+cpp.
+
+\mbox{\Hypertarget{classFingerModule_a043140bc42f33404b5fb09ed314569d3}\label{classFingerModule_a043140bc42f33404b5fb09ed314569d3}} 
+\index{FingerModule@{FingerModule}!nEncs@{nEncs}}
+\index{nEncs@{nEncs}!FingerModule@{FingerModule}}
+\doxysubsubsection{\texorpdfstring{nEncs}{nEncs}}
+{\footnotesize\ttfamily int Finger\+Module\+::n\+Encs\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 48 of file main.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/icub-\/contrib/icub-\/contrib/show-\/fingers/src/\mbox{\hyperlink{show-fingers_2src_2main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

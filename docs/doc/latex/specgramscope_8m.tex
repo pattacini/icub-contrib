@@ -1,0 +1,786 @@
+\hypertarget{specgramscope_8m}{}\doxysection{/home/runner/work/icub-\/contrib/icub-\/contrib/matlab\+Viewers/app/scripts/specgramscope.m File Reference}
+\label{specgramscope_8m}\index{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/specgramscope.m@{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/specgramscope.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+... \mbox{\hyperlink{specgramscope_8m_a4f75115117bfc88fb8f0b3a416894a0e}{by\+:}} (... S\+P\+E\+C\+G\+R\+A\+M\+S\+C\+O\+PE)
+\item 
+Initialize \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} \mbox{\hyperlink{specgramscope_8m_ad06d420842590dcbe45f56f206887f09}{specgramscope}} (\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}, \mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}}, 30)
+\item 
+\mbox{\hyperlink{specgramscope_8m_af1372c517729aede374d194a16725e50}{view}} (\mbox{[}103 30\mbox{]}) \% \% \%\% Update \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} \% for \mbox{\hyperlink{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a001e6e931092a5e70d6c76f1ee0f2a01}{pause}} (.\+01)
+\item 
+id \mbox{\hyperlink{specgramscope_8m_aefbb18f948f0d8a6ce1f4823484c4dc2}{tree\+:}} (nargchk(1, 4, \mbox{\hyperlink{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}{nargin}}) N\+Traces\+Default)
+\item 
+\mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(varargin\{2\} \mbox{\hyperlink{specgramscope_8m_ac2d87d3ec49292eb9ed1875530c97563}{update}} ()
+\item 
+Ensure that \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} has been initialized \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{specgramscope_8m_a0d353126d0f6b157d3655cf27349c978}{isempty}} (\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) \% Use default values \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}
+\item 
+Number of time histories \mbox{\hyperlink{specgramscope_8m_ace1fcdae520cf3b1df8c128ec4eb7313}{feval}} (mfilename, \mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}}, \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}, \mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}}, \mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{N\+Traces}})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{specgramscope_8m_a696a16cc11eddfef8f3d05eafc7ae5d4}{$\sim$isaxes}} (varargin\{1\}) \% Easy \mbox{\hyperlink{stripchart_8m_aedfaba280295cdeab6b465d48d5af7d9}{mode}}
+\item 
+\mbox{\hyperlink{stripchart_8m_acd7df8a7cb914c5aa8e8453bf3537083}{F\+FT}} Block \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}} Store parameter structure \mbox{\hyperlink{specgramscope_8m_a3ec46693ac240e90144739f2f235c966}{setappdata}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}}, \textquotesingle{}Specgram\+Scope\+Parameters\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a40336f492a26e16e58d1951aa8fc6d58}{local\+Init\+Scope}} (\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) \% Initialize \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} case \textquotesingle{}\mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}}\textquotesingle{} \% Update \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a896fc1a57f05a9820178d0fe3080d459}{local\+Update\+Scope}} (\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}, \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) \% Update the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_afb4cdbf4df8bfba0b2f885487dd25234}{set}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},... \textquotesingle{}X\+Lim\textquotesingle{},\mbox{[}-\/\mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{parms.\+N\+Traces}}+1 0\mbox{]},... \textquotesingle{}Y\+Lim\textquotesingle{},\mbox{[}0 \mbox{\hyperlink{specgramscope_8m_adf54b00849b50c18054bcf0f1ecaa69c}{f}}(\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}})\mbox{]})
+\item 
+Reverse frequency axes direction \mbox{\hyperlink{specgramscope_8m_af34673aeb48582b179e717f6b0afb9e3}{shading}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}interp\textquotesingle{})
+\item 
+\mbox{\hyperlink{specgramscope_8m_ace2f91e16c4ef8eb37a4daaff1d4abcb}{setappdata}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}Specgram\+Scope\+Parameters\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}})
+\item 
+In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a not a figure \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{specgramscope_8m_a77f1fe0983c8e33b2d600e4ccdde48e6}{$\sim$strcmp}} (\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Type\textquotesingle{}), \textquotesingle{}figure\textquotesingle{}) \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}
+\item 
+id \mbox{\hyperlink{specgramscope_8m_a2c5a7ee5a3c81adcacd531e1451346d6}{gca}} ()
+\item 
+\mbox{\hyperlink{specgramscope_8m_af2f907ee778a476e650d39510350c770}{set}} (\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Current\+Axes\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a6a23656e12e992cf34021bb93ecb7282}{xlabel}} (\textquotesingle{}History\textquotesingle{}) \mbox{\hyperlink{iKinGazeView_8m_abfbc59a5f2d56b17236971364f6a94ec}{ylabel}}(\textquotesingle{}Frequency(Hz)\textquotesingle{})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a3f65106c25794ce68cdc3dffe3355d15}{zlabel}} (\textquotesingle{}Magnitude(dB)\textquotesingle{})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a3140f18c0c0cb76cbb2468b221c572f6}{set}} (\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Current\+Axes\textquotesingle{}, ca)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}}$<$ yax2(1), yax2(1)=\mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}};endif \mbox{\hyperlink{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}{maxM}} $>$ \mbox{\hyperlink{specgramscope_8m_a59ea27491de5d78222e29e711ee88fcc}{yax2}} (2)
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{specgramscope_8m_a0fe5d2b37ca1d347a53fc32b6f2ba437}{set}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}Y\+Lim\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}{yax2}}) \% Update the plot \mbox{\hyperlink{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}{h\+Surf}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a9116286466c63afa531e4fca0c3c0360}{set}} (\mbox{\hyperlink{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}{h\+Surf}}, \textquotesingle{}Z\+Data\textquotesingle{}, \mbox{\hyperlink{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}{zd}}, \textquotesingle{}C\+Data\textquotesingle{}, \mbox{\hyperlink{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}{zd}}) \% set(parms.\+h\+Line
+\item 
+\mbox{\hyperlink{specgramscope_8m_adf54b00849b50c18054bcf0f1ecaa69c}{f}} (\+:, 1)
+\item 
+\mbox{\hyperlink{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}{mag}} (\+:, 1))
+\item 
+\mbox{\hyperlink{specgramscope_8m_af72ee580f8d6ac0b9929016efa6d10d6}{set}} (parms.\+h\+Line, \{ \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{}\}, Mag\textquotesingle{})
+\item 
+Avoid taking the log of \mbox{\hyperlink{specgramscope_8m_aa4e15c8ca23e4ea585e7e36c34b3480f}{xfft}} (xfft==0)
+\item 
+h \mbox{\hyperlink{specgramscope_8m_a06223b1212e05115f3aacbe342eb31c9}{isaxes}} ()
+\item 
+\mbox{\hyperlink{specgramscope_8m_ae632cf4f527c38e97bef7875b214727b}{I\+S\+A\+X\+ES}} (H) True \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} H is a handle to a valid axes \mbox{\hyperlink{stripchart_8m_a1489018df97d501325262eb1a18ebc1f}{truefalse}}=0
+\item 
+Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{specgramscope_8m_a9c39cf12fcdb5f19ba499d0b3f65a041}{ishandle}} (h) \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} strcmp(\textquotesingle{}axes\textquotesingle{}
+\item 
+Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{specgramscope_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}} (h, \textquotesingle{}Type\textquotesingle{})) \mbox{\hyperlink{stripchart_8m_a1489018df97d501325262eb1a18ebc1f}{truefalse}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{specgramscope_8m_ac0dd107b457e7de9936f0e416c439887}{rowmajor}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+function \mbox{\hyperlink{specgramscope_8m_aeed64c08cecf4522650c2fe59a716f14}{varargout}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_ae1997a452372d4c58d7f347a7630f9ac}{H\+Surf}} = findobj(H\+AX,\textquotesingle{}Tag\textquotesingle{},\textquotesingle{}Specgram\+Scope\textquotesingle{})
+\item 
+Example Initialize \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{specgramscope_8m_a68700005648f933c9e74a0d2c9390025}{Fs}} = 16384
+\item 
+\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}} = 2048
+\item 
+\mbox{\hyperlink{specgramscope_8m_aaccc9105df5383111407fd5b41255e23}{t}} = (0\+:1\+:\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}}-\/1)\textquotesingle{}/\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}{fo}} = logspace(3.\+5,3.\+7)
+\item 
+\mbox{\hyperlink{stripchart_8m_adabd68f3c955f599822cd5fba106e10f}{Range}} of fundamental frequencies \mbox{\hyperlink{specgramscope_8m_a14b3b0b5d9d71b5eae323da639e60d28}{s1}} = sin(2$\ast$pi$\ast$\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}$\ast$\mbox{\hyperlink{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}{fo}}) + .\+1$\ast$rand(\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}},length(\mbox{\hyperlink{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}{fo}}))
+\item 
+\mbox{\hyperlink{specgramscope_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}{drawnow}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a1e96cceca2fa0a7b32967dca2c6efe52}{end}} = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}})
+\item 
+Initialize or \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} If first or second input argument is not a \mbox{\hyperlink{specgramscope_8m_ac919aea9c9c7b58a17d376c3f3ac4b7d}{scalar}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{specgramscope_8m_a388ea4a215114137ba759ef0aa02ab6b}{nargin}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} = varargin\{1\}
+\item 
+else \mbox{\hyperlink{specgramscope_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}} = varargin\{1\}
+\item 
+If the user has not initialized this \mbox{\hyperlink{specgramscope_8m_ae58574b1de49c92bd33773f035c722f7}{scope}}
+\item 
+If the user has not initialized this do it for them \mbox{\hyperlink{specgramscope_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} = getappdata(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}},\textquotesingle{}Specgram\+Scope\+Parameters\textquotesingle{})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a96c4b1f5c603bf558bdefd9684725caa}{N\+Traces}} = N\+Traces\+Default
+\item 
+else Initialize \mbox{\hyperlink{specgramscope_8m_a2f16190a9290603ff80a7bfc5619eb24}{action}} = \textquotesingle{}init\textquotesingle{}
+\item 
+else Expert \mbox{\hyperlink{specgramscope_8m_aedfaba280295cdeab6b465d48d5af7d9}{mode}}
+\item 
+Check that the number of \mbox{\hyperlink{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}{columns}} corresponds to the number of \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} \mbox{\hyperlink{specgramscope_8m_ac0c66875113daecd8e14505a20898488}{nc}} = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}},2)
+\item 
+\mbox{\hyperlink{specgramscope_8m_a740d4b83d26e4df9268e1e58c4cdf82c}{f}} = f(\+:)
+\item 
+Add \mbox{\hyperlink{specgramscope_8m_a5a62025618c9770c137299cc8d4f5263}{surface}} \mbox{[}X, Y\mbox{]} = meshgrid(-\/\mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{parms.\+N\+Traces}}+1\+:0,\mbox{\hyperlink{specgramscope_8m_adf54b00849b50c18054bcf0f1ecaa69c}{f}})
+\item 
+\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} \mbox{\hyperlink{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}{h\+Surf}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a313101b5d9715f306e9b0e9d5784f05b}{Y\+Dir}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a247637008a7d22a04f4f44ac0e58e96f}{reverse}}
+\item 
+Get handle to the figure Turn doublebuffer \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} to eliminate flickering \mbox{\hyperlink{specgramscope_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Parent\textquotesingle{})
+\item 
+In \mbox{\hyperlink{specgramscope_8m_acd2a86897c361b40496b22c9d1e65504}{R14}}
+\item 
+In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a \mbox{\hyperlink{specgramscope_8m_a27703d15e42438099575fe8045dfb639}{panel}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a6872c4309c0f8c3b4d7dfab032e17d08}{Double\+Buffer}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}
+\item 
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Update the plot function \mbox{\hyperlink{specgramscope_8m_a0b8984d88ac789b523c0444f59fb3c83}{mag}} = localfft(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}},\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}})
+\item 
+Dynamically modify Magnitude axis as we go \mbox{\hyperlink{specgramscope_8m_a6545487468b9d92b67cfdff434956053}{Expand}}
+\item 
+Dynamically modify Magnitude axis as we go but don \mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} shrink \mbox{\hyperlink{specgramscope_8m_a3d8d14f058fb2ff87c5f38ae579ff8c9}{maxM}} =max(\mbox{\hyperlink{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}{mag}}(\+:))
+\item 
+\mbox{\hyperlink{specgramscope_8m_ad2005c9f7136760615b695ffd366da03}{minM}} =min(\mbox{\hyperlink{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}{mag}}(\+:))
+\item 
+\mbox{\hyperlink{specgramscope_8m_ac7209ef7e667388bbe9c884fd50509b8}{yax2}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Y\+Lim\textquotesingle{})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}{zd}} = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}{h\+Surf}},\textquotesingle{}Z\+Data\textquotesingle{})
+\item 
+\mbox{\hyperlink{specgramscope_8m_a5e6cd200a00232561cd56002ff9b078e}{X\+Data}}
+\item 
+\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}
+\item 
+Note \mbox{\hyperlink{specgramscope_8m_a7f69560b45d2868c90647dc18e847731}{\+\_\+\+\_\+pad0\+\_\+\+\_\+}}
+\item 
+Compute \mbox{\hyperlink{specgramscope_8m_a87dec4da73ea38c865a39dc1c0fa40cb}{magnitude}}
+\item 
+Force \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to be row major i e more rows than \mbox{\hyperlink{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}{columns}} \mbox{[}nr, \mbox{\hyperlink{stripchart_8m_ac0c66875113daecd8e14505a20898488}{nc}}\mbox{]} = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{specgramscope_8m_a696a16cc11eddfef8f3d05eafc7ae5d4}\label{specgramscope_8m_a696a16cc11eddfef8f3d05eafc7ae5d4}} 
+\index{specgramscope.m@{specgramscope.m}!````~isaxes@{$\sim$isaxes}}
+\index{````~isaxes@{$\sim$isaxes}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isaxes()}{~isaxes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} $\sim$\mbox{\hyperlink{specgramscope_8m_a06223b1212e05115f3aacbe342eb31c9}{isaxes}} (\begin{DoxyParamCaption}\item[{varargin\{1\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a77f1fe0983c8e33b2d600e4ccdde48e6}\label{specgramscope_8m_a77f1fe0983c8e33b2d600e4ccdde48e6}} 
+\index{specgramscope.m@{specgramscope.m}!````~strcmp@{$\sim$strcmp}}
+\index{````~strcmp@{$\sim$strcmp}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$strcmp()}{~strcmp()}}
+{\footnotesize\ttfamily In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a not a figure \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} $\sim$strcmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Type\textquotesingle{})}]{,  }\item[{\textquotesingle{}figure\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a4f75115117bfc88fb8f0b3a416894a0e}\label{specgramscope_8m_a4f75115117bfc88fb8f0b3a416894a0e}} 
+\index{specgramscope.m@{specgramscope.m}!by:@{by:}}
+\index{by:@{by:}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{by:()}{by:()}}
+{\footnotesize\ttfamily ... by\+: (\begin{DoxyParamCaption}\item[{}]{S\+P\+E\+C\+G\+R\+A\+M\+S\+C\+O\+PE }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_adf54b00849b50c18054bcf0f1ecaa69c}\label{specgramscope_8m_adf54b00849b50c18054bcf0f1ecaa69c}} 
+\index{specgramscope.m@{specgramscope.m}!f@{f}}
+\index{f@{f}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{f()}{f()}}
+{\footnotesize\ttfamily f (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_ace1fcdae520cf3b1df8c128ec4eb7313}\label{specgramscope_8m_ace1fcdae520cf3b1df8c128ec4eb7313}} 
+\index{specgramscope.m@{specgramscope.m}!feval@{feval}}
+\index{feval@{feval}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{feval()}{feval()}}
+{\footnotesize\ttfamily Number of time histories feval (\begin{DoxyParamCaption}\item[{mfilename}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}}]{,  }\item[{\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{N\+Traces}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a2c5a7ee5a3c81adcacd531e1451346d6}\label{specgramscope_8m_a2c5a7ee5a3c81adcacd531e1451346d6}} 
+\index{specgramscope.m@{specgramscope.m}!gca@{gca}}
+\index{gca@{gca}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{gca()}{gca()}}
+{\footnotesize\ttfamily id gca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}\label{specgramscope_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}} 
+\index{specgramscope.m@{specgramscope.m}!get@{get}}
+\index{get@{get}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} get (\begin{DoxyParamCaption}\item[{h}]{,  }\item[{\textquotesingle{}Type\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a06223b1212e05115f3aacbe342eb31c9}\label{specgramscope_8m_a06223b1212e05115f3aacbe342eb31c9}} 
+\index{specgramscope.m@{specgramscope.m}!isaxes@{isaxes}}
+\index{isaxes@{isaxes}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{isaxes()}{isaxes()}}
+{\footnotesize\ttfamily h isaxes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_ae632cf4f527c38e97bef7875b214727b}\label{specgramscope_8m_ae632cf4f527c38e97bef7875b214727b}} 
+\index{specgramscope.m@{specgramscope.m}!ISAXES@{ISAXES}}
+\index{ISAXES@{ISAXES}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{ISAXES()}{ISAXES()}}
+{\footnotesize\ttfamily I\+S\+A\+X\+ES (\begin{DoxyParamCaption}\item[{H}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_a0d353126d0f6b157d3655cf27349c978}\label{specgramscope_8m_a0d353126d0f6b157d3655cf27349c978}} 
+\index{specgramscope.m@{specgramscope.m}!isempty@{isempty}}
+\index{isempty@{isempty}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily Ensure that \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} has been initialized \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a9c39cf12fcdb5f19ba499d0b3f65a041}\label{specgramscope_8m_a9c39cf12fcdb5f19ba499d0b3f65a041}} 
+\index{specgramscope.m@{specgramscope.m}!ishandle@{ishandle}}
+\index{ishandle@{ishandle}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{ishandle()}{ishandle()}}
+{\footnotesize\ttfamily Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} ishandle (\begin{DoxyParamCaption}\item[{h}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a40336f492a26e16e58d1951aa8fc6d58}\label{specgramscope_8m_a40336f492a26e16e58d1951aa8fc6d58}} 
+\index{specgramscope.m@{specgramscope.m}!localInitScope@{localInitScope}}
+\index{localInitScope@{localInitScope}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{localInitScope()}{localInitScope()}}
+{\footnotesize\ttfamily local\+Init\+Scope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a896fc1a57f05a9820178d0fe3080d459}\label{specgramscope_8m_a896fc1a57f05a9820178d0fe3080d459}} 
+\index{specgramscope.m@{specgramscope.m}!localUpdateScope@{localUpdateScope}}
+\index{localUpdateScope@{localUpdateScope}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{localUpdateScope()}{localUpdateScope()}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Update the plot function local\+Update\+Scope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [new]}}
+
+\mbox{\Hypertarget{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}\label{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}} 
+\index{specgramscope.m@{specgramscope.m}!mag@{mag}}
+\index{mag@{mag}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{mag()}{mag()}}
+{\footnotesize\ttfamily mag (\begin{DoxyParamCaption}\item[{\+:}]{,  }\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a001e6e931092a5e70d6c76f1ee0f2a01}\label{specgramscope_8m_a001e6e931092a5e70d6c76f1ee0f2a01}} 
+\index{specgramscope.m@{specgramscope.m}!pause@{pause}}
+\index{pause@{pause}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily pause (\begin{DoxyParamCaption}\item[{.}]{01 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_ac0dd107b457e7de9936f0e416c439887}\label{specgramscope_8m_ac0dd107b457e7de9936f0e416c439887}} 
+\index{specgramscope.m@{specgramscope.m}!rowmajor@{rowmajor}}
+\index{rowmajor@{rowmajor}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{rowmajor()}{rowmajor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} rowmajor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_a3140f18c0c0cb76cbb2468b221c572f6}\label{specgramscope_8m_a3140f18c0c0cb76cbb2468b221c572f6}} 
+\index{specgramscope.m@{specgramscope.m}!set@{set}}
+\index{set@{set}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}}]{,  }\item[{\textquotesingle{}Current\+Axes\textquotesingle{}}]{,  }\item[{ca}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_af2f907ee778a476e650d39510350c770}\label{specgramscope_8m_af2f907ee778a476e650d39510350c770}} 
+\index{specgramscope.m@{specgramscope.m}!set@{set}}
+\index{set@{set}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}}]{,  }\item[{\textquotesingle{}Current\+Axes\textquotesingle{}}]{,  }\item[{parms.}]{h\+Axes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a9116286466c63afa531e4fca0c3c0360}\label{specgramscope_8m_a9116286466c63afa531e4fca0c3c0360}} 
+\index{specgramscope.m@{specgramscope.m}!set@{set}}
+\index{set@{set}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}{h\+Surf}}}]{,  }\item[{\textquotesingle{}Z\+Data\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}{zd}}}]{,  }\item[{\textquotesingle{}C\+Data\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}{zd}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a0fe5d2b37ca1d347a53fc32b6f2ba437}\label{specgramscope_8m_a0fe5d2b37ca1d347a53fc32b6f2ba437}} 
+\index{specgramscope.m@{specgramscope.m}!set@{set}}
+\index{set@{set}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} set (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}Y\+Lim\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}{yax2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_afb4cdbf4df8bfba0b2f885487dd25234}\label{specgramscope_8m_afb4cdbf4df8bfba0b2f885487dd25234}} 
+\index{specgramscope.m@{specgramscope.m}!set@{set}}
+\index{set@{set}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{... \textquotesingle{}X\+Lim\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Y\+Lim\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_af72ee580f8d6ac0b9929016efa6d10d6}\label{specgramscope_8m_af72ee580f8d6ac0b9929016efa6d10d6}} 
+\index{specgramscope.m@{specgramscope.m}!set@{set}}
+\index{set@{set}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{parms.}]{h\+Line,  }\item[{\{ \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{}\}}]{,  }\item[{Mag\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a3ec46693ac240e90144739f2f235c966}\label{specgramscope_8m_a3ec46693ac240e90144739f2f235c966}} 
+\index{specgramscope.m@{specgramscope.m}!setappdata@{setappdata}}
+\index{setappdata@{setappdata}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{setappdata()}{setappdata()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_acd7df8a7cb914c5aa8e8453bf3537083}{F\+FT}} Block \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}} Store parameter structure setappdata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}}}]{,  }\item[{\textquotesingle{}Specgram\+Scope\+Parameters\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_ace2f91e16c4ef8eb37a4daaff1d4abcb}\label{specgramscope_8m_ace2f91e16c4ef8eb37a4daaff1d4abcb}} 
+\index{specgramscope.m@{specgramscope.m}!setappdata@{setappdata}}
+\index{setappdata@{setappdata}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{setappdata()}{setappdata()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily setappdata (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}Specgram\+Scope\+Parameters\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_af34673aeb48582b179e717f6b0afb9e3}\label{specgramscope_8m_af34673aeb48582b179e717f6b0afb9e3}} 
+\index{specgramscope.m@{specgramscope.m}!shading@{shading}}
+\index{shading@{shading}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{shading()}{shading()}}
+{\footnotesize\ttfamily Reverse frequency axes direction shading (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}interp\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_ad06d420842590dcbe45f56f206887f09}\label{specgramscope_8m_ad06d420842590dcbe45f56f206887f09}} 
+\index{specgramscope.m@{specgramscope.m}!specgramscope@{specgramscope}}
+\index{specgramscope@{specgramscope}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{specgramscope()}{specgramscope()}}
+{\footnotesize\ttfamily Initialize \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} specgramscope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}}]{,  }\item[{\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}}}]{,  }\item[{30}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_aefbb18f948f0d8a6ce1f4823484c4dc2}\label{specgramscope_8m_aefbb18f948f0d8a6ce1f4823484c4dc2}} 
+\index{specgramscope.m@{specgramscope.m}!tree:@{tree:}}
+\index{tree:@{tree:}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{tree:()}{tree:()}}
+{\footnotesize\ttfamily id tree\+: (\begin{DoxyParamCaption}\item[{nargchk(1, 4, \mbox{\hyperlink{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}{nargin}})}]{N\+Traces\+Default }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_ac2d87d3ec49292eb9ed1875530c97563}\label{specgramscope_8m_ac2d87d3ec49292eb9ed1875530c97563}} 
+\index{specgramscope.m@{specgramscope.m}!update@{update}}
+\index{update@{update}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(varargin\{2\} update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{specgramscope_8m_af1372c517729aede374d194a16725e50}\label{specgramscope_8m_af1372c517729aede374d194a16725e50}} 
+\index{specgramscope.m@{specgramscope.m}!view@{view}}
+\index{view@{view}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily view (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_aa4e15c8ca23e4ea585e7e36c34b3480f}\label{specgramscope_8m_aa4e15c8ca23e4ea585e7e36c34b3480f}} 
+\index{specgramscope.m@{specgramscope.m}!xfft@{xfft}}
+\index{xfft@{xfft}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{xfft()}{xfft()}}
+{\footnotesize\ttfamily Avoid taking the log of xfft (\begin{DoxyParamCaption}\item[{xfft}]{ = {\ttfamily =0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a6a23656e12e992cf34021bb93ecb7282}\label{specgramscope_8m_a6a23656e12e992cf34021bb93ecb7282}} 
+\index{specgramscope.m@{specgramscope.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}History\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a59ea27491de5d78222e29e711ee88fcc}\label{specgramscope_8m_a59ea27491de5d78222e29e711ee88fcc}} 
+\index{specgramscope.m@{specgramscope.m}!yax2@{yax2}}
+\index{yax2@{yax2}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{yax2()}{yax2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}}$<$yax2(1), yax2(1)=\mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}};endif \mbox{\hyperlink{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}{maxM}}$>$ yax2 (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{specgramscope_8m_a3f65106c25794ce68cdc3dffe3355d15}\label{specgramscope_8m_a3f65106c25794ce68cdc3dffe3355d15}} 
+\index{specgramscope.m@{specgramscope.m}!zlabel@{zlabel}}
+\index{zlabel@{zlabel}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{zlabel()}{zlabel()}}
+{\footnotesize\ttfamily zlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}Magnitude(dB)\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{specgramscope_8m_a7f69560b45d2868c90647dc18e847731}\label{specgramscope_8m_a7f69560b45d2868c90647dc18e847731}} 
+\index{specgramscope.m@{specgramscope.m}!\_\_pad0\_\_@{\_\_pad0\_\_}}
+\index{\_\_pad0\_\_@{\_\_pad0\_\_}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{\_\_pad0\_\_}{\_\_pad0\_\_}}
+{\footnotesize\ttfamily Note \+\_\+\+\_\+pad0\+\_\+\+\_\+}
+
+
+
+Definition at line 254 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a2f16190a9290603ff80a7bfc5619eb24}\label{specgramscope_8m_a2f16190a9290603ff80a7bfc5619eb24}} 
+\index{specgramscope.m@{specgramscope.m}!action@{action}}
+\index{action@{action}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily else Initialize action = \textquotesingle{}init\textquotesingle{}}
+
+
+
+Definition at line 101 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}\label{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}} 
+\index{specgramscope.m@{specgramscope.m}!columns@{columns}}
+\index{columns@{columns}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily Force \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to be row major i e more rows than columns\mbox{[}nr, \mbox{\hyperlink{stripchart_8m_ac0c66875113daecd8e14505a20898488}{nc}}\mbox{]} = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}})}
+
+
+
+Definition at line 285 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a09f20bf0178b6afe1ed0c467ba75baa6}\label{specgramscope_8m_a09f20bf0178b6afe1ed0c467ba75baa6}} 
+\index{specgramscope.m@{specgramscope.m}!data@{data}}
+\index{data@{data}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ac0c66875113daecd8e14505a20898488}{nc}} nr data = varargin\{1\}}
+
+
+
+Definition at line 77 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a6872c4309c0f8c3b4d7dfab032e17d08}\label{specgramscope_8m_a6872c4309c0f8c3b4d7dfab032e17d08}} 
+\index{specgramscope.m@{specgramscope.m}!DoubleBuffer@{DoubleBuffer}}
+\index{DoubleBuffer@{DoubleBuffer}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{DoubleBuffer}{DoubleBuffer}}
+{\footnotesize\ttfamily Double\+Buffer}
+
+
+
+Definition at line 218 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}\label{specgramscope_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}} 
+\index{specgramscope.m@{specgramscope.m}!drawnow@{drawnow}}
+\index{drawnow@{drawnow}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{drawnow}{drawnow}}
+{\footnotesize\ttfamily drawnow}
+
+
+
+Definition at line 51 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a1e96cceca2fa0a7b32967dca2c6efe52}\label{specgramscope_8m_a1e96cceca2fa0a7b32967dca2c6efe52}} 
+\index{specgramscope.m@{specgramscope.m}!end@{end}}
+\index{end@{end}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily new \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} goes \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} right end = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}})}
+
+
+
+Definition at line 52 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a6545487468b9d92b67cfdff434956053}\label{specgramscope_8m_a6545487468b9d92b67cfdff434956053}} 
+\index{specgramscope.m@{specgramscope.m}!Expand@{Expand}}
+\index{Expand@{Expand}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{Expand}{Expand}}
+{\footnotesize\ttfamily Dynamically modify Magnitude axis as we go Expand}
+
+
+
+Definition at line 226 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a740d4b83d26e4df9268e1e58c4cdf82c}\label{specgramscope_8m_a740d4b83d26e4df9268e1e58c4cdf82c}} 
+\index{specgramscope.m@{specgramscope.m}!f@{f}}
+\index{f@{f}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Initialize the Scope function \mbox{\hyperlink{stripchart_8m_a40336f492a26e16e58d1951aa8fc6d58}{local\+Init\+Scope}}(\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) Set axes f = f(\+:)}
+
+
+
+Definition at line 178 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}\label{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}} 
+\index{specgramscope.m@{specgramscope.m}!fo@{fo}}
+\index{fo@{fo}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{fo}{fo}}
+{\footnotesize\ttfamily fo = logspace(3.\+5,3.\+7)}
+
+
+
+Definition at line 40 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a68700005648f933c9e74a0d2c9390025}\label{specgramscope_8m_a68700005648f933c9e74a0d2c9390025}} 
+\index{specgramscope.m@{specgramscope.m}!Fs@{Fs}}
+\index{Fs@{Fs}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{Fs}{Fs}}
+{\footnotesize\ttfamily Dole out the work switch \mbox{\hyperlink{stripchart_8m_a2f16190a9290603ff80a7bfc5619eb24}{action}} case init Initialize Build structure to internally pass information \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} Fs = 16384}
+
+
+
+Definition at line 37 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}\label{specgramscope_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}} 
+\index{specgramscope.m@{specgramscope.m}!hAxes@{hAxes}}
+\index{hAxes@{hAxes}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{hAxes}{hAxes}}
+{\footnotesize\ttfamily Number of \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} in plot \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} h\+Axes = varargin\{1\}}
+
+
+
+Definition at line 79 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ac99d95a2e587a24c50596373324c35cb}\label{specgramscope_8m_ac99d95a2e587a24c50596373324c35cb}} 
+\index{specgramscope.m@{specgramscope.m}!hFig@{hFig}}
+\index{hFig@{hFig}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{hFig}{hFig}}
+{\footnotesize\ttfamily Get handle to the figure Turn doublebuffer \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} to eliminate flickering h\+Fig = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Parent\textquotesingle{})}
+
+
+
+Definition at line 195 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ae1997a452372d4c58d7f347a7630f9ac}\label{specgramscope_8m_ae1997a452372d4c58d7f347a7630f9ac}} 
+\index{specgramscope.m@{specgramscope.m}!HSurf@{HSurf}}
+\index{HSurf@{HSurf}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{HSurf}{HSurf}}
+{\footnotesize\ttfamily H\+Surf = findobj(H\+AX,\textquotesingle{}Tag\textquotesingle{},\textquotesingle{}Specgram\+Scope\textquotesingle{})}
+
+
+
+Definition at line 33 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}\label{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}} 
+\index{specgramscope.m@{specgramscope.m}!hSurf@{hSurf}}
+\index{hSurf@{hSurf}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{hSurf}{hSurf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} h\+Surf}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= surf(\mbox{\hyperlink{specgramscope_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}.hAxes,X,Y,NaN*ones(length(\mbox{\hyperlink{specgramscope_8m_a740d4b83d26e4df9268e1e58c4cdf82c}{f}}),\mbox{\hyperlink{specgramscope_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}.NTraces), ...}
+\DoxyCodeLine{    \textcolor{stringliteral}{'Tag'},\textcolor{stringliteral}{'SpecgramScope'})}
+
+\end{DoxyCode}
+
+
+Definition at line 182 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a0b8984d88ac789b523c0444f59fb3c83}\label{specgramscope_8m_a0b8984d88ac789b523c0444f59fb3c83}} 
+\index{specgramscope.m@{specgramscope.m}!mag@{mag}}
+\index{mag@{mag}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{mag}{mag}}
+{\footnotesize\ttfamily Compute dB mag = localfft(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}},\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}})}
+
+
+
+Definition at line 224 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a87dec4da73ea38c865a39dc1c0fa40cb}\label{specgramscope_8m_a87dec4da73ea38c865a39dc1c0fa40cb}} 
+\index{specgramscope.m@{specgramscope.m}!magnitude@{magnitude}}
+\index{magnitude@{magnitude}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{magnitude}{magnitude}}
+{\footnotesize\ttfamily Compute magnitude}
+
+
+
+Definition at line 262 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a3d8d14f058fb2ff87c5f38ae579ff8c9}\label{specgramscope_8m_a3d8d14f058fb2ff87c5f38ae579ff8c9}} 
+\index{specgramscope.m@{specgramscope.m}!maxM@{maxM}}
+\index{maxM@{maxM}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{maxM}{maxM}}
+{\footnotesize\ttfamily Dynamically modify Magnitude axis as we go but don \mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} shrink maxM =max(\mbox{\hyperlink{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}{mag}}(\+:))}
+
+
+
+Definition at line 227 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ad2005c9f7136760615b695ffd366da03}\label{specgramscope_8m_ad2005c9f7136760615b695ffd366da03}} 
+\index{specgramscope.m@{specgramscope.m}!minM@{minM}}
+\index{minM@{minM}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{minM}{minM}}
+{\footnotesize\ttfamily minM =min(\mbox{\hyperlink{specgramscope_8m_ae05a8ed0358dce7ed7f58e2e4b353a01}{mag}}(\+:))}
+
+
+
+Definition at line 228 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_aedfaba280295cdeab6b465d48d5af7d9}\label{specgramscope_8m_aedfaba280295cdeab6b465d48d5af7d9}} 
+\index{specgramscope.m@{specgramscope.m}!mode@{mode}}
+\index{mode@{mode}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily else Expert mode}
+
+
+
+Definition at line 114 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a388ea4a215114137ba759ef0aa02ab6b}\label{specgramscope_8m_a388ea4a215114137ba759ef0aa02ab6b}} 
+\index{specgramscope.m@{specgramscope.m}!nargin@{nargin}}
+\index{nargin@{nargin}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{nargin}{nargin}}
+{\footnotesize\ttfamily Number of samples across axes \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} nargin}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{==1                \% Use current axes}
+\DoxyCodeLine{        \mbox{\hyperlink{specgramscope_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{hAxes}} = \mbox{\hyperlink{specgramscope_8m_a2c5a7ee5a3c81adcacd531e1451346d6}{gca}}}
+
+\end{DoxyCode}
+
+
+Definition at line 75 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ac0c66875113daecd8e14505a20898488}\label{specgramscope_8m_ac0c66875113daecd8e14505a20898488}} 
+\index{specgramscope.m@{specgramscope.m}!nc@{nc}}
+\index{nc@{nc}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{nc}{nc}}
+{\footnotesize\ttfamily Number of \mbox{\hyperlink{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}{columns}} \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} nc = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}},2)}
+
+
+
+Definition at line 158 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}\label{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}} 
+\index{specgramscope.m@{specgramscope.m}!Nfft@{Nfft}}
+\index{Nfft@{Nfft}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{Nfft}{Nfft}}
+{\footnotesize\ttfamily Handle to axes \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} Nfft = 2048}
+
+
+
+Definition at line 38 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a96c4b1f5c603bf558bdefd9684725caa}\label{specgramscope_8m_a96c4b1f5c603bf558bdefd9684725caa}} 
+\index{specgramscope.m@{specgramscope.m}!NTraces@{NTraces}}
+\index{NTraces@{NTraces}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{NTraces}{NTraces}}
+{\footnotesize\ttfamily Sample Rate \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} N\+Traces = N\+Traces\+Default}
+
+
+
+Definition at line 92 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}\label{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}} 
+\index{specgramscope.m@{specgramscope.m}!on@{on}}
+\index{on@{on}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily on}
+
+
+
+Definition at line 218 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a27703d15e42438099575fe8045dfb639}\label{specgramscope_8m_a27703d15e42438099575fe8045dfb639}} 
+\index{specgramscope.m@{specgramscope.m}!panel@{panel}}
+\index{panel@{panel}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{panel}{panel}}
+{\footnotesize\ttfamily In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a panel}
+
+
+
+Definition at line 197 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a0676dc009d7afc3c1b857a4758b4eec0}\label{specgramscope_8m_a0676dc009d7afc3c1b857a4758b4eec0}} 
+\index{specgramscope.m@{specgramscope.m}!parms@{parms}}
+\index{parms@{parms}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{parms}{parms}}
+{\footnotesize\ttfamily Requested Axes parms = getappdata(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}},\textquotesingle{}Specgram\+Scope\+Parameters\textquotesingle{})}
+
+
+
+Definition at line 84 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_acd2a86897c361b40496b22c9d1e65504}\label{specgramscope_8m_acd2a86897c361b40496b22c9d1e65504}} 
+\index{specgramscope.m@{specgramscope.m}!R14@{R14}}
+\index{R14@{R14}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{R14}{R14}}
+{\footnotesize\ttfamily In R14}
+
+
+
+Definition at line 197 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a247637008a7d22a04f4f44ac0e58e96f}\label{specgramscope_8m_a247637008a7d22a04f4f44ac0e58e96f}} 
+\index{specgramscope.m@{specgramscope.m}!reverse@{reverse}}
+\index{reverse@{reverse}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{reverse}{reverse}}
+{\footnotesize\ttfamily reverse}
+
+
+
+Definition at line 188 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a14b3b0b5d9d71b5eae323da639e60d28}\label{specgramscope_8m_a14b3b0b5d9d71b5eae323da639e60d28}} 
+\index{specgramscope.m@{specgramscope.m}!s1@{s1}}
+\index{s1@{s1}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{s1}{s1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_adabd68f3c955f599822cd5fba106e10f}{Range}} of fundamental frequencies s1 = sin(2$\ast$pi$\ast$\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}$\ast$\mbox{\hyperlink{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}{fo}}) + .\+1$\ast$rand(\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}},length(\mbox{\hyperlink{specgramscope_8m_ade2d6d3888b45f2f3b51afefc8d15e45}{fo}}))}
+
+
+
+Definition at line 41 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ac919aea9c9c7b58a17d376c3f3ac4b7d}\label{specgramscope_8m_ac919aea9c9c7b58a17d376c3f3ac4b7d}} 
+\index{specgramscope.m@{specgramscope.m}!scalar@{scalar}}
+\index{scalar@{scalar}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{scalar}{scalar}}
+{\footnotesize\ttfamily Initialize or \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} If first or second input argument is not a scalar}
+
+
+
+Definition at line 69 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ae58574b1de49c92bd33773f035c722f7}\label{specgramscope_8m_ae58574b1de49c92bd33773f035c722f7}} 
+\index{specgramscope.m@{specgramscope.m}!scope@{scope}}
+\index{scope@{scope}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily If the user has not initialized this scope}
+
+
+
+Definition at line 83 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a5a62025618c9770c137299cc8d4f5263}\label{specgramscope_8m_a5a62025618c9770c137299cc8d4f5263}} 
+\index{specgramscope.m@{specgramscope.m}!surface@{surface}}
+\index{surface@{surface}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily Add surface\mbox{[}X, Y\mbox{]} = meshgrid(-\/\mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{parms.\+N\+Traces}}+1\+:0,\mbox{\hyperlink{specgramscope_8m_adf54b00849b50c18054bcf0f1ecaa69c}{f}})}
+
+
+
+Definition at line 181 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_aaccc9105df5383111407fd5b41255e23}\label{specgramscope_8m_aaccc9105df5383111407fd5b41255e23}} 
+\index{specgramscope.m@{specgramscope.m}!t@{t}}
+\index{t@{t}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily t = (0\+:1\+:\mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}}-\/1)\textquotesingle{}/\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}}
+
+
+
+Definition at line 39 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_aeed64c08cecf4522650c2fe59a716f14}\label{specgramscope_8m_aeed64c08cecf4522650c2fe59a716f14}} 
+\index{specgramscope.m@{specgramscope.m}!varargout@{varargout}}
+\index{varargout@{varargout}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{varargout}{varargout}}
+{\footnotesize\ttfamily Return appropriate output argument \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} nargout varargout}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{specgramscope_8m_ad06d420842590dcbe45f56f206887f09}{specgramscope}}(varargin)}
+\DoxyCodeLine{\% SPECGRAMSCOPE   Live updating spectrogram display}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% \mbox{\hyperlink{stripchart_8m_a82d84a8c2ca90644f29164697a436809}{STEP}} 1: Initialize the \mbox{\hyperlink{specgramscope_8m_ae58574b1de49c92bd33773f035c722f7}{scope}}}
+\DoxyCodeLine{\% SPECGRAMSCOPE(FS,NFFT) initializes a spectrogram \mbox{\hyperlink{specgramscope_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} in the current axes.}
+\DoxyCodeLine{\% This spectrogram \mbox{\hyperlink{specgramscope_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} will compute and displays the NFFT-\/point \mbox{\hyperlink{stripchart_8m_acd7df8a7cb914c5aa8e8453bf3537083}{FFT}} of a vector }
+\DoxyCodeLine{\% signal with sample rate FS Hz.  It will show the last 10 FFTs}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% \mbox{\hyperlink{stripchart_8m_a82d84a8c2ca90644f29164697a436809}{STEP}} 2: Update the scope}
+\DoxyCodeLine{\% SPECGRAMSCOPE(S) updates the spectrogram scope in the current axes with the}
+\DoxyCodeLine{\% FFT of vector S.  The scope should first be initialized as above with}
+\DoxyCodeLine{\% sample rate and FFT length.  If not}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a5e6cd200a00232561cd56002ff9b078e}\label{specgramscope_8m_a5e6cd200a00232561cd56002ff9b078e}} 
+\index{specgramscope.m@{specgramscope.m}!XData@{XData}}
+\index{XData@{XData}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{XData}{XData}}
+{\footnotesize\ttfamily X\+Data}
+
+
+
+Definition at line 246 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_ac7209ef7e667388bbe9c884fd50509b8}\label{specgramscope_8m_ac7209ef7e667388bbe9c884fd50509b8}} 
+\index{specgramscope.m@{specgramscope.m}!yax2@{yax2}}
+\index{yax2@{yax2}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{yax2}{yax2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}}$<$ yax2(1), yax2(1)=min\+Mendif \mbox{\hyperlink{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}{maxM}} $>$ yax2 =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Y\+Lim\textquotesingle{})}
+
+
+
+Definition at line 229 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a578ab01a530a95b416b30b56af883774}\label{specgramscope_8m_a578ab01a530a95b416b30b56af883774}} 
+\index{specgramscope.m@{specgramscope.m}!YData@{YData}}
+\index{YData@{YData}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{YData}{YData}}
+{\footnotesize\ttfamily Y\+Data}
+
+
+
+Definition at line 246 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a313101b5d9715f306e9b0e9d5784f05b}\label{specgramscope_8m_a313101b5d9715f306e9b0e9d5784f05b}} 
+\index{specgramscope.m@{specgramscope.m}!YDir@{YDir}}
+\index{YDir@{YDir}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{YDir}{YDir}}
+{\footnotesize\ttfamily Y\+Dir}
+
+
+
+Definition at line 187 of file specgramscope.\+m.
+
+\mbox{\Hypertarget{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}\label{specgramscope_8m_a1c58d9beb912fcd8a82cd03ced09211d}} 
+\index{specgramscope.m@{specgramscope.m}!zd@{zd}}
+\index{zd@{zd}!specgramscope.m@{specgramscope.m}}
+\doxysubsubsection{\texorpdfstring{zd}{zd}}
+{\footnotesize\ttfamily zd = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{specgramscope_8m_ab4244212be119ef7ca14659ba16b4570}{h\+Surf}},\textquotesingle{}Z\+Data\textquotesingle{})}
+
+
+
+Definition at line 241 of file specgramscope.\+m.
+

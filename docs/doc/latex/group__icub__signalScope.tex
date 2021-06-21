@@ -1,0 +1,97 @@
+\hypertarget{group__icub__signalScope}{}\doxysection{signal\+Scope}
+\label{group__icub__signalScope}\index{signalScope@{signalScope}}
+Collaboration diagram for signal\+Scope\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{group__icub__signalScope}
+\end{center}
+\end{figure}
+A M\+A\+T\+L\+AB scope which displays signal acquired form a Y\+A\+RP port along with its F\+FT.
+
+Copyright (C) 2010 Robot\+Cub Consortium
+
+Author\+: Ugo Pattacini
+
+Copy\+Policy\+: Released under the terms of the G\+NU G\+PL v2.\+0.\hypertarget{group__icub__signalScope_intro_sec}{}\doxysubsection{Description}\label{group__icub__signalScope_intro_sec}
+A M\+A\+T\+L\+AB script launched by this module displays data acquired from Y\+A\+RP port. Two type of plot are provided\+: the stripchart and the spectrogram.
+
+The Scope will look like this\+: 
+
+Installation notes\+:
+
+Within C\+Make please assign the following two paths (example for Windows is given)\+:
+
+
+\begin{DoxyItemize}
+\item M\+A\+T\+L\+A\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/extern/include
+\item M\+A\+T\+L\+A\+B\+\_\+\+L\+I\+B\+R\+A\+R\+I\+E\+S\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/extern/lib/win32/microsoft
+\end{DoxyItemize}
+
+For a Linux platform something like the following should hold\+:
+
+
+\begin{DoxyItemize}
+\item M\+A\+T\+L\+A\+B\+\_\+\+I\+N\+C\+L\+U\+D\+E\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/extern/include
+\item M\+A\+T\+L\+A\+B\+\_\+\+L\+I\+B\+R\+A\+R\+I\+E\+S\+\_\+\+D\+I\+RS =$>$ \$\{M\+A\+T\+L\+A\+B\+\_\+\+R\+O\+OT\}/bin/glnxa64
+\end{DoxyItemize}
+
+For Windows users only\+: if you did not register M\+A\+T\+L\+AB as C\+OM server during installation, on the command line you can issue the following\+: matlab /regserver
+
+For Linux users only\+: make sure that {\itshape csh} shell is installed and M\+A\+T\+L\+AB is in the path.\hypertarget{group__icub__signalScope_lib_sec}{}\doxysubsection{Libraries}\label{group__icub__signalScope_lib_sec}
+
+\begin{DoxyItemize}
+\item Y\+A\+RP libraries.
+\item M\+A\+T\+L\+AB installed.
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_parameters_sec}{}\doxysubsection{Parameters}\label{group__icub__signalScope_parameters_sec}
+--name {\itshape name} 
+\begin{DoxyItemize}
+\item The parameter {\itshape name} identifies the module\textquotesingle{}s name; if not specified /signal\+Scope is assumed.
+\end{DoxyItemize}
+
+--channel {\itshape chn} 
+\begin{DoxyItemize}
+\item The parameter {\itshape chn} identifies the vector element to be acquired (first element by default, i.\+e. 1).
+\end{DoxyItemize}
+
+--Fs {\itshape Fs} 
+\begin{DoxyItemize}
+\item The parameter {\itshape Fs} specifies the sample rate in Hz (50 Hz by default).
+\end{DoxyItemize}
+
+--width {\itshape w} 
+\begin{DoxyItemize}
+\item The parameter {\itshape w} specifies the time window in seconds to be displayed (10 s by default).
+\end{DoxyItemize}
+
+--Nfft {\itshape N} 
+\begin{DoxyItemize}
+\item The parameter {\itshape N} specifies the F\+FT length (1024 by default). Note that the update period of the spectrogram is given by Nfft/\+Fs seconds.
+\end{DoxyItemize}
+
+--visibility {\itshape switch} 
+\begin{DoxyItemize}
+\item The parameter {\itshape switch} set M\+A\+T\+L\+AB session visibility on/off (off by default).
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_portsa_sec}{}\doxysubsection{Ports Accessed}\label{group__icub__signalScope_portsa_sec}
+The ports the module is connected to.\hypertarget{group__icub__signalScope_portsc_sec}{}\doxysubsection{Ports Created}\label{group__icub__signalScope_portsc_sec}
+
+\begin{DoxyItemize}
+\item {\itshape } $<$name$>$\+:i (e.\+g. /signal\+Scope\+:i) receives the input data vector.
+\item {\itshape } $<$name$>$/rpc remote procedure call port useful to shut down the module remotely by sending to this port the \textquotesingle{}quit\textquotesingle{} command.
+\end{DoxyItemize}\hypertarget{group__icub__signalScope_in_files_sec}{}\doxysubsection{Input Data Files}\label{group__icub__signalScope_in_files_sec}
+None.\hypertarget{group__icub__signalScope_out_data_sec}{}\doxysubsection{Output Data Files}\label{group__icub__signalScope_out_data_sec}
+None.\hypertarget{group__icub__signalScope_conf_file_sec}{}\doxysubsection{Configuration Files}\label{group__icub__signalScope_conf_file_sec}
+None.\hypertarget{group__icub__signalScope_tested_os_sec}{}\doxysubsection{Tested OS}\label{group__icub__signalScope_tested_os_sec}
+Windows and Linux.\hypertarget{group__icub__signalScope_example_sec}{}\doxysubsection{Example}\label{group__icub__signalScope_example_sec}
+Try with the following\+:
+
+
+\begin{DoxyItemize}
+\item signal\+Scope --Fs 100
+\item yarp connect /icub/right\+\_\+arm/state\+:o /signal\+Scope\+:i 
+\end{DoxyItemize}
+
+\begin{DoxyAuthor}{Author}
+Ugo Pattacini 
+\end{DoxyAuthor}

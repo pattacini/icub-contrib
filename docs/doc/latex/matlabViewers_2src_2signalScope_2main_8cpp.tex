@@ -1,0 +1,98 @@
+\hypertarget{matlabViewers_2src_2signalScope_2main_8cpp}{}\doxysection{/home/runner/work/icub-\/contrib/icub-\/contrib/matlab\+Viewers/src/signal\+Scope/main.cpp File Reference}
+\label{matlabViewers_2src_2signalScope_2main_8cpp}\index{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/src/signalScope/main.cpp@{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/src/signalScope/main.cpp}}
+{\ttfamily \#include $<$yarp/os/\+Network.\+h$>$}\newline
+{\ttfamily \#include $<$yarp/os/\+R\+F\+Module.\+h$>$}\newline
+{\ttfamily \#include $<$yarp/os/\+Rate\+Thread.\+h$>$}\newline
+{\ttfamily \#include $<$yarp/os/\+Time.\+h$>$}\newline
+{\ttfamily \#include $<$yarp/os/\+Buffered\+Port.\+h$>$}\newline
+{\ttfamily \#include $<$yarp/sig/\+Vector.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include \char`\"{}engine.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matlabViewers_2src_2signalScope_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrxPort}{rx\+Port}}
+\item 
+class \mbox{\hyperlink{classGatewayThread}{Gateway\+Thread}}
+\item 
+class \mbox{\hyperlink{classGatewayModule}{Gateway\+Module}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{matlabViewers_2src_2signalScope_2main_8cpp_a440cce71145c0252ce66953c31dbe301}{check\+Scope}} (Engine $\ast$ep)
+\item 
+void \mbox{\hyperlink{matlabViewers_2src_2signalScope_2main_8cpp_a9f72832109b2c6e8076da9eb660196d0}{open\+Scope}} (Engine $\ast$ep, int \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}, int width, int \mbox{\hyperlink{specgramscope_8m_a0ef95a89601f4dfa446e9914887e8249}{Nfft}})
+\item 
+void \mbox{\hyperlink{matlabViewers_2src_2signalScope_2main_8cpp_aaa8d2c46675fc5e4a80f6ffab01293eb}{update\+Strip}} (Engine $\ast$ep, const string \&val)
+\item 
+void \mbox{\hyperlink{matlabViewers_2src_2signalScope_2main_8cpp_a03ec49f6848cec3a40d21841909dc9d8}{update\+Spectr}} (Engine $\ast$ep, const string \&val)
+\item 
+int \mbox{\hyperlink{matlabViewers_2src_2signalScope_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{matlabViewers_2src_2signalScope_2main_8cpp_a440cce71145c0252ce66953c31dbe301}\label{matlabViewers_2src_2signalScope_2main_8cpp_a440cce71145c0252ce66953c31dbe301}} 
+\index{main.cpp@{main.cpp}!checkScope@{checkScope}}
+\index{checkScope@{checkScope}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{checkScope()}{checkScope()}}
+{\footnotesize\ttfamily bool check\+Scope (\begin{DoxyParamCaption}\item[{Engine $\ast$}]{ep }\end{DoxyParamCaption})}
+
+
+
+Definition at line 409 of file main.\+cpp.
+
+\mbox{\Hypertarget{matlabViewers_2src_2signalScope_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{matlabViewers_2src_2signalScope_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 465 of file main.\+cpp.
+
+\mbox{\Hypertarget{matlabViewers_2src_2signalScope_2main_8cpp_a9f72832109b2c6e8076da9eb660196d0}\label{matlabViewers_2src_2signalScope_2main_8cpp_a9f72832109b2c6e8076da9eb660196d0}} 
+\index{main.cpp@{main.cpp}!openScope@{openScope}}
+\index{openScope@{openScope}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{openScope()}{openScope()}}
+{\footnotesize\ttfamily void open\+Scope (\begin{DoxyParamCaption}\item[{Engine $\ast$}]{ep,  }\item[{int}]{Fs,  }\item[{int}]{width,  }\item[{int}]{Nfft }\end{DoxyParamCaption})}
+
+
+
+Definition at line 429 of file main.\+cpp.
+
+\mbox{\Hypertarget{matlabViewers_2src_2signalScope_2main_8cpp_a03ec49f6848cec3a40d21841909dc9d8}\label{matlabViewers_2src_2signalScope_2main_8cpp_a03ec49f6848cec3a40d21841909dc9d8}} 
+\index{main.cpp@{main.cpp}!updateSpectr@{updateSpectr}}
+\index{updateSpectr@{updateSpectr}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{updateSpectr()}{updateSpectr()}}
+{\footnotesize\ttfamily void update\+Spectr (\begin{DoxyParamCaption}\item[{Engine $\ast$}]{ep,  }\item[{const string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line 456 of file main.\+cpp.
+
+\mbox{\Hypertarget{matlabViewers_2src_2signalScope_2main_8cpp_aaa8d2c46675fc5e4a80f6ffab01293eb}\label{matlabViewers_2src_2signalScope_2main_8cpp_aaa8d2c46675fc5e4a80f6ffab01293eb}} 
+\index{main.cpp@{main.cpp}!updateStrip@{updateStrip}}
+\index{updateStrip@{updateStrip}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{updateStrip()}{updateStrip()}}
+{\footnotesize\ttfamily void update\+Strip (\begin{DoxyParamCaption}\item[{Engine $\ast$}]{ep,  }\item[{const string \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Definition at line 448 of file main.\+cpp.
+

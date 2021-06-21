@@ -1,0 +1,894 @@
+\hypertarget{stripchart_8m}{}\doxysection{/home/runner/work/icub-\/contrib/icub-\/contrib/matlab\+Viewers/app/scripts/stripchart.m File Reference}
+\label{stripchart_8m}\index{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/stripchart.m@{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/stripchart.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} you initialize the stripchart with basic information needed for the \mbox{\hyperlink{stripchart_8m_acd7df8a7cb914c5aa8e8453bf3537083}{F\+FT}} (sample rate, axis width, number of \mbox{\hyperlink{stripchart_8m_a2e01a503b8cf46e1866495ce4fc5855b}{traces}}). \% After that
+\item 
+function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use S\+T\+R\+I\+P\+C\+H\+A\+RT you initialize the stripchart with basic information needed for the all you need to do is pass your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} to \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} This documentation starts with the simplest syntax for the two then provides a few more advanced options A\+X\+E\+S\+W\+I\+D\+TH initializes a stripchart in the current axes This stripchart will display incoming \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} with a sample rate of FS Hz The stripchart will display the most recent A\+X\+E\+S\+W\+I\+D\+TH seconds of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} the sample rate will be Hz and the axes width will match the duration of S \mbox{\hyperlink{stripchart_8m_affe27dd61356775ed297b07910ae545e}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} (FS, A\+X\+E\+S\+W\+I\+D\+TH, N\+T\+R\+A\+C\+ES) initializes a stripchart in the \% current axes with N\+T\+R\+A\+C\+ES traces. \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}} trace is a single \mbox{\hyperlink{stripchart_8m_a1edbf199a3cc3380154136cefc6c4f49}{line}} \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}}
+\item 
+typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple \mbox{\hyperlink{stripchart_8m_a8b32a206aa35b540504eed7593ea1bca}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} (S) must specify a matrix S with shorter dimension length
+\item 
+typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple \mbox{\hyperlink{stripchart_8m_a4b52309bdc7975ab41316eb3ce62a076}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} (H\+AX, FS, A\+X\+E\+S\+W\+I\+D\+TH) initializes axes H\+AX as a stripchart
+\item 
+typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple and \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} (H\+AX, S) updates axes H\+AX with vector S. \% \% H\+AX
+\item 
+\mbox{\hyperlink{stripchart_8m_a6a6d0f079f3d0b06d11c4b0ba737ae9f}{A}} (1\+:\mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}}/2)
+\item 
+\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}} (end\+:-\/1\+:\mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}}/2+1)
+\item 
+Axes \mbox{\hyperlink{stripchart_8m_ac04676032ca393c7f75193e13dc936f5}{Width}} (\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}) \% stripchart(\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}
+\item 
+\mbox{\hyperlink{stripchart_8m_ab1c248dcc260f415ee60ff11075309e9}{pause}} (.\+05)
+\item 
+Original version of Strip\+Chart written \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Bob Bemis This modification was developed \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Scott Hirsch to match syntax of Spectrum\+Scope Parse input arguments Decision or use G\+CA \mbox{\hyperlink{stripchart_8m_a7af2ae678031eee6e6ef499495f065b4}{error}} (nargchk(1, 4, \mbox{\hyperlink{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}{nargin}})) \%\% Initialize or \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}}? \% If first or second input argument is not a \mbox{\hyperlink{specgramscope_8m_ac919aea9c9c7b58a17d376c3f3ac4b7d}{scalar}}
+\item 
+varargin\{2\} \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} ()
+\item 
+Ensure that \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} has been initialized \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_a0d353126d0f6b157d3655cf27349c978}{isempty}} (\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) \% Use default values \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a0752bb8d698f271be427559f25716fc7}{feval}} (mfilename, \mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}}, \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}, \mbox{\hyperlink{stripchart_8m_a33a1de8b89c72db9d9f9506a2f779de6}{Axes\+Width}}, \mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{N\+Traces}})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_a696a16cc11eddfef8f3d05eafc7ae5d4}{$\sim$isaxes}} (varargin\{1\}) \% Easy \mbox{\hyperlink{stripchart_8m_aedfaba280295cdeab6b465d48d5af7d9}{mode}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a40336f492a26e16e58d1951aa8fc6d58}{local\+Init\+Scope}} (\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) \% Initialize \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} case \textquotesingle{}\mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}}\textquotesingle{} \% Update \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a6de7de56cb478d333a8131d5c1632bda}{local\+Update\+Scope}} (\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}, \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) \% Update the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+Add \mbox{\hyperlink{stripchart_8m_a1edbf199a3cc3380154136cefc6c4f49}{line}} (\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}) parms.\+h\+Line
+\item 
+\mbox{\hyperlink{stripchart_8m_ad1977393c6ca3b81652c51d1b8cd8733}{set}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}X\+Lim\textquotesingle{},\mbox{[}0 \mbox{\hyperlink{stripchart_8m_a33a1de8b89c72db9d9f9506a2f779de6}{parms.\+Axes\+Width}}\mbox{]})
+\item 
+\mbox{\hyperlink{stripchart_8m_aa769ee44e5da216d5ed299d9b4e73c87}{setappdata}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}\mbox{\hyperlink{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}{Strip\+Chart\+Parameters}}\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}})
+\item 
+In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a not a figure \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_a77f1fe0983c8e33b2d600e4ccdde48e6}{$\sim$strcmp}} (\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Type\textquotesingle{}), \textquotesingle{}figure\textquotesingle{}) \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_adabd68f3c955f599822cd5fba106e10f}{Range}} (\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}})$\sim$
+\item 
+\mbox{\hyperlink{stripchart_8m_aaede10fab5238bcc9b9d60917a025b16}{set}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}X\+Tick\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}{Ticks}}) \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} set(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}
+\item 
+id \mbox{\hyperlink{stripchart_8m_a2c5a7ee5a3c81adcacd531e1451346d6}{gca}} ()
+\item 
+\mbox{\hyperlink{stripchart_8m_af2f907ee778a476e650d39510350c770}{set}} (\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Current\+Axes\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}})
+\item 
+\mbox{\hyperlink{stripchart_8m_ac76b694b78893ca0231ddfc99c4707e7}{xlabel}} (sprintf(\textquotesingle{}\%g\%\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}/div\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}}, \textquotesingle{}\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}\textquotesingle{})) \mbox{\hyperlink{iKinGazeView_8m_abfbc59a5f2d56b17236971364f6a94ec}{ylabel}}(\textquotesingle{}Amplitude\textquotesingle{})
+\item 
+\mbox{\hyperlink{stripchart_8m_a3140f18c0c0cb76cbb2468b221c572f6}{set}} (\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Current\+Axes\textquotesingle{}, ca)
+\item 
+axis manual Turn doublebuffer \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} to eliminate flickering \mbox{\hyperlink{stripchart_8m_a02f3fcbb99fed47f1a4215c260ea561a}{set}} (\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a6872c4309c0f8c3b4d7dfab032e17d08}{Double\+Buffer}}\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}}$<$ yax2(1), yax2(1)=\mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}};endif \mbox{\hyperlink{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}{maxM}} $>$ \mbox{\hyperlink{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}{yax2}} (2)
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{stripchart_8m_a2c2f4aaa5ccaf4084487d4e05f50539b}{set}} (\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}}, \textquotesingle{}Y\+Lim\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}{yax2}}) h\+Line
+\item 
+shift old \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} left \mbox{\hyperlink{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}{y\+Data}} (\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/new\+Pts+1\+:\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}})
+\item 
+new \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} goes \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} right \mbox{\hyperlink{stripchart_8m_a6f99a24227ddb000f9e0d7dc460c646b}{set}} (h\+Line, \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}{y\+Data}}) \% \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} plot else for \mbox{\hyperlink{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}
+\item 
+\mbox{\hyperlink{stripchart_8m_ad29afc63dbb415454ab0e485760792d7}{set}} (h\+Line,\{ \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{}\}, \mbox{\hyperlink{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}{y\+Data}}) \% \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} plot \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+H \mbox{\hyperlink{stripchart_8m_a1489018df97d501325262eb1a18ebc1f}{truefalse}} ()
+\item 
+Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_a9c39cf12fcdb5f19ba499d0b3f65a041}{ishandle}} (h) \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} strcmp(\textquotesingle{}axes\textquotesingle{}
+\item 
+Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}} (h, \textquotesingle{}Type\textquotesingle{})) \mbox{\hyperlink{stripchart_8m_a1489018df97d501325262eb1a18ebc1f}{truefalse}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+function \mbox{\hyperlink{stripchart_8m_aeed64c08cecf4522650c2fe59a716f14}{varargout}}
+\item 
+function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} \mbox{\hyperlink{stripchart_8m_aedc647acfab43b8d1c95fe5fdffc3b65}{First}}
+\item 
+function and it updates the display It takes steps to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} you initialize the stripchart with basic information needed for the all you need to do is pass your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} to \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} This documentation starts with the simplest syntax for the two \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}}
+\item 
+function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} you initialize the stripchart with basic information needed for the all you need to do is pass your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} to \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} This documentation starts with the simplest syntax for the two then provides a few more advanced options \mbox{\hyperlink{stripchart_8m_a82d84a8c2ca90644f29164697a436809}{S\+T\+EP}}
+\item 
+typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple \mbox{\hyperlink{stripchart_8m_a2e01a503b8cf46e1866495ce4fc5855b}{traces}}
+\item 
+typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple and and want to be able to easily reference the axes for updates The lines created \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} all have the tag Strip\+Chart If you would like to manually modify the properties of these \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}}
+\item 
+typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple and and want to be able to easily reference the axes for updates The \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} created by \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} all have the tag Strip\+Chart If you would like to manually modify the properties of these their handles can be found \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}}
+\item 
+\mbox{\hyperlink{stripchart_8m_ac95529e3e4798539d9463073dd7f2181}{H\+L\+I\+NE}} = findobj(H\+AX,\textquotesingle{}Tag\textquotesingle{},\textquotesingle{}Strip\+Chart\textquotesingle{})
+\item 
+Example Create \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}} = 1000
+\item 
+Sample rate \mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}} = \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}$\ast$3
+\item 
+Make seconds worth of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} = (0\+:1\+:\mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}}-\/1)\textquotesingle{}/\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} = sqrt(\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}})
+\item 
+\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} = A.$\ast$sin(2$\ast$pi$\ast$\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}$\ast$1)
+\item 
+Initialize \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} clf \mbox{\hyperlink{stripchart_8m_a33a1de8b89c72db9d9f9506a2f779de6}{Axes\+Width}} = 2
+\item 
+Update \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} \mbox{\hyperlink{stripchart_8m_a01df226571af6327dfa53eaedf0845e0}{N}} = 50
+\item 
+\mbox{\hyperlink{stripchart_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}} = 1\+:N\+:\+Ns
+\item 
+for \mbox{\hyperlink{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}
+\item 
+\mbox{\hyperlink{stripchart_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}{drawnow}}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}
+\item 
+Original version of Strip\+Chart written \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Bob Bemis This modification was developed \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Scott Hirsch to match syntax of Spectrum\+Scope Parse input arguments Decision \mbox{\hyperlink{stripchart_8m_a939d24ab5c33176e0ad506749292cd0f}{tree}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}{nargin}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} = varargin\{1\}
+\item 
+else \mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}} = varargin\{1\}
+\item 
+If the user has not initialized this \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}}
+\item 
+If the user has not initialized this do it for them \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} = getappdata(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}},\textquotesingle{}\mbox{\hyperlink{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}{Strip\+Chart\+Parameters}}\textquotesingle{})
+\item 
+else Initialize \mbox{\hyperlink{stripchart_8m_a2f16190a9290603ff80a7bfc5619eb24}{action}} = \textquotesingle{}init\textquotesingle{}
+\item 
+else \mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{N\+Traces}} = 1
+\item 
+else Expert \mbox{\hyperlink{stripchart_8m_aedfaba280295cdeab6b465d48d5af7d9}{mode}}
+\item 
+Requested Axes \mbox{\hyperlink{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}{Strip\+Chart\+Parameters}}
+\item 
+Check that the number of \mbox{\hyperlink{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}{columns}} corresponds to the number of \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} \mbox{\hyperlink{stripchart_8m_ac0c66875113daecd8e14505a20898488}{nc}} = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}},2)
+\item 
+Get handle to the figure Turn doublebuffer \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} to eliminate flickering \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Parent\textquotesingle{})
+\item 
+In \mbox{\hyperlink{stripchart_8m_acd2a86897c361b40496b22c9d1e65504}{R14}}
+\item 
+In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a \mbox{\hyperlink{stripchart_8m_a27703d15e42438099575fe8045dfb639}{panel}}
+\item 
+Format the axes maintain X tick spacing \mbox{\hyperlink{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}{Ticks}} = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}X\+Tick\textquotesingle{})
+\item 
+\mbox{\hyperlink{stripchart_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}} = mean(diff(\mbox{\hyperlink{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}{Ticks}}))
+\item 
+enforce right justification for \mbox{\hyperlink{iKinGazeView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}{grid}} \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} \&remove X tick labels \mbox{\hyperlink{stripchart_8m_aa9916d1bbcfdee4ed7551eea5408e9b3}{Range}} = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}X\+Lim\textquotesingle{})
+\item 
+\mbox{\hyperlink{stripchart_8m_a13f11c74e3eb978dfe3a4ce079960ac6}{X\+Tick\+Label}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a49151309431dcbd6efa81fe06a5d36ac}{X\+Tick\+Mode}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a88e8c0b345e703fd0c9771d14db4e75b}{Manual}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a0276e5d5efa9e1c35d4d2376dea42b19}{X\+Grid}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a70ee460ed7c40b55066358eec87f25b0}{On}}
+\item 
+\mbox{\hyperlink{stripchart_8m_a01d6bda789afe1242a65f8acd42a08aa}{Y\+Grid}}
+\item 
+$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Update the plot function but don \mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} shrink \mbox{\hyperlink{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}{maxM}} =max(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}(\+:))
+\item 
+\mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}} =min(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}(\+:))
+\item 
+\mbox{\hyperlink{stripchart_8m_a3f96dcf6e18015a4baab7f09ab6f2e55}{yax2}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Y\+Lim\textquotesingle{})
+\item 
+\mbox{\hyperlink{stripchart_8m_a59edc526374ee94011d99b793f37582d}{y\+Data}} = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(h\+Line,\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{})
+\item 
+old \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ac4d32739edc937a0268fcb480d80d59d}{N\+Lines}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{stripchart_8m_a696a16cc11eddfef8f3d05eafc7ae5d4}\label{stripchart_8m_a696a16cc11eddfef8f3d05eafc7ae5d4}} 
+\index{stripchart.m@{stripchart.m}!````~isaxes@{$\sim$isaxes}}
+\index{````~isaxes@{$\sim$isaxes}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$isaxes()}{~isaxes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} $\sim$\mbox{\hyperlink{specgramscope_8m_a06223b1212e05115f3aacbe342eb31c9}{isaxes}} (\begin{DoxyParamCaption}\item[{varargin\{1\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a77f1fe0983c8e33b2d600e4ccdde48e6}\label{stripchart_8m_a77f1fe0983c8e33b2d600e4ccdde48e6}} 
+\index{stripchart.m@{stripchart.m}!````~strcmp@{$\sim$strcmp}}
+\index{````~strcmp@{$\sim$strcmp}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{$\sim$strcmp()}{~strcmp()}}
+{\footnotesize\ttfamily In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a not a figure \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} $\sim$strcmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}, \textquotesingle{}Type\textquotesingle{})}]{,  }\item[{\textquotesingle{}figure\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a6a6d0f079f3d0b06d11c4b0ba737ae9f}\label{stripchart_8m_a6a6d0f079f3d0b06d11c4b0ba737ae9f}} 
+\index{stripchart.m@{stripchart.m}!A@{A}}
+\index{A@{A}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{A()}{A()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily A (\begin{DoxyParamCaption}\item[{1\+:\mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}}/}]{2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a08b0b21610d9b1033858954763905167}\label{stripchart_8m_a08b0b21610d9b1033858954763905167}} 
+\index{stripchart.m@{stripchart.m}!A@{A}}
+\index{A@{A}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{A()}{A()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily A (\begin{DoxyParamCaption}\item[{end\+:-\/1\+:\mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}}/2+}]{1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a7af2ae678031eee6e6ef499495f065b4}\label{stripchart_8m_a7af2ae678031eee6e6ef499495f065b4}} 
+\index{stripchart.m@{stripchart.m}!error@{error}}
+\index{error@{error}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily Original version of Strip\+Chart written \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Bob Bemis This modification was developed \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Scott Hirsch to match syntax of Spectrum\+Scope Parse input arguments Decision or use G\+CA error (\begin{DoxyParamCaption}\item[{nargchk(1, 4, \mbox{\hyperlink{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}{nargin}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a0752bb8d698f271be427559f25716fc7}\label{stripchart_8m_a0752bb8d698f271be427559f25716fc7}} 
+\index{stripchart.m@{stripchart.m}!feval@{feval}}
+\index{feval@{feval}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{feval()}{feval()}}
+{\footnotesize\ttfamily feval (\begin{DoxyParamCaption}\item[{mfilename}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a33a1de8b89c72db9d9f9506a2f779de6}{Axes\+Width}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}{N\+Traces}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_acd7df8a7cb914c5aa8e8453bf3537083}\label{stripchart_8m_acd7df8a7cb914c5aa8e8453bf3537083}} 
+\index{stripchart.m@{stripchart.m}!FFT@{FFT}}
+\index{FFT@{FFT}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{FFT()}{FFT()}}
+{\footnotesize\ttfamily function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} you initialize the stripchart with basic information needed for the F\+FT (\begin{DoxyParamCaption}\item[{sample}]{rate,  }\item[{axis}]{width,  }\item[{number of}]{traces }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a2c5a7ee5a3c81adcacd531e1451346d6}\label{stripchart_8m_a2c5a7ee5a3c81adcacd531e1451346d6}} 
+\index{stripchart.m@{stripchart.m}!gca@{gca}}
+\index{gca@{gca}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{gca()}{gca()}}
+{\footnotesize\ttfamily id gca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}\label{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}} 
+\index{stripchart.m@{stripchart.m}!get@{get}}
+\index{get@{get}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} get (\begin{DoxyParamCaption}\item[{h}]{,  }\item[{\textquotesingle{}Type\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a0d353126d0f6b157d3655cf27349c978}\label{stripchart_8m_a0d353126d0f6b157d3655cf27349c978}} 
+\index{stripchart.m@{stripchart.m}!isempty@{isempty}}
+\index{isempty@{isempty}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{isempty()}{isempty()}}
+{\footnotesize\ttfamily Ensure that \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} has been initialized \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} isempty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a9c39cf12fcdb5f19ba499d0b3f65a041}\label{stripchart_8m_a9c39cf12fcdb5f19ba499d0b3f65a041}} 
+\index{stripchart.m@{stripchart.m}!ishandle@{ishandle}}
+\index{ishandle@{ishandle}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{ishandle()}{ishandle()}}
+{\footnotesize\ttfamily Start false \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} ishandle (\begin{DoxyParamCaption}\item[{h}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a1edbf199a3cc3380154136cefc6c4f49}\label{stripchart_8m_a1edbf199a3cc3380154136cefc6c4f49}} 
+\index{stripchart.m@{stripchart.m}!line@{line}}
+\index{line@{line}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{line()}{line()}}
+{\footnotesize\ttfamily Add line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a40336f492a26e16e58d1951aa8fc6d58}\label{stripchart_8m_a40336f492a26e16e58d1951aa8fc6d58}} 
+\index{stripchart.m@{stripchart.m}!localInitScope@{localInitScope}}
+\index{localInitScope@{localInitScope}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{localInitScope()}{localInitScope()}}
+{\footnotesize\ttfamily local\+Init\+Scope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a6de7de56cb478d333a8131d5c1632bda}\label{stripchart_8m_a6de7de56cb478d333a8131d5c1632bda}} 
+\index{stripchart.m@{stripchart.m}!localUpdateScope@{localUpdateScope}}
+\index{localUpdateScope@{localUpdateScope}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{localUpdateScope()}{localUpdateScope()}}
+{\footnotesize\ttfamily local\+Update\+Scope (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_ab1c248dcc260f415ee60ff11075309e9}\label{stripchart_8m_ab1c248dcc260f415ee60ff11075309e9}} 
+\index{stripchart.m@{stripchart.m}!pause@{pause}}
+\index{pause@{pause}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily pause (\begin{DoxyParamCaption}\item[{.}]{05 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_adabd68f3c955f599822cd5fba106e10f}\label{stripchart_8m_adabd68f3c955f599822cd5fba106e10f}} 
+\index{stripchart.m@{stripchart.m}!Range@{Range}}
+\index{Range@{Range}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Range()}{Range()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} Range (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a3140f18c0c0cb76cbb2468b221c572f6}\label{stripchart_8m_a3140f18c0c0cb76cbb2468b221c572f6}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}}]{,  }\item[{\textquotesingle{}Current\+Axes\textquotesingle{}}]{,  }\item[{ca}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_af2f907ee778a476e650d39510350c770}\label{stripchart_8m_af2f907ee778a476e650d39510350c770}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}}]{,  }\item[{\textquotesingle{}Current\+Axes\textquotesingle{}}]{,  }\item[{parms.}]{h\+Axes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a02f3fcbb99fed47f1a4215c260ea561a}\label{stripchart_8m_a02f3fcbb99fed47f1a4215c260ea561a}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily axis manual Turn doublebuffer \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} to eliminate flickering set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a6872c4309c0f8c3b4d7dfab032e17d08}{Double\+Buffer}}\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a6f99a24227ddb000f9e0d7dc460c646b}\label{stripchart_8m_a6f99a24227ddb000f9e0d7dc460c646b}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily new \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} goes \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} right set (\begin{DoxyParamCaption}\item[{h\+Line}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}{y\+Data}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_ad29afc63dbb415454ab0e485760792d7}\label{stripchart_8m_ad29afc63dbb415454ab0e485760792d7}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{h\+Line}]{,  }\item[{\{ \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{}\}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}{y\+Data}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_ad1977393c6ca3b81652c51d1b8cd8733}\label{stripchart_8m_ad1977393c6ca3b81652c51d1b8cd8733}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}X\+Lim\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_aaede10fab5238bcc9b9d60917a025b16}\label{stripchart_8m_aaede10fab5238bcc9b9d60917a025b16}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}X\+Tick\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}{Ticks}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a2c2f4aaa5ccaf4084487d4e05f50539b}\label{stripchart_8m_a2c2f4aaa5ccaf4084487d4e05f50539b}} 
+\index{stripchart.m@{stripchart.m}!set@{set}}
+\index{set@{set}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} set (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}Y\+Lim\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}{yax2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_aa769ee44e5da216d5ed299d9b4e73c87}\label{stripchart_8m_aa769ee44e5da216d5ed299d9b4e73c87}} 
+\index{stripchart.m@{stripchart.m}!setappdata@{setappdata}}
+\index{setappdata@{setappdata}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{setappdata()}{setappdata()}}
+{\footnotesize\ttfamily setappdata (\begin{DoxyParamCaption}\item[{parms.}]{h\+Axes,  }\item[{\textquotesingle{}\mbox{\hyperlink{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}{Strip\+Chart\+Parameters}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a3789d78f44c1c190033b546c21b40459}\label{stripchart_8m_a3789d78f44c1c190033b546c21b40459}} 
+\index{stripchart.m@{stripchart.m}!size@{size}}
+\index{size@{size}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stripchart_8m_affe27dd61356775ed297b07910ae545e}\label{stripchart_8m_affe27dd61356775ed297b07910ae545e}} 
+\index{stripchart.m@{stripchart.m}!STRIPCHART@{STRIPCHART}}
+\index{STRIPCHART@{STRIPCHART}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{STRIPCHART()}{STRIPCHART()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use S\+T\+R\+I\+P\+C\+H\+A\+RT you initialize the stripchart with basic information needed for the all you need to do is pass your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} to \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} This documentation starts with the simplest syntax for the two then provides a few more advanced options A\+X\+E\+S\+W\+I\+D\+TH initializes a stripchart in the current axes This stripchart will display incoming \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} with a sample rate of FS Hz The stripchart will display the most recent A\+X\+E\+S\+W\+I\+D\+TH seconds of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} the sample rate will be Hz and the axes width will match the duration of S S\+T\+R\+I\+P\+C\+H\+A\+RT (\begin{DoxyParamCaption}\item[{FS}]{,  }\item[{A\+X\+E\+S\+W\+I\+D\+TH}]{,  }\item[{N\+T\+R\+A\+C\+ES}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a4b52309bdc7975ab41316eb3ce62a076}\label{stripchart_8m_a4b52309bdc7975ab41316eb3ce62a076}} 
+\index{stripchart.m@{stripchart.m}!STRIPCHART@{STRIPCHART}}
+\index{STRIPCHART@{STRIPCHART}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{STRIPCHART()}{STRIPCHART()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple S\+T\+R\+I\+P\+C\+H\+A\+RT (\begin{DoxyParamCaption}\item[{H\+AX}]{,  }\item[{FS}]{,  }\item[{A\+X\+E\+S\+W\+I\+D\+TH}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}\label{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}} 
+\index{stripchart.m@{stripchart.m}!STRIPCHART@{STRIPCHART}}
+\index{STRIPCHART@{STRIPCHART}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{STRIPCHART()}{STRIPCHART()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple and S\+T\+R\+I\+P\+C\+H\+A\+RT (\begin{DoxyParamCaption}\item[{H\+AX}]{,  }\item[{S}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a8b32a206aa35b540504eed7593ea1bca}\label{stripchart_8m_a8b32a206aa35b540504eed7593ea1bca}} 
+\index{stripchart.m@{stripchart.m}!STRIPCHART@{STRIPCHART}}
+\index{STRIPCHART@{STRIPCHART}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{STRIPCHART()}{STRIPCHART()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple S\+T\+R\+I\+P\+C\+H\+A\+RT (\begin{DoxyParamCaption}\item[{S}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a1489018df97d501325262eb1a18ebc1f}\label{stripchart_8m_a1489018df97d501325262eb1a18ebc1f}} 
+\index{stripchart.m@{stripchart.m}!truefalse@{truefalse}}
+\index{truefalse@{truefalse}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{truefalse()}{truefalse()}}
+{\footnotesize\ttfamily H truefalse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}\label{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}} 
+\index{stripchart.m@{stripchart.m}!update@{update}}
+\index{update@{update}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily varargin\{2\} update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{stripchart_8m_ac04676032ca393c7f75193e13dc936f5}\label{stripchart_8m_ac04676032ca393c7f75193e13dc936f5}} 
+\index{stripchart.m@{stripchart.m}!Width@{Width}}
+\index{Width@{Width}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily Axes Width (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_ac76b694b78893ca0231ddfc99c4707e7}\label{stripchart_8m_ac76b694b78893ca0231ddfc99c4707e7}} 
+\index{stripchart.m@{stripchart.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{sprintf(\textquotesingle{}\%g\%\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}/div\textquotesingle{}, \mbox{\hyperlink{stripchart_8m_a921b80a0245a4f241fc0dda5e364b471}{dX}}, \textquotesingle{}\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}\textquotesingle{})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}\label{stripchart_8m_a59ea27491de5d78222e29e711ee88fcc}} 
+\index{stripchart.m@{stripchart.m}!yax2@{yax2}}
+\index{yax2@{yax2}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{yax2()}{yax2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}}$<$yax2(1), yax2(1)=\mbox{\hyperlink{stripchart_8m_ad2005c9f7136760615b695ffd366da03}{minM}};endif \mbox{\hyperlink{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}{maxM}}$>$ yax2 (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}\label{stripchart_8m_aee21b2f4bb09205c7ee6a6eec0144abd}} 
+\index{stripchart.m@{stripchart.m}!yData@{yData}}
+\index{yData@{yData}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{yData()}{yData()}}
+{\footnotesize\ttfamily shift old \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} left y\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/new\+Pts+1\+:\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{stripchart_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}\label{stripchart_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}} 
+\index{stripchart.m@{stripchart.m}!A@{A}}
+\index{A@{A}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily A = sqrt(\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}})}
+
+
+
+Definition at line 51 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a2f16190a9290603ff80a7bfc5619eb24}\label{stripchart_8m_a2f16190a9290603ff80a7bfc5619eb24}} 
+\index{stripchart.m@{stripchart.m}!action@{action}}
+\index{action@{action}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily else Initialize action = \textquotesingle{}init\textquotesingle{}}
+
+
+
+Definition at line 116 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a33a1de8b89c72db9d9f9506a2f779de6}\label{stripchart_8m_a33a1de8b89c72db9d9f9506a2f779de6}} 
+\index{stripchart.m@{stripchart.m}!AxesWidth@{AxesWidth}}
+\index{AxesWidth@{AxesWidth}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{AxesWidth}{AxesWidth}}
+{\footnotesize\ttfamily Number of samples across axes \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} Axes\+Width = 2}
+
+
+
+Definition at line 58 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}\label{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}} 
+\index{stripchart.m@{stripchart.m}!by@{by}}
+\index{by@{by}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{by}{by}}
+{\footnotesize\ttfamily typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple and and want to be able to easily reference the axes for updates The \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} created by \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} all have the tag Strip\+Chart If you would like to manually modify the properties of these their handles can be found by}
+
+
+
+Definition at line 43 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}\label{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}} 
+\index{stripchart.m@{stripchart.m}!data@{data}}
+\index{data@{data}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{stripchart_8m_ac0c66875113daecd8e14505a20898488}{nc}} nr data = varargin\{1\}}
+
+
+
+Definition at line 92 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}\label{stripchart_8m_aadd84b46ee6d2e3ae04d2920f4e78bfd}} 
+\index{stripchart.m@{stripchart.m}!drawnow@{drawnow}}
+\index{drawnow@{drawnow}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{drawnow}{drawnow}}
+{\footnotesize\ttfamily drawnow}
+
+
+
+Definition at line 67 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a921b80a0245a4f241fc0dda5e364b471}\label{stripchart_8m_a921b80a0245a4f241fc0dda5e364b471}} 
+\index{stripchart.m@{stripchart.m}!dX@{dX}}
+\index{dX@{dX}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{dX}{dX}}
+{\footnotesize\ttfamily dX = mean(diff(\mbox{\hyperlink{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}{Ticks}}))}
+
+
+
+Definition at line 221 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}\label{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}} 
+\index{stripchart.m@{stripchart.m}!end@{end}}
+\index{end@{end}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily end}
+
+
+
+Definition at line 68 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_aedc647acfab43b8d1c95fe5fdffc3b65}\label{stripchart_8m_aedc647acfab43b8d1c95fe5fdffc3b65}} 
+\index{stripchart.m@{stripchart.m}!First@{First}}
+\index{First@{First}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{First}{First}}
+{\footnotesize\ttfamily function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} First}
+
+
+
+Definition at line 7 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a68700005648f933c9e74a0d2c9390025}\label{stripchart_8m_a68700005648f933c9e74a0d2c9390025}} 
+\index{stripchart.m@{stripchart.m}!Fs@{Fs}}
+\index{Fs@{Fs}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Fs}{Fs}}
+{\footnotesize\ttfamily Dole out the work switch \mbox{\hyperlink{stripchart_8m_a2f16190a9290603ff80a7bfc5619eb24}{action}} case init Initialize Build structure to internally pass information \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} Fs = 1000}
+
+
+
+Definition at line 48 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}\label{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}} 
+\index{stripchart.m@{stripchart.m}!hAxes@{hAxes}}
+\index{hAxes@{hAxes}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{hAxes}{hAxes}}
+{\footnotesize\ttfamily Number of \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}} in plot \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} h\+Axes = varargin\{1\}}
+
+
+
+Definition at line 94 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}\label{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}} 
+\index{stripchart.m@{stripchart.m}!hFig@{hFig}}
+\index{hFig@{hFig}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{hFig}{hFig}}
+{\footnotesize\ttfamily Get handle to the figure Turn doublebuffer \mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}} to eliminate flickering h\+Fig = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Parent\textquotesingle{})}
+
+
+
+Definition at line 209 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ac95529e3e4798539d9463073dd7f2181}\label{stripchart_8m_ac95529e3e4798539d9463073dd7f2181}} 
+\index{stripchart.m@{stripchart.m}!HLINE@{HLINE}}
+\index{HLINE@{HLINE}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{HLINE}{HLINE}}
+{\footnotesize\ttfamily H\+L\+I\+NE = findobj(H\+AX,\textquotesingle{}Tag\textquotesingle{},\textquotesingle{}Strip\+Chart\textquotesingle{})}
+
+
+
+Definition at line 44 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}\label{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}} 
+\index{stripchart.m@{stripchart.m}!ii@{ii}}
+\index{ii@{ii}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{ii}{ii}}
+{\footnotesize\ttfamily for ii}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \mbox{\hyperlink{stripchart_8m_aa1a517e3e42b3d109bc480c74e3a655c}{ind}}}
+\DoxyCodeLine{\%           stripchart(\mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}}(\mbox{\hyperlink{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}:\mbox{\hyperlink{stripchart_8m_abf9d47cd7d4fbc942e618bb1977019c2}{ii}}+\mbox{\hyperlink{stripchart_8m_a01df226571af6327dfa53eaedf0845e0}{N}}-\/1,:))}
+
+\end{DoxyCode}
+
+
+Definition at line 65 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_aa1a517e3e42b3d109bc480c74e3a655c}\label{stripchart_8m_aa1a517e3e42b3d109bc480c74e3a655c}} 
+\index{stripchart.m@{stripchart.m}!ind@{ind}}
+\index{ind@{ind}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{ind}{ind}}
+{\footnotesize\ttfamily ind = 1\+:N\+:\+Ns}
+
+
+
+Definition at line 63 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}\label{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}} 
+\index{stripchart.m@{stripchart.m}!lines@{lines}}
+\index{lines@{lines}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{lines}{lines}}
+{\footnotesize\ttfamily typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple and and want to be able to easily reference the axes for updates The lines created \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} all have the tag Strip\+Chart If you would like to manually modify the properties of these lines}
+
+
+
+Definition at line 41 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a88e8c0b345e703fd0c9771d14db4e75b}\label{stripchart_8m_a88e8c0b345e703fd0c9771d14db4e75b}} 
+\index{stripchart.m@{stripchart.m}!Manual@{Manual}}
+\index{Manual@{Manual}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Manual}{Manual}}
+{\footnotesize\ttfamily Manual}
+
+
+
+Definition at line 229 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}\label{stripchart_8m_adbb05ede6c6128d5206e2270b10bc82e}} 
+\index{stripchart.m@{stripchart.m}!maxM@{maxM}}
+\index{maxM@{maxM}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{maxM}{maxM}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Update the plot function but don \mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} shrink maxM =max(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}(\+:))}
+
+
+
+Definition at line 255 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ad2005c9f7136760615b695ffd366da03}\label{stripchart_8m_ad2005c9f7136760615b695ffd366da03}} 
+\index{stripchart.m@{stripchart.m}!minM@{minM}}
+\index{minM@{minM}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{minM}{minM}}
+{\footnotesize\ttfamily minM =min(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}(\+:))}
+
+
+
+Definition at line 256 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_aedfaba280295cdeab6b465d48d5af7d9}\label{stripchart_8m_aedfaba280295cdeab6b465d48d5af7d9}} 
+\index{stripchart.m@{stripchart.m}!mode@{mode}}
+\index{mode@{mode}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{mode}{mode}}
+{\footnotesize\ttfamily else Expert mode}
+
+
+
+Definition at line 130 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a01df226571af6327dfa53eaedf0845e0}\label{stripchart_8m_a01df226571af6327dfa53eaedf0845e0}} 
+\index{stripchart.m@{stripchart.m}!N@{N}}
+\index{N@{N}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily Update \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} N = 50}
+
+
+
+Definition at line 62 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}\label{stripchart_8m_a388ea4a215114137ba759ef0aa02ab6b}} 
+\index{stripchart.m@{stripchart.m}!nargin@{nargin}}
+\index{nargin@{nargin}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{nargin}{nargin}}
+{\footnotesize\ttfamily Number of samples across axes \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} nargin}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{==1                \% Use current axes}
+\DoxyCodeLine{        \mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{hAxes}} = \mbox{\hyperlink{stripchart_8m_a2c5a7ee5a3c81adcacd531e1451346d6}{gca}}}
+
+\end{DoxyCode}
+
+
+Definition at line 90 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ac0c66875113daecd8e14505a20898488}\label{stripchart_8m_ac0c66875113daecd8e14505a20898488}} 
+\index{stripchart.m@{stripchart.m}!nc@{nc}}
+\index{nc@{nc}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{nc}{nc}}
+{\footnotesize\ttfamily Number of \mbox{\hyperlink{specgramscope_8m_a217f7dad0b305562928b962ea5fc48ea}{columns}} \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} nc = \mbox{\hyperlink{stripchart_8m_a3789d78f44c1c190033b546c21b40459}{size}}(\mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}},2)}
+
+
+
+Definition at line 177 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ac4d32739edc937a0268fcb480d80d59d}\label{stripchart_8m_ac4d32739edc937a0268fcb480d80d59d}} 
+\index{stripchart.m@{stripchart.m}!NLines@{NLines}}
+\index{NLines@{NLines}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{NLines}{NLines}}
+{\footnotesize\ttfamily old \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} N\+Lines}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{==1         \%Special \textcolor{keywordflow}{case} \textcolor{keywordflow}{for} one \mbox{\hyperlink{stripchart_8m_a1edbf199a3cc3380154136cefc6c4f49}{line}} only}
+\DoxyCodeLine{    \mbox{\hyperlink{stripchart_8m_a59edc526374ee94011d99b793f37582d}{yData}}(1:\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}}-\/newPts) = \mbox{\hyperlink{stripchart_8m_a59edc526374ee94011d99b793f37582d}{yData}}(newPts+1:\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}})}
+
+\end{DoxyCode}
+
+
+Definition at line 272 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}\label{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}} 
+\index{stripchart.m@{stripchart.m}!Ns@{Ns}}
+\index{Ns@{Ns}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Ns}{Ns}}
+{\footnotesize\ttfamily Handle to axes \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} Ns = \mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}$\ast$3}
+
+
+
+Definition at line 49 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}\label{stripchart_8m_a96c4b1f5c603bf558bdefd9684725caa}} 
+\index{stripchart.m@{stripchart.m}!NTraces@{NTraces}}
+\index{NTraces@{NTraces}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{NTraces}{NTraces}}
+{\footnotesize\ttfamily Sample Rate \mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}} N\+Traces = 1}
+
+
+
+Definition at line 127 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a70ee460ed7c40b55066358eec87f25b0}\label{stripchart_8m_a70ee460ed7c40b55066358eec87f25b0}} 
+\index{stripchart.m@{stripchart.m}!On@{On}}
+\index{On@{On}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{On}{On}}
+{\footnotesize\ttfamily On}
+
+
+
+Definition at line 229 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a27703d15e42438099575fe8045dfb639}\label{stripchart_8m_a27703d15e42438099575fe8045dfb639}} 
+\index{stripchart.m@{stripchart.m}!panel@{panel}}
+\index{panel@{panel}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{panel}{panel}}
+{\footnotesize\ttfamily In it \mbox{\hyperlink{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}{s}} possible that \mbox{\hyperlink{stripchart_8m_ac99d95a2e587a24c50596373324c35cb}{h\+Fig}} would \mbox{\hyperlink{iKinGazeView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}} a handle to a panel}
+
+
+
+Definition at line 211 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}\label{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}} 
+\index{stripchart.m@{stripchart.m}!parms@{parms}}
+\index{parms@{parms}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{parms}{parms}}
+{\footnotesize\ttfamily Requested Axes parms = getappdata(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{h\+Axes}},\textquotesingle{}\mbox{\hyperlink{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}{Strip\+Chart\+Parameters}}\textquotesingle{})}
+
+
+
+Definition at line 99 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_acd2a86897c361b40496b22c9d1e65504}\label{stripchart_8m_acd2a86897c361b40496b22c9d1e65504}} 
+\index{stripchart.m@{stripchart.m}!R14@{R14}}
+\index{R14@{R14}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{R14}{R14}}
+{\footnotesize\ttfamily In R14}
+
+
+
+Definition at line 211 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_aa9916d1bbcfdee4ed7551eea5408e9b3}\label{stripchart_8m_aa9916d1bbcfdee4ed7551eea5408e9b3}} 
+\index{stripchart.m@{stripchart.m}!Range@{Range}}
+\index{Range@{Range}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Range}{Range}}
+{\footnotesize\ttfamily enforce right justification for \mbox{\hyperlink{iKinGazeView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}{grid}} \mbox{\hyperlink{stripchart_8m_ab76c361ba7f654284023a47210e2bc03}{lines}}\& remove X tick labels Range = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}X\+Lim\textquotesingle{})}
+
+
+
+Definition at line 224 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}\label{stripchart_8m_a3691308f2a4c2f6983f2880d32e29c84}} 
+\index{stripchart.m@{stripchart.m}!s@{s}}
+\index{s@{s}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily s = A.$\ast$sin(2$\ast$pi$\ast$\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}$\ast$1)}
+
+
+
+Definition at line 54 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}\label{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}} 
+\index{stripchart.m@{stripchart.m}!scope@{scope}}
+\index{scope@{scope}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily If the user has not initialized this scope}
+
+
+
+Definition at line 98 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a82d84a8c2ca90644f29164697a436809}\label{stripchart_8m_a82d84a8c2ca90644f29164697a436809}} 
+\index{stripchart.m@{stripchart.m}!STEP@{STEP}}
+\index{STEP@{STEP}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{STEP}{STEP}}
+{\footnotesize\ttfamily function and it updates the display It takes \mbox{\hyperlink{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}{steps}} to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} you initialize the stripchart with basic information needed for the all you need to do is pass your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} to \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} This documentation starts with the simplest syntax for the two then provides a few more advanced options A\+X\+E\+S\+W\+I\+D\+TH initializes a stripchart in the current axes This stripchart will display incoming \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} with a sample rate of FS Hz The stripchart will display the most recent A\+X\+E\+S\+W\+I\+D\+TH seconds of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} S\+T\+EP}
+
+
+
+Definition at line 15 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}\label{stripchart_8m_a20425ef90ad3a588dd3bd785d8a5684a}} 
+\index{stripchart.m@{stripchart.m}!steps@{steps}}
+\index{steps@{steps}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{steps}{steps}}
+{\footnotesize\ttfamily function and it updates the display It takes steps to use \mbox{\hyperlink{stripchart_8m_a315af6ace9050207f99931fbed9a18d5}{S\+T\+R\+I\+P\+C\+H\+A\+RT}} you initialize the stripchart with basic information needed for the all you need to do is pass your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} to the \mbox{\hyperlink{stripchart_8m_ae58574b1de49c92bd33773f035c722f7}{scope}} to \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} This documentation starts with the simplest syntax for the two steps}
+
+
+
+Definition at line 11 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}\label{stripchart_8m_afbd3e8dea98b0cf9de77466ca2668674}} 
+\index{stripchart.m@{stripchart.m}!StripChartParameters@{StripChartParameters}}
+\index{StripChartParameters@{StripChartParameters}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{StripChartParameters}{StripChartParameters}}
+{\footnotesize\ttfamily Requested Axes Strip\+Chart\+Parameters}
+
+
+
+Definition at line 157 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}\label{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}} 
+\index{stripchart.m@{stripchart.m}!t@{t}}
+\index{t@{t}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily Make seconds worth of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} t = (0\+:1\+:\mbox{\hyperlink{stripchart_8m_a97376ef459b23d8342d15f23b54ba844}{Ns}}-\/1)\textquotesingle{}/\mbox{\hyperlink{stripchart_8m_a68700005648f933c9e74a0d2c9390025}{Fs}}}
+
+
+
+Definition at line 50 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}\label{stripchart_8m_ab348a9fef65c04c2b03133dd71115bf0}} 
+\index{stripchart.m@{stripchart.m}!Ticks@{Ticks}}
+\index{Ticks@{Ticks}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{Ticks}{Ticks}}
+{\footnotesize\ttfamily Format the axes maintain X tick spacing Ticks = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}X\+Tick\textquotesingle{})}
+
+
+
+Definition at line 220 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a2e01a503b8cf46e1866495ce4fc5855b}\label{stripchart_8m_a2e01a503b8cf46e1866495ce4fc5855b}} 
+\index{stripchart.m@{stripchart.m}!traces@{traces}}
+\index{traces@{traces}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{traces}{traces}}
+{\footnotesize\ttfamily typically one will display one trace per channel of \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} The default for N\+T\+R\+A\+C\+ES is To \mbox{\hyperlink{stripchart_8m_abe3d280e2f31d4bc56823331818e87ee}{update}} a stripchart with multiple traces}
+
+
+
+Definition at line 28 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a939d24ab5c33176e0ad506749292cd0f}\label{stripchart_8m_a939d24ab5c33176e0ad506749292cd0f}} 
+\index{stripchart.m@{stripchart.m}!tree@{tree}}
+\index{tree@{tree}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{tree}{tree}}
+{\footnotesize\ttfamily Original version of Strip\+Chart written \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Bob Bemis This modification was developed \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} Scott Hirsch to match syntax of Spectrum\+Scope Parse input arguments Decision tree}
+
+
+
+Definition at line 79 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_aeed64c08cecf4522650c2fe59a716f14}\label{stripchart_8m_aeed64c08cecf4522650c2fe59a716f14}} 
+\index{stripchart.m@{stripchart.m}!varargout@{varargout}}
+\index{varargout@{varargout}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{varargout}{varargout}}
+{\footnotesize\ttfamily Return appropriate output argument \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} nargout varargout}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= stripchart(varargin)}
+\DoxyCodeLine{\% \mbox{\hyperlink{stripchart_8m_affe27dd61356775ed297b07910ae545e}{STRIPCHART}} Create a stripchart \textcolor{keywordflow}{for} real-\/time \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} display}
+\DoxyCodeLine{\%}
+\DoxyCodeLine{\% \mbox{\hyperlink{stripchart_8m_affe27dd61356775ed297b07910ae545e}{STRIPCHART}} makes it fairly easy to \mbox{\hyperlink{jointVelCtrlIdent_2CMakeLists_8txt_aac0aec6d0af67da08e0927119b464620}{include}} a strip chart in your}
+\DoxyCodeLine{\% real-\/time \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} acquisition and analysis application.  You feed}
+\DoxyCodeLine{\% stripchart your \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}}}
+
+\end{DoxyCode}
+
+
+Definition at line 1 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a0276e5d5efa9e1c35d4d2376dea42b19}\label{stripchart_8m_a0276e5d5efa9e1c35d4d2376dea42b19}} 
+\index{stripchart.m@{stripchart.m}!XGrid@{XGrid}}
+\index{XGrid@{XGrid}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{XGrid}{XGrid}}
+{\footnotesize\ttfamily X\+Grid}
+
+
+
+Definition at line 229 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a13f11c74e3eb978dfe3a4ce079960ac6}\label{stripchart_8m_a13f11c74e3eb978dfe3a4ce079960ac6}} 
+\index{stripchart.m@{stripchart.m}!XTickLabel@{XTickLabel}}
+\index{XTickLabel@{XTickLabel}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{XTickLabel}{XTickLabel}}
+{\footnotesize\ttfamily X\+Tick\+Label}
+
+
+
+Definition at line 229 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a49151309431dcbd6efa81fe06a5d36ac}\label{stripchart_8m_a49151309431dcbd6efa81fe06a5d36ac}} 
+\index{stripchart.m@{stripchart.m}!XTickMode@{XTickMode}}
+\index{XTickMode@{XTickMode}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{XTickMode}{XTickMode}}
+{\footnotesize\ttfamily X\+Tick\+Mode}
+
+
+
+Definition at line 229 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a3f96dcf6e18015a4baab7f09ab6f2e55}\label{stripchart_8m_a3f96dcf6e18015a4baab7f09ab6f2e55}} 
+\index{stripchart.m@{stripchart.m}!yax2@{yax2}}
+\index{yax2@{yax2}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{yax2}{yax2}}
+{\footnotesize\ttfamily yax2 =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{stripchart_8m_a70f32e1e82ebe4ebb4d0cc7d52c35bd1}{parms.\+h\+Axes}},\textquotesingle{}Y\+Lim\textquotesingle{})}
+
+
+
+Definition at line 257 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a59edc526374ee94011d99b793f37582d}\label{stripchart_8m_a59edc526374ee94011d99b793f37582d}} 
+\index{stripchart.m@{stripchart.m}!yData@{yData}}
+\index{yData@{yData}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{yData}{yData}}
+{\footnotesize\ttfamily shift old \mbox{\hyperlink{stripchart_8m_a09f20bf0178b6afe1ed0c467ba75baa6}{data}} left y\+Data = \mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(h\+Line,\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a578ab01a530a95b416b30b56af883774}{Y\+Data}}\textquotesingle{})}
+
+
+
+Definition at line 270 of file stripchart.\+m.
+
+\mbox{\Hypertarget{stripchart_8m_a01d6bda789afe1242a65f8acd42a08aa}\label{stripchart_8m_a01d6bda789afe1242a65f8acd42a08aa}} 
+\index{stripchart.m@{stripchart.m}!YGrid@{YGrid}}
+\index{YGrid@{YGrid}!stripchart.m@{stripchart.m}}
+\doxysubsubsection{\texorpdfstring{YGrid}{YGrid}}
+{\footnotesize\ttfamily Y\+Grid}
+
+
+
+Definition at line 229 of file stripchart.\+m.
+

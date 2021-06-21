@@ -1,0 +1,6 @@
+<map id="MATLAB Viewers" name="MATLAB Viewers">
+<area shape="rect" id="node1" title="These MATLAB viewers display some useful information such as gaze or arm configuration and can plot s..." alt="" coords="5,55,137,80"/>
+<area shape="rect" id="node2" href="$group__icub__iKinGazeView.html" title=" " alt="" coords="185,5,297,31"/>
+<area shape="rect" id="node3" href="$group__icub__signalScope.html" title=" " alt="" coords="191,55,291,80"/>
+<area shape="rect" id="node4" href="$group__icub__iKinArmView.html" title=" " alt="" coords="188,104,295,129"/>
+</map>

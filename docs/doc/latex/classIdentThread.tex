@@ -1,0 +1,543 @@
+\hypertarget{classIdentThread}{}\doxysection{Ident\+Thread Class Reference}
+\label{classIdentThread}\index{IdentThread@{IdentThread}}
+
+
+Inheritance diagram for Ident\+Thread\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classIdentThread__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIdentThread_a0fded1f08277d70ad4880484a0df5bb0}{Ident\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classIdentThread_aa95df621f87f02710b65f9be150dd919}{configure}} (Resource\+Finder \&rf)
+\item 
+bool \mbox{\hyperlink{classIdentThread_add789b9c5f45fc7800bf0415ae2b9037}{thread\+Init}} ()
+\item 
+void \mbox{\hyperlink{classIdentThread_a2211daf91169ca912f4fd94986aa5fd9}{set\+Pid}} (const Pid \&pid)
+\item 
+Vector \mbox{\hyperlink{classIdentThread_abb4ba3ec103ff649e6e5eba93f2c4f57}{get\+Output}} ()
+\item 
+void \mbox{\hyperlink{classIdentThread_a297e3308f512e1f737dc987b18b8d7dd}{go\+To\+Starting\+Pos}} ()
+\item 
+void \mbox{\hyperlink{classIdentThread_a8186ff287f9fa8c8a50104ca7bb39be2}{run}} ()
+\item 
+void \mbox{\hyperlink{classIdentThread_a89433ea20807d9fb08a5f13023f2d8fc}{thread\+Release}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{classIdentThread_a9100cfc7196b0121af124741f4a05f8d}{robot}}
+\item 
+string \mbox{\hyperlink{classIdentThread_a400611efdf48928f2d3458c2792882b2}{name}}
+\item 
+string \mbox{\hyperlink{classIdentThread_a913c12f13fd8f8d7355b42cd0c82158a}{part}}
+\item 
+int \mbox{\hyperlink{classIdentThread_a5b8cc105847ccb32db5197a7a1fc0b06}{joint}}
+\item 
+int \mbox{\hyperlink{classIdentThread_a5f9f04c5dc4c132dcba73ddc8845e23e}{cnt}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a3c0a53f8987840fd720c715124de33e7}{gain}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a234ac66d90b155c8ebdceab3cfe745cd}{fb0}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a94a8bd19fa5681d79113d97b36563e3c}{fb1}}
+\item 
+double \mbox{\hyperlink{classIdentThread_ad1103b04bb8d278161b77898dfc234e9}{fmin}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a08c97de69310dba054b248e7a132ce95}{fmax}}
+\item 
+double \mbox{\hyperlink{classIdentThread_aa5ccec018efb8942c06b6b25ab9f8517}{t0}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a39097a5935a030b97d47bf48bf17bd5a}{T}}
+\item 
+double \mbox{\hyperlink{classIdentThread_aff460374daba8897cdc7027c2fd867f9}{Ttraj}}
+\item 
+bool \mbox{\hyperlink{classIdentThread_a8862709597934c80f8decf30876fffef}{pid\+\_\+change}}
+\item 
+bool \mbox{\hyperlink{classIdentThread_ae4d9c529fa9c8d423ff2aedf5c0d3ab0}{pid\+\_\+change\+\_\+\+Kp}}
+\item 
+bool \mbox{\hyperlink{classIdentThread_a7ad13940525882cd4aee5202de99fd63}{pid\+\_\+change\+\_\+\+Ki}}
+\item 
+bool \mbox{\hyperlink{classIdentThread_ae1dbbb82a820c52b4600097ce07aa46d}{pid\+\_\+change\+\_\+\+Kd}}
+\item 
+double \mbox{\hyperlink{classIdentThread_ae9e07c599f5e790904ba18211a1ddbf4}{pid\+\_\+\+Kp}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a07a65c70e24c7e69c6e24b2043e178a9}{pid\+\_\+\+Ki}}
+\item 
+double \mbox{\hyperlink{classIdentThread_a6dfe2c87ac9bbc409c56cf93e6995558}{pid\+\_\+\+Kd}}
+\item 
+Poly\+Driver \mbox{\hyperlink{classIdentThread_a641b35993d7c1e34ff3effcbff992548}{drv}}
+\item 
+I\+Control\+Mode2 $\ast$ \mbox{\hyperlink{classIdentThread_adb95b0fbeae236c5cc3cfcc15d720f1d}{imod}}
+\item 
+I\+Control\+Limits $\ast$ \mbox{\hyperlink{classIdentThread_a4d2f74fab4a0daabd05a599e90916edc}{ilim}}
+\item 
+I\+Encoders $\ast$ \mbox{\hyperlink{classIdentThread_af1e0b2e86a6dd0d94f041ca13e20cbf6}{ienc}}
+\item 
+I\+Position\+Control $\ast$ \mbox{\hyperlink{classIdentThread_a68f629ae7af8b908f7ae3d5cb18754ff}{ipos}}
+\item 
+I\+Velocity\+Control $\ast$ \mbox{\hyperlink{classIdentThread_af46ca359b393ecc49e11e33960f10b04}{ivel}}
+\item 
+I\+Pid\+Control $\ast$ \mbox{\hyperlink{classIdentThread_a5f8490206363faa910d51b5eaa3d644d}{ipid}}
+\item 
+Pid \mbox{\hyperlink{classIdentThread_a5629b0825bb9ee558df34c684e2f2a7e}{pid0}}
+\item 
+Pid \mbox{\hyperlink{classIdentThread_a4c9228e64b4514383436f30ca84505a1}{pid1}}
+\item 
+A\+W\+Lin\+Estimator \mbox{\hyperlink{classIdentThread_a2cf79faf6b4d07dde466aa1ddda77344}{vel\+Est}}
+\item 
+min\+Jerk\+Vel\+Ctrl\+For\+Ideal\+Plant $\ast$ \mbox{\hyperlink{classIdentThread_ace17b121fe5a5f88c396ffe367b92318}{ctrl1}}
+\item 
+min\+Jerk\+Vel\+Ctrl\+For\+Non\+Ideal\+Plant $\ast$ \mbox{\hyperlink{classIdentThread_a9d82a371db2a093f8fd6fdf4369c9789}{ctrl2}}
+\item 
+Property \mbox{\hyperlink{classIdentThread_ade3ade5a1fa05b168d87e77e76f03c55}{plant\+Parameters}}
+\item 
+Buffered\+Port$<$ Bottle $>$ \mbox{\hyperlink{classIdentThread_a76c8df9af2f06921cb0c67fc6598d429}{port}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 133 of file main.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIdentThread_a0fded1f08277d70ad4880484a0df5bb0}\label{classIdentThread_a0fded1f08277d70ad4880484a0df5bb0}} 
+\index{IdentThread@{IdentThread}!IdentThread@{IdentThread}}
+\index{IdentThread@{IdentThread}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{IdentThread()}{IdentThread()}}
+{\footnotesize\ttfamily Ident\+Thread\+::\+Ident\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 174 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIdentThread_aa95df621f87f02710b65f9be150dd919}\label{classIdentThread_aa95df621f87f02710b65f9be150dd919}} 
+\index{IdentThread@{IdentThread}!configure@{configure}}
+\index{configure@{configure}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void Ident\+Thread\+::configure (\begin{DoxyParamCaption}\item[{Resource\+Finder \&}]{rf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 177 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_abb4ba3ec103ff649e6e5eba93f2c4f57}\label{classIdentThread_abb4ba3ec103ff649e6e5eba93f2c4f57}} 
+\index{IdentThread@{IdentThread}!getOutput@{getOutput}}
+\index{getOutput@{getOutput}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{getOutput()}{getOutput()}}
+{\footnotesize\ttfamily Vector Ident\+Thread\+::get\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 296 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a297e3308f512e1f737dc987b18b8d7dd}\label{classIdentThread_a297e3308f512e1f737dc987b18b8d7dd}} 
+\index{IdentThread@{IdentThread}!goToStartingPos@{goToStartingPos}}
+\index{goToStartingPos@{goToStartingPos}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{goToStartingPos()}{goToStartingPos()}}
+{\footnotesize\ttfamily void Ident\+Thread\+::go\+To\+Starting\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 319 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a8186ff287f9fa8c8a50104ca7bb39be2}\label{classIdentThread_a8186ff287f9fa8c8a50104ca7bb39be2}} 
+\index{IdentThread@{IdentThread}!run@{run}}
+\index{run@{run}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Ident\+Thread\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 342 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a2211daf91169ca912f4fd94986aa5fd9}\label{classIdentThread_a2211daf91169ca912f4fd94986aa5fd9}} 
+\index{IdentThread@{IdentThread}!setPid@{setPid}}
+\index{setPid@{setPid}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{setPid()}{setPid()}}
+{\footnotesize\ttfamily void Ident\+Thread\+::set\+Pid (\begin{DoxyParamCaption}\item[{const Pid \&}]{pid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 278 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_add789b9c5f45fc7800bf0415ae2b9037}\label{classIdentThread_add789b9c5f45fc7800bf0415ae2b9037}} 
+\index{IdentThread@{IdentThread}!threadInit@{threadInit}}
+\index{threadInit@{threadInit}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{threadInit()}{threadInit()}}
+{\footnotesize\ttfamily bool Ident\+Thread\+::thread\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 215 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a89433ea20807d9fb08a5f13023f2d8fc}\label{classIdentThread_a89433ea20807d9fb08a5f13023f2d8fc}} 
+\index{IdentThread@{IdentThread}!threadRelease@{threadRelease}}
+\index{threadRelease@{threadRelease}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{threadRelease()}{threadRelease()}}
+{\footnotesize\ttfamily void Ident\+Thread\+::thread\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 388 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classIdentThread_a5f9f04c5dc4c132dcba73ddc8845e23e}\label{classIdentThread_a5f9f04c5dc4c132dcba73ddc8845e23e}} 
+\index{IdentThread@{IdentThread}!cnt@{cnt}}
+\index{cnt@{cnt}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{cnt}{cnt}}
+{\footnotesize\ttfamily int Ident\+Thread\+::cnt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 141 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_ace17b121fe5a5f88c396ffe367b92318}\label{classIdentThread_ace17b121fe5a5f88c396ffe367b92318}} 
+\index{IdentThread@{IdentThread}!ctrl1@{ctrl1}}
+\index{ctrl1@{ctrl1}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ctrl1}{ctrl1}}
+{\footnotesize\ttfamily min\+Jerk\+Vel\+Ctrl\+For\+Ideal\+Plant$\ast$ Ident\+Thread\+::ctrl1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 166 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a9d82a371db2a093f8fd6fdf4369c9789}\label{classIdentThread_a9d82a371db2a093f8fd6fdf4369c9789}} 
+\index{IdentThread@{IdentThread}!ctrl2@{ctrl2}}
+\index{ctrl2@{ctrl2}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ctrl2}{ctrl2}}
+{\footnotesize\ttfamily min\+Jerk\+Vel\+Ctrl\+For\+Non\+Ideal\+Plant$\ast$ Ident\+Thread\+::ctrl2\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 167 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a641b35993d7c1e34ff3effcbff992548}\label{classIdentThread_a641b35993d7c1e34ff3effcbff992548}} 
+\index{IdentThread@{IdentThread}!drv@{drv}}
+\index{drv@{drv}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{drv}{drv}}
+{\footnotesize\ttfamily Poly\+Driver Ident\+Thread\+::drv\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 155 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a234ac66d90b155c8ebdceab3cfe745cd}\label{classIdentThread_a234ac66d90b155c8ebdceab3cfe745cd}} 
+\index{IdentThread@{IdentThread}!fb0@{fb0}}
+\index{fb0@{fb0}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{fb0}{fb0}}
+{\footnotesize\ttfamily double Ident\+Thread\+::fb0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 143 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a94a8bd19fa5681d79113d97b36563e3c}\label{classIdentThread_a94a8bd19fa5681d79113d97b36563e3c}} 
+\index{IdentThread@{IdentThread}!fb1@{fb1}}
+\index{fb1@{fb1}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{fb1}{fb1}}
+{\footnotesize\ttfamily double Ident\+Thread\+::fb1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 143 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a08c97de69310dba054b248e7a132ce95}\label{classIdentThread_a08c97de69310dba054b248e7a132ce95}} 
+\index{IdentThread@{IdentThread}!fmax@{fmax}}
+\index{fmax@{fmax}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{fmax}{fmax}}
+{\footnotesize\ttfamily double Ident\+Thread\+::fmax\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 144 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_ad1103b04bb8d278161b77898dfc234e9}\label{classIdentThread_ad1103b04bb8d278161b77898dfc234e9}} 
+\index{IdentThread@{IdentThread}!fmin@{fmin}}
+\index{fmin@{fmin}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{fmin}{fmin}}
+{\footnotesize\ttfamily double Ident\+Thread\+::fmin\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 144 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a3c0a53f8987840fd720c715124de33e7}\label{classIdentThread_a3c0a53f8987840fd720c715124de33e7}} 
+\index{IdentThread@{IdentThread}!gain@{gain}}
+\index{gain@{gain}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{gain}{gain}}
+{\footnotesize\ttfamily double Ident\+Thread\+::gain\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 142 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_af1e0b2e86a6dd0d94f041ca13e20cbf6}\label{classIdentThread_af1e0b2e86a6dd0d94f041ca13e20cbf6}} 
+\index{IdentThread@{IdentThread}!ienc@{ienc}}
+\index{ienc@{ienc}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ienc}{ienc}}
+{\footnotesize\ttfamily I\+Encoders$\ast$ Ident\+Thread\+::ienc\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 158 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a4d2f74fab4a0daabd05a599e90916edc}\label{classIdentThread_a4d2f74fab4a0daabd05a599e90916edc}} 
+\index{IdentThread@{IdentThread}!ilim@{ilim}}
+\index{ilim@{ilim}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ilim}{ilim}}
+{\footnotesize\ttfamily I\+Control\+Limits$\ast$ Ident\+Thread\+::ilim\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 157 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_adb95b0fbeae236c5cc3cfcc15d720f1d}\label{classIdentThread_adb95b0fbeae236c5cc3cfcc15d720f1d}} 
+\index{IdentThread@{IdentThread}!imod@{imod}}
+\index{imod@{imod}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{imod}{imod}}
+{\footnotesize\ttfamily I\+Control\+Mode2$\ast$ Ident\+Thread\+::imod\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 156 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a5f8490206363faa910d51b5eaa3d644d}\label{classIdentThread_a5f8490206363faa910d51b5eaa3d644d}} 
+\index{IdentThread@{IdentThread}!ipid@{ipid}}
+\index{ipid@{ipid}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ipid}{ipid}}
+{\footnotesize\ttfamily I\+Pid\+Control$\ast$ Ident\+Thread\+::ipid\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 161 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a68f629ae7af8b908f7ae3d5cb18754ff}\label{classIdentThread_a68f629ae7af8b908f7ae3d5cb18754ff}} 
+\index{IdentThread@{IdentThread}!ipos@{ipos}}
+\index{ipos@{ipos}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ipos}{ipos}}
+{\footnotesize\ttfamily I\+Position\+Control$\ast$ Ident\+Thread\+::ipos\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 159 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_af46ca359b393ecc49e11e33960f10b04}\label{classIdentThread_af46ca359b393ecc49e11e33960f10b04}} 
+\index{IdentThread@{IdentThread}!ivel@{ivel}}
+\index{ivel@{ivel}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{ivel}{ivel}}
+{\footnotesize\ttfamily I\+Velocity\+Control$\ast$ Ident\+Thread\+::ivel\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 160 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a5b8cc105847ccb32db5197a7a1fc0b06}\label{classIdentThread_a5b8cc105847ccb32db5197a7a1fc0b06}} 
+\index{IdentThread@{IdentThread}!joint@{joint}}
+\index{joint@{joint}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{joint}{joint}}
+{\footnotesize\ttfamily int Ident\+Thread\+::joint\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 139 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a400611efdf48928f2d3458c2792882b2}\label{classIdentThread_a400611efdf48928f2d3458c2792882b2}} 
+\index{IdentThread@{IdentThread}!name@{name}}
+\index{name@{name}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily string Ident\+Thread\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 137 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a913c12f13fd8f8d7355b42cd0c82158a}\label{classIdentThread_a913c12f13fd8f8d7355b42cd0c82158a}} 
+\index{IdentThread@{IdentThread}!part@{part}}
+\index{part@{part}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{part}{part}}
+{\footnotesize\ttfamily string Ident\+Thread\+::part\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 138 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a5629b0825bb9ee558df34c684e2f2a7e}\label{classIdentThread_a5629b0825bb9ee558df34c684e2f2a7e}} 
+\index{IdentThread@{IdentThread}!pid0@{pid0}}
+\index{pid0@{pid0}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid0}{pid0}}
+{\footnotesize\ttfamily Pid Ident\+Thread\+::pid0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 162 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a4c9228e64b4514383436f30ca84505a1}\label{classIdentThread_a4c9228e64b4514383436f30ca84505a1}} 
+\index{IdentThread@{IdentThread}!pid1@{pid1}}
+\index{pid1@{pid1}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid1}{pid1}}
+{\footnotesize\ttfamily Pid Ident\+Thread\+::pid1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 163 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a8862709597934c80f8decf30876fffef}\label{classIdentThread_a8862709597934c80f8decf30876fffef}} 
+\index{IdentThread@{IdentThread}!pid\_change@{pid\_change}}
+\index{pid\_change@{pid\_change}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_change}{pid\_change}}
+{\footnotesize\ttfamily bool Ident\+Thread\+::pid\+\_\+change\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 147 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_ae1dbbb82a820c52b4600097ce07aa46d}\label{classIdentThread_ae1dbbb82a820c52b4600097ce07aa46d}} 
+\index{IdentThread@{IdentThread}!pid\_change\_Kd@{pid\_change\_Kd}}
+\index{pid\_change\_Kd@{pid\_change\_Kd}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_change\_Kd}{pid\_change\_Kd}}
+{\footnotesize\ttfamily bool Ident\+Thread\+::pid\+\_\+change\+\_\+\+Kd\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 150 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a7ad13940525882cd4aee5202de99fd63}\label{classIdentThread_a7ad13940525882cd4aee5202de99fd63}} 
+\index{IdentThread@{IdentThread}!pid\_change\_Ki@{pid\_change\_Ki}}
+\index{pid\_change\_Ki@{pid\_change\_Ki}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_change\_Ki}{pid\_change\_Ki}}
+{\footnotesize\ttfamily bool Ident\+Thread\+::pid\+\_\+change\+\_\+\+Ki\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 149 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_ae4d9c529fa9c8d423ff2aedf5c0d3ab0}\label{classIdentThread_ae4d9c529fa9c8d423ff2aedf5c0d3ab0}} 
+\index{IdentThread@{IdentThread}!pid\_change\_Kp@{pid\_change\_Kp}}
+\index{pid\_change\_Kp@{pid\_change\_Kp}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_change\_Kp}{pid\_change\_Kp}}
+{\footnotesize\ttfamily bool Ident\+Thread\+::pid\+\_\+change\+\_\+\+Kp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 148 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a6dfe2c87ac9bbc409c56cf93e6995558}\label{classIdentThread_a6dfe2c87ac9bbc409c56cf93e6995558}} 
+\index{IdentThread@{IdentThread}!pid\_Kd@{pid\_Kd}}
+\index{pid\_Kd@{pid\_Kd}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_Kd}{pid\_Kd}}
+{\footnotesize\ttfamily double Ident\+Thread\+::pid\+\_\+\+Kd\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 153 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a07a65c70e24c7e69c6e24b2043e178a9}\label{classIdentThread_a07a65c70e24c7e69c6e24b2043e178a9}} 
+\index{IdentThread@{IdentThread}!pid\_Ki@{pid\_Ki}}
+\index{pid\_Ki@{pid\_Ki}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_Ki}{pid\_Ki}}
+{\footnotesize\ttfamily double Ident\+Thread\+::pid\+\_\+\+Ki\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 152 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_ae9e07c599f5e790904ba18211a1ddbf4}\label{classIdentThread_ae9e07c599f5e790904ba18211a1ddbf4}} 
+\index{IdentThread@{IdentThread}!pid\_Kp@{pid\_Kp}}
+\index{pid\_Kp@{pid\_Kp}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{pid\_Kp}{pid\_Kp}}
+{\footnotesize\ttfamily double Ident\+Thread\+::pid\+\_\+\+Kp\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 151 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_ade3ade5a1fa05b168d87e77e76f03c55}\label{classIdentThread_ade3ade5a1fa05b168d87e77e76f03c55}} 
+\index{IdentThread@{IdentThread}!plantParameters@{plantParameters}}
+\index{plantParameters@{plantParameters}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{plantParameters}{plantParameters}}
+{\footnotesize\ttfamily Property Ident\+Thread\+::plant\+Parameters\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 168 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a76c8df9af2f06921cb0c67fc6598d429}\label{classIdentThread_a76c8df9af2f06921cb0c67fc6598d429}} 
+\index{IdentThread@{IdentThread}!port@{port}}
+\index{port@{port}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily Buffered\+Port$<$Bottle$>$ Ident\+Thread\+::port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 170 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a9100cfc7196b0121af124741f4a05f8d}\label{classIdentThread_a9100cfc7196b0121af124741f4a05f8d}} 
+\index{IdentThread@{IdentThread}!robot@{robot}}
+\index{robot@{robot}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{robot}{robot}}
+{\footnotesize\ttfamily string Ident\+Thread\+::robot\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 136 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a39097a5935a030b97d47bf48bf17bd5a}\label{classIdentThread_a39097a5935a030b97d47bf48bf17bd5a}} 
+\index{IdentThread@{IdentThread}!T@{T}}
+\index{T@{T}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily double Ident\+Thread\+::T\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 145 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_aa5ccec018efb8942c06b6b25ab9f8517}\label{classIdentThread_aa5ccec018efb8942c06b6b25ab9f8517}} 
+\index{IdentThread@{IdentThread}!t0@{t0}}
+\index{t0@{t0}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{t0}{t0}}
+{\footnotesize\ttfamily double Ident\+Thread\+::t0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 145 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_aff460374daba8897cdc7027c2fd867f9}\label{classIdentThread_aff460374daba8897cdc7027c2fd867f9}} 
+\index{IdentThread@{IdentThread}!Ttraj@{Ttraj}}
+\index{Ttraj@{Ttraj}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{Ttraj}{Ttraj}}
+{\footnotesize\ttfamily double Ident\+Thread\+::\+Ttraj\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 145 of file main.\+cpp.
+
+\mbox{\Hypertarget{classIdentThread_a2cf79faf6b4d07dde466aa1ddda77344}\label{classIdentThread_a2cf79faf6b4d07dde466aa1ddda77344}} 
+\index{IdentThread@{IdentThread}!velEst@{velEst}}
+\index{velEst@{velEst}!IdentThread@{IdentThread}}
+\doxysubsubsection{\texorpdfstring{velEst}{velEst}}
+{\footnotesize\ttfamily A\+W\+Lin\+Estimator Ident\+Thread\+::vel\+Est\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 165 of file main.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/icub-\/contrib/icub-\/contrib/joint\+Vel\+Ctrl\+Ident/\mbox{\hyperlink{jointVelCtrlIdent_2main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}

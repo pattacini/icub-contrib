@@ -1,0 +1,629 @@
+\hypertarget{iKinArmView_8m}{}\doxysection{/home/runner/work/icub-\/contrib/icub-\/contrib/matlab\+Viewers/app/scripts/i\+Kin\+Arm\+View.m File Reference}
+\label{iKinArmView_8m}\index{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/iKinArmView.m@{/home/runner/work/icub-\/contrib/icub-\/contrib/matlabViewers/app/scripts/iKinArmView.m}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+function i\+Kin\+Arm\+View(varargin) \% \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}} viewer for the i\+Cub arm controlled \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} a yarp module \% Author \mbox{\hyperlink{iKinArmView_8m_a06932cab22052d9e9d816700d98fe69e}{if}} ($\sim$\mbox{\hyperlink{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}{strcmpi}}(\mbox{\hyperlink{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}{arm\+Type}}, \textquotesingle{}right\textquotesingle{}) \&\&$\sim$\mbox{\hyperlink{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}{strcmpi}}(\mbox{\hyperlink{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}{arm\+Type}}, \textquotesingle{}left\textquotesingle{})) \mbox{\hyperlink{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}{arm\+Type}}
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}{strcmpi}} (\mbox{\hyperlink{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}{arm\+Type}}, \textquotesingle{}right\textquotesingle{}) \mbox{\hyperlink{iKinArmView_8m_adb0e2890594494f4d95ddbcfeff2f7ff}{P}}
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a9edc28150168edec7c34c8e6d84cec18}{title}} (\textquotesingle{}Select a target point to move to\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a23882f684009a79a64d6c9735822d214}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Toolbar\textquotesingle{}, \textquotesingle{}figure\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_af1f541d04433e3a53c08be957cdbab91}{view}} (3)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_acc24bfd3fde8697149ee8c0d7bb14a21}{xlim}} (\mbox{[}-\/0.\+6 0.\+2\mbox{]})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a5f6237a1980cd822ac1a1a99438383ee}{xlabel}} (\textquotesingle{}x\mbox{[}m\mbox{]}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a5b4b12c85a75bf2dcfda86802cf372a3}{ylim}} (\mbox{[}-\/0.\+6 0.\+6\mbox{]})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_abfbc59a5f2d56b17236971364f6a94ec}{ylabel}} (\textquotesingle{}y\mbox{[}m\mbox{]}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a9d8c24669feec8ab5d5697cda1797607}{zlim}} (\mbox{[}-\/0.\+6 0.\+6\mbox{]})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ab0ff54a52579aab5b2de13b1e23fde55}{zlabel}} (\textquotesingle{}z\mbox{[}m\mbox{]}\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_adc388f8dd2c7927d0f01cff464d9ec66}{set}} (\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}}, \textquotesingle{}Data\+Aspect\+Ratio\textquotesingle{},\mbox{[}1 1 1\mbox{]})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a0b570e6191408bc7d71a31f231f4b4a8}{quiver3}} (0, 0, 0, \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}/2, 0, 0, \textquotesingle{}Color\textquotesingle{}, \textquotesingle{}r\textquotesingle{}, \textquotesingle{}Linewidth\textquotesingle{}, 2)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a9daca53801477b91ca7888732f9f470c}{quiver3}} (0, 0, 0, 0, \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}/2, 0, \textquotesingle{}Color\textquotesingle{}, \textquotesingle{}g\textquotesingle{}, \textquotesingle{}Linewidth\textquotesingle{}, 2)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a1a1c180960739484a8921a9ae42da2d6}{quiver3}} (0, 0, 0, 0, 0, \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}/2, \textquotesingle{}Color\textquotesingle{}, \textquotesingle{}b\textquotesingle{}, \textquotesingle{}Linewidth\textquotesingle{}, 2)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a2b6e42eb704f7a050f0ab4755fc0e001}{assignin}} (\textquotesingle{}base\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{},\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a37f7349dfc167460251f084b3e84499f}{ax}} (1)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a15f9b2106ea156ae1dd4b66cbb58023f}{ax}} (2)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_affe47eeebe1f995420821e7842bdf7e5}{ax}} (3)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a5e92bf30cd9bd89fc9269dbcd012612b}{set}} (\mbox{\hyperlink{iKinArmView_8m_affe47eeebe1f995420821e7842bdf7e5}{ax}}, \textquotesingle{}Parent\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ad306676b857bbbe9cba6fb53cb6bc93a}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} \mbox{\hyperlink{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}{mode\+Once}} \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} \mbox{\hyperlink{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}{xd\+\_\+ml}} \mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}}\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_acfc91b5ee8e9e0be336609e84f370f23}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Pushbutton\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300+60 80 20\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Align Target\textquotesingle{}, \textquotesingle{}Callback\textquotesingle{}, @Align\+Target)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a47b787e80950abaa67e0e7ff467d0a52}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Text\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300+25 80 15\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Target sliders\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ac0e582d369632d743f74f44412713984}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(1), \textquotesingle{}Max\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(2), \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{1\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_adc1ce594b8b098cb027b69c9ac9d45c1}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(3), \textquotesingle{}Max\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(4), \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{2\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ae1af4370564d7b82f3722036ded90379}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$2 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(5), \textquotesingle{}Max\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(6), \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{3\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a3cfc6d20050383e6af8567c40563fcfd}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$3 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{},-\/180, \textquotesingle{}Max\textquotesingle{}, 180, \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{4\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ae3db22b2f47c344173f502e2ffbed3f9}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$4 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{},-\/180, \textquotesingle{}Max\textquotesingle{}, 180, \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{5\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a13cefc6304f97a3d5e7faecde6b63b41}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Slider\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$5 80 20\mbox{]},... \textquotesingle{}Min\textquotesingle{},-\/180, \textquotesingle{}Max\textquotesingle{}, 180, \textquotesingle{}Value\textquotesingle{}, 0,... \textquotesingle{}Callback\textquotesingle{}, @Select\+Target, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{},\{6\})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_adcb16a20c94908c26d2bcd633e88bd52}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Text\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$6 60 15\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}At once\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a55dc45f75a3cc2068c20a70beea77c50}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Checkbox\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}70 300-\/30 $\ast$6 16 16\mbox{]},... \textquotesingle{}Value\textquotesingle{}, true, \textquotesingle{}Callback\textquotesingle{}, @Switch\+Mode)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a599b50f69cd16958ce2179461e3d4782}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Pushbutton\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$7 80 20\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Apply Target\textquotesingle{}, \textquotesingle{}Callback\textquotesingle{}, @Apply\+Target)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_aaa5f5b872f91c7465a373c3b3563a925}{uicontrol}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Style\textquotesingle{}, \textquotesingle{}Pushbutton\textquotesingle{}, \textquotesingle{}Position\textquotesingle{},\mbox{[}10 300-\/30 $\ast$8 80 20\mbox{]},... \textquotesingle{}String\textquotesingle{}, \textquotesingle{}Plot Traj.\textquotesingle{}, \textquotesingle{}Callback\textquotesingle{}, @Plot\+Data)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a6c1f48c5827d313fa3ce306a99fe726c}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}Close\+Request\+Fcn\textquotesingle{}, @Quit)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a140d0cd9eb831be1b5108157912e0581}{start}} (\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}})
+\item 
+src, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{} \mbox{\hyperlink{iKinArmView_8m_af02e9d306092b8bc46e72ebd815bc3d1}{get}} ()
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a2eeccebaa749300e0171f40a8f85ca8d}{stop}} (\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ac904cd78e11f6993a2229e10d8bea3ab}{delete}} (src)
+\item 
+\mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}{state}} \mbox{\hyperlink{iKinArmView_8m_af8df50e8f8dbea30ae08780cf78102a6}{set}} (\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}, \textquotesingle{}Enable\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}\textquotesingle{})
+\item 
+else \mbox{\hyperlink{iKinArmView_8m_a8c36b5117baa9a33e008d69eb5586f7b}{set}} (\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}, \textquotesingle{}Enable\textquotesingle{}, \textquotesingle{}off\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ae4e8790f6b5631869b713d5a71de1569}{set}} (\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_aac81aebd6dea11165957725a5bf73ef6}{assignin}} (\textquotesingle{}base\textquotesingle{}, \textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}, \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{})
+\item 
+\textquotesingle{}base\textquotesingle{}, \textquotesingle{}Buffer\textquotesingle{} \mbox{\hyperlink{iKinArmView_8m_aed3a0cdb27889dc257dd40c606b13eb3}{evalin}} ()
+\item 
+catch \mbox{\hyperlink{iKinArmView_8m_a635face6c09c7892685106e1c662d817}{warndlg}} (\textquotesingle{}Nothing to display\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} else \mbox{\hyperlink{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}{arm\+Type}} =\textquotesingle{}right\textquotesingle{}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} global \mbox{\hyperlink{iKinArmView_8m_adb0e2890594494f4d95ddbcfeff2f7ff}{P}} \{1\}.D =0
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}{A}} =0.\+032
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{iKinArmView_8m_af776dffcfccddf737592018cc4b8c4fa}{hfig}} =figure(\textquotesingle{}Name\textquotesingle{},\textquotesingle{}i\+Cub Arm\textquotesingle{})
+\item 
+hold \mbox{\hyperlink{iKinArmView_8m_a58ab1fd68e97078232808206b850161b}{on}}
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}{grid}}
+\item 
+\mbox{\hyperlink{iKinArmView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Current\+Axes\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}} =axis
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}} =zeros(10,1)
+\item 
+\mbox{\hyperlink{iKinArmView_8m_acb2377703f0c61135c5b216220c9e86a}{hg1}} =draw\+Arm(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},x,axpoint)
+\item 
+init with empty value \mbox{\hyperlink{iKinArmView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} =\mbox{[}0 0 0 0 0 0 0\mbox{]}
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a4e4d95c851149a1349b4a2f2238d2e50}{xd\+\_\+ml}} =\mbox{[}0 0 0 0 0 0\mbox{]}
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}} =hgtransform(\textquotesingle{}Parent\textquotesingle{},\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a3d8b144a4241e23274596990ff8e91d5}{t}}
+\item 
+\mbox{\hyperlink{iKinArmView_8m_ae22e677cb657434d87fd1504ab2a85c5}{mode\+Once}} =true
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}} =findobj(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Style\textquotesingle{},\textquotesingle{}Pushbutton\textquotesingle{},\textquotesingle{}String\textquotesingle{},\textquotesingle{}Apply Target\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_aa2b8cb2330766e258b12c29d766fdb63}{User\+Data}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}User\+Data\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_adc6e5733fc3c22f0a7b2914188c49c90}{state}} =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(src,\textquotesingle{}Value\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a49654e4709f40aecccada266daa32fc6}{idx}} =\mbox{\hyperlink{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}{evalin}}(\textquotesingle{}base\textquotesingle{},\textquotesingle{}idx\textquotesingle{})
+\item 
+\mbox{\hyperlink{iKinArmView_8m_a9717e7bbecb906637e86cef6da3d83c2}{return}}
+\item 
+\mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} \mbox{\hyperlink{iKinArmView_8m_a3ba4e5ca01ba62ba925034c719048c4e}{sel}} =2\+:11
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{iKinArmView_8m_aac81aebd6dea11165957725a5bf73ef6}\label{iKinArmView_8m_aac81aebd6dea11165957725a5bf73ef6}} 
+\index{iKinArmView.m@{iKinArmView.m}!assignin@{assignin}}
+\index{assignin@{assignin}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{assignin()}{assignin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily assignin (\begin{DoxyParamCaption}\item[{\textquotesingle{}base\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a2b6e42eb704f7a050f0ab4755fc0e001}\label{iKinArmView_8m_a2b6e42eb704f7a050f0ab4755fc0e001}} 
+\index{iKinArmView.m@{iKinArmView.m}!assignin@{assignin}}
+\index{assignin@{assignin}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{assignin()}{assignin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily assignin (\begin{DoxyParamCaption}\item[{\textquotesingle{}base\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a37f7349dfc167460251f084b3e84499f}\label{iKinArmView_8m_a37f7349dfc167460251f084b3e84499f}} 
+\index{iKinArmView.m@{iKinArmView.m}!ax@{ax}}
+\index{ax@{ax}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{ax()}{ax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily ax (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a15f9b2106ea156ae1dd4b66cbb58023f}\label{iKinArmView_8m_a15f9b2106ea156ae1dd4b66cbb58023f}} 
+\index{iKinArmView.m@{iKinArmView.m}!ax@{ax}}
+\index{ax@{ax}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{ax()}{ax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily ax (\begin{DoxyParamCaption}\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_affe47eeebe1f995420821e7842bdf7e5}\label{iKinArmView_8m_affe47eeebe1f995420821e7842bdf7e5}} 
+\index{iKinArmView.m@{iKinArmView.m}!ax@{ax}}
+\index{ax@{ax}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{ax()}{ax()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily ax (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ac904cd78e11f6993a2229e10d8bea3ab}\label{iKinArmView_8m_ac904cd78e11f6993a2229e10d8bea3ab}} 
+\index{iKinArmView.m@{iKinArmView.m}!delete@{delete}}
+\index{delete@{delete}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{src}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_aed3a0cdb27889dc257dd40c606b13eb3}\label{iKinArmView_8m_aed3a0cdb27889dc257dd40c606b13eb3}} 
+\index{iKinArmView.m@{iKinArmView.m}!evalin@{evalin}}
+\index{evalin@{evalin}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{evalin()}{evalin()}}
+{\footnotesize\ttfamily \textquotesingle{}base\textquotesingle{},\textquotesingle{}Buffer\textquotesingle{} evalin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{iKinArmView_8m_af02e9d306092b8bc46e72ebd815bc3d1}\label{iKinArmView_8m_af02e9d306092b8bc46e72ebd815bc3d1}} 
+\index{iKinArmView.m@{iKinArmView.m}!get@{get}}
+\index{get@{get}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily src Parent get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{iKinArmView_8m_a06932cab22052d9e9d816700d98fe69e}\label{iKinArmView_8m_a06932cab22052d9e9d816700d98fe69e}} 
+\index{iKinArmView.m@{iKinArmView.m}!if@{if}}
+\index{if@{if}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily function i\+Kin\+Arm\+View (varargin) \% \mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}} viewer for the i\+Cub arm controlled \mbox{\hyperlink{stripchart_8m_a33dc54c3abf2203ef8743ecbc4320b40}{by}} a yarp module \% Author if (\begin{DoxyParamCaption}\item[{$\sim$}]{strcmpiarm\+Type, \textquotesingle{}right\textquotesingle{}) \&\&$\sim$strcmpi(arm\+Type, \textquotesingle{}left\textquotesingle{} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a1a1c180960739484a8921a9ae42da2d6}\label{iKinArmView_8m_a1a1c180960739484a8921a9ae42da2d6}} 
+\index{iKinArmView.m@{iKinArmView.m}!quiver3@{quiver3}}
+\index{quiver3@{quiver3}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{quiver3()}{quiver3()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily quiver3 (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}/}]{2,  }\item[{\textquotesingle{}Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}b\textquotesingle{}}]{,  }\item[{\textquotesingle{}Linewidth\textquotesingle{}}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a9daca53801477b91ca7888732f9f470c}\label{iKinArmView_8m_a9daca53801477b91ca7888732f9f470c}} 
+\index{iKinArmView.m@{iKinArmView.m}!quiver3@{quiver3}}
+\index{quiver3@{quiver3}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{quiver3()}{quiver3()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily quiver3 (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}/}]{2,  }\item[{0}]{,  }\item[{\textquotesingle{}Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}g\textquotesingle{}}]{,  }\item[{\textquotesingle{}Linewidth\textquotesingle{}}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a0b570e6191408bc7d71a31f231f4b4a8}\label{iKinArmView_8m_a0b570e6191408bc7d71a31f231f4b4a8}} 
+\index{iKinArmView.m@{iKinArmView.m}!quiver3@{quiver3}}
+\index{quiver3@{quiver3}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{quiver3()}{quiver3()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily quiver3 (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\mbox{\hyperlink{stripchart_8m_a08b0b21610d9b1033858954763905167}{A}}/}]{2,  }\item[{0}]{,  }\item[{0}]{,  }\item[{\textquotesingle{}Color\textquotesingle{}}]{,  }\item[{\textquotesingle{}r\textquotesingle{}}]{,  }\item[{\textquotesingle{}Linewidth\textquotesingle{}}]{,  }\item[{2}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a5e92bf30cd9bd89fc9269dbcd012612b}\label{iKinArmView_8m_a5e92bf30cd9bd89fc9269dbcd012612b}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinArmView_8m_affe47eeebe1f995420821e7842bdf7e5}{ax}}}]{,  }\item[{\textquotesingle{}Parent\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_adc388f8dd2c7927d0f01cff464d9ec66}\label{iKinArmView_8m_adc388f8dd2c7927d0f01cff464d9ec66}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}}}]{,  }\item[{\textquotesingle{}Data\+Aspect\+Ratio\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a8c36b5117baa9a33e008d69eb5586f7b}\label{iKinArmView_8m_a8c36b5117baa9a33e008d69eb5586f7b}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily else set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}}]{,  }\item[{\textquotesingle{}Enable\textquotesingle{}}]{,  }\item[{\textquotesingle{}off\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_af8df50e8f8dbea30ae08780cf78102a6}\label{iKinArmView_8m_af8df50e8f8dbea30ae08780cf78102a6}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} \mbox{\hyperlink{iKinGazeView_8m_adc6e5733fc3c22f0a7b2914188c49c90}{state}} set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_a3ca8f647edb133d0a57d2ebf62e27257}{hdl}}}]{,  }\item[{\textquotesingle{}Enable\textquotesingle{}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{specgramscope_8m_a2afac59ff5745529b53b8f71a26333b5}{on}}\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a6c1f48c5827d313fa3ce306a99fe726c}\label{iKinArmView_8m_a6c1f48c5827d313fa3ce306a99fe726c}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Close\+Request\+Fcn\textquotesingle{}}]{,  }\item[{@}]{Quit }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a23882f684009a79a64d6c9735822d214}\label{iKinArmView_8m_a23882f684009a79a64d6c9735822d214}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Toolbar\textquotesingle{}}]{,  }\item[{\textquotesingle{}figure\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ae4e8790f6b5631869b713d5a71de1569}\label{iKinArmView_8m_ae4e8790f6b5631869b713d5a71de1569}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ad306676b857bbbe9cba6fb53cb6bc93a}\label{iKinArmView_8m_ad306676b857bbbe9cba6fb53cb6bc93a}} 
+\index{iKinArmView.m@{iKinArmView.m}!set@{set}}
+\index{set@{set}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}} \mbox{\hyperlink{iKinGazeView_8m_ae22e677cb657434d87fd1504ab2a85c5}{mode\+Once}} \mbox{\hyperlink{iKinGazeView_8m_a0903a189cbe112bce4b75bbc7c50357c}{xd}} \mbox{\hyperlink{iKinGazeView_8m_a4e4d95c851149a1349b4a2f2238d2e50}{xd\+\_\+ml}} \mbox{\hyperlink{iKinGazeView_8m_a316486c932a3a1996ea6103513ba8278}{hg2}}\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a140d0cd9eb831be1b5108157912e0581}\label{iKinArmView_8m_a140d0cd9eb831be1b5108157912e0581}} 
+\index{iKinArmView.m@{iKinArmView.m}!start@{start}}
+\index{start@{start}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a2eeccebaa749300e0171f40a8f85ca8d}\label{iKinArmView_8m_a2eeccebaa749300e0171f40a8f85ca8d}} 
+\index{iKinArmView.m@{iKinArmView.m}!stop@{stop}}
+\index{stop@{stop}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{stripchart_8m_a89d078b9881664c5421f8c6b6e482e1c}{t}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}\label{iKinArmView_8m_a293a1f3b8e8a90a45cb23cc8cb4b0c4b}} 
+\index{iKinArmView.m@{iKinArmView.m}!strcmpi@{strcmpi}}
+\index{strcmpi@{strcmpi}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{strcmpi()}{strcmpi()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{iKinGazeView_8m_add9a7c93e551f0caee0f7b1d3d2cb3c3}{if}} strcmpi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}{arm\+Type}}}]{,  }\item[{\textquotesingle{}right\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a9edc28150168edec7c34c8e6d84cec18}\label{iKinArmView_8m_a9edc28150168edec7c34c8e6d84cec18}} 
+\index{iKinArmView.m@{iKinArmView.m}!title@{title}}
+\index{title@{title}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily title (\begin{DoxyParamCaption}\item[{\textquotesingle{}Select a target point to move to\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a55dc45f75a3cc2068c20a70beea77c50}\label{iKinArmView_8m_a55dc45f75a3cc2068c20a70beea77c50}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Checkbox\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Value\textquotesingle{}}]{,  }\item[{true}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Switch\+Mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_acfc91b5ee8e9e0be336609e84f370f23}\label{iKinArmView_8m_acfc91b5ee8e9e0be336609e84f370f23}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Pushbutton\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Align Target\textquotesingle{}}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Align\+Target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a599b50f69cd16958ce2179461e3d4782}\label{iKinArmView_8m_a599b50f69cd16958ce2179461e3d4782}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Pushbutton\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Apply Target\textquotesingle{}}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Apply\+Target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_aaa5f5b872f91c7465a373c3b3563a925}\label{iKinArmView_8m_aaa5f5b872f91c7465a373c3b3563a925}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Pushbutton\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Plot Traj.\textquotesingle{}}]{,  }\item[{\textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Plot\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ac0e582d369632d743f74f44412713984}\label{iKinArmView_8m_ac0e582d369632d743f74f44412713984}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(1)}]{,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(2)}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{1\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ae1af4370564d7b82f3722036ded90379}\label{iKinArmView_8m_ae1af4370564d7b82f3722036ded90379}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(5)}]{,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(6)}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{3\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a3cfc6d20050383e6af8567c40563fcfd}\label{iKinArmView_8m_a3cfc6d20050383e6af8567c40563fcfd}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{-\/}]{180,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{180}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{4\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ae3db22b2f47c344173f502e2ffbed3f9}\label{iKinArmView_8m_ae3db22b2f47c344173f502e2ffbed3f9}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{-\/}]{180,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{180}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{5\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a13cefc6304f97a3d5e7faecde6b63b41}\label{iKinArmView_8m_a13cefc6304f97a3d5e7faecde6b63b41}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{-\/}]{180,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{180}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{6\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_adc1ce594b8b098cb027b69c9ac9d45c1}\label{iKinArmView_8m_adc1ce594b8b098cb027b69c9ac9d45c1}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Slider\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}Min\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(3)}]{,  }\item[{\textquotesingle{}Max\textquotesingle{}}]{,  }\item[{\mbox{\hyperlink{iKinGazeView_8m_a79ce400f6845fba8953af6affcb020e7}{lim}}(4)}]{,  }\item[{\textquotesingle{}Value\textquotesingle{}}]{,  }\item[{0}]{,  }\item[{... \textquotesingle{}Callback\textquotesingle{}}]{,  }\item[{@}]{Select\+Target,  }\item[{\textquotesingle{}\mbox{\hyperlink{iKinGazeView_8m_a9f1f83a1a276702159548308c12b14eb}{User\+Data}}\textquotesingle{}}]{,  }\item[{\{2\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a47b787e80950abaa67e0e7ff467d0a52}\label{iKinArmView_8m_a47b787e80950abaa67e0e7ff467d0a52}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Text\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}Target sliders\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_adcb16a20c94908c26d2bcd633e88bd52}\label{iKinArmView_8m_adcb16a20c94908c26d2bcd633e88bd52}} 
+\index{iKinArmView.m@{iKinArmView.m}!uicontrol@{uicontrol}}
+\index{uicontrol@{uicontrol}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{uicontrol()}{uicontrol()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily uicontrol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}}}]{,  }\item[{\textquotesingle{}Style\textquotesingle{}}]{,  }\item[{\textquotesingle{}Text\textquotesingle{}}]{,  }\item[{\textquotesingle{}Position\textquotesingle{}}]{,  }\item[{... \textquotesingle{}String\textquotesingle{}}]{,  }\item[{\textquotesingle{}At once\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_af1f541d04433e3a53c08be957cdbab91}\label{iKinArmView_8m_af1f541d04433e3a53c08be957cdbab91}} 
+\index{iKinArmView.m@{iKinArmView.m}!view@{view}}
+\index{view@{view}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily view (\begin{DoxyParamCaption}\item[{3}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a635face6c09c7892685106e1c662d817}\label{iKinArmView_8m_a635face6c09c7892685106e1c662d817}} 
+\index{iKinArmView.m@{iKinArmView.m}!warndlg@{warndlg}}
+\index{warndlg@{warndlg}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{warndlg()}{warndlg()}}
+{\footnotesize\ttfamily catch warndlg (\begin{DoxyParamCaption}\item[{\textquotesingle{}Nothing to display\textquotesingle{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a5f6237a1980cd822ac1a1a99438383ee}\label{iKinArmView_8m_a5f6237a1980cd822ac1a1a99438383ee}} 
+\index{iKinArmView.m@{iKinArmView.m}!xlabel@{xlabel}}
+\index{xlabel@{xlabel}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{xlabel()}{xlabel()}}
+{\footnotesize\ttfamily xlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}x\textquotesingle{}}]{\mbox{[}m\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_acc24bfd3fde8697149ee8c0d7bb14a21}\label{iKinArmView_8m_acc24bfd3fde8697149ee8c0d7bb14a21}} 
+\index{iKinArmView.m@{iKinArmView.m}!xlim@{xlim}}
+\index{xlim@{xlim}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{xlim()}{xlim()}}
+{\footnotesize\ttfamily xlim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_abfbc59a5f2d56b17236971364f6a94ec}\label{iKinArmView_8m_abfbc59a5f2d56b17236971364f6a94ec}} 
+\index{iKinArmView.m@{iKinArmView.m}!ylabel@{ylabel}}
+\index{ylabel@{ylabel}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{ylabel()}{ylabel()}}
+{\footnotesize\ttfamily ylabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}y\textquotesingle{}}]{\mbox{[}m\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a5b4b12c85a75bf2dcfda86802cf372a3}\label{iKinArmView_8m_a5b4b12c85a75bf2dcfda86802cf372a3}} 
+\index{iKinArmView.m@{iKinArmView.m}!ylim@{ylim}}
+\index{ylim@{ylim}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{ylim()}{ylim()}}
+{\footnotesize\ttfamily ylim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_ab0ff54a52579aab5b2de13b1e23fde55}\label{iKinArmView_8m_ab0ff54a52579aab5b2de13b1e23fde55}} 
+\index{iKinArmView.m@{iKinArmView.m}!zlabel@{zlabel}}
+\index{zlabel@{zlabel}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{zlabel()}{zlabel()}}
+{\footnotesize\ttfamily zlabel (\begin{DoxyParamCaption}\item[{\textquotesingle{}z\textquotesingle{}}]{\mbox{[}m\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{iKinArmView_8m_a9d8c24669feec8ab5d5697cda1797607}\label{iKinArmView_8m_a9d8c24669feec8ab5d5697cda1797607}} 
+\index{iKinArmView.m@{iKinArmView.m}!zlim@{zlim}}
+\index{zlim@{zlim}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{zlim()}{zlim()}}
+{\footnotesize\ttfamily zlim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{iKinArmView_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}\label{iKinArmView_8m_a3b98e2dffc6cb06a89dcb0d5c60a0206}} 
+\index{iKinArmView.m@{iKinArmView.m}!A@{A}}
+\index{A@{A}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{A}{A}}
+{\footnotesize\ttfamily A =0.\+032}
+
+
+
+Definition at line 17 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}\label{iKinArmView_8m_ad3d5f36f4fdfc2d8002b9b5a057c078a}} 
+\index{iKinArmView.m@{iKinArmView.m}!armType@{armType}}
+\index{armType@{armType}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{armType}{armType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} else arm\+Type =\textquotesingle{}right\textquotesingle{}}
+
+
+
+Definition at line 11 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}\label{iKinArmView_8m_a52bdd18b63ba2ec1780aecd91679ee4a}} 
+\index{iKinArmView.m@{iKinArmView.m}!grid@{grid}}
+\index{grid@{grid}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{grid}{grid}}
+{\footnotesize\ttfamily grid}
+
+
+
+Definition at line 43 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_af5e4d0630ef386a9a48b05cf1baa174d}\label{iKinArmView_8m_af5e4d0630ef386a9a48b05cf1baa174d}} 
+\index{iKinArmView.m@{iKinArmView.m}!hax@{hax}}
+\index{hax@{hax}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{hax}{hax}}
+{\footnotesize\ttfamily hax =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Current\+Axes\textquotesingle{})}
+
+
+
+Definition at line 48 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a3ca8f647edb133d0a57d2ebf62e27257}\label{iKinArmView_8m_a3ca8f647edb133d0a57d2ebf62e27257}} 
+\index{iKinArmView.m@{iKinArmView.m}!hdl@{hdl}}
+\index{hdl@{hdl}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{hdl}{hdl}}
+{\footnotesize\ttfamily hdl =findobj(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}Style\textquotesingle{},\textquotesingle{}Pushbutton\textquotesingle{},\textquotesingle{}String\textquotesingle{},\textquotesingle{}Apply Target\textquotesingle{})}
+
+
+
+Definition at line 140 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_af776dffcfccddf737592018cc4b8c4fa}\label{iKinArmView_8m_af776dffcfccddf737592018cc4b8c4fa}} 
+\index{iKinArmView.m@{iKinArmView.m}!hfig@{hfig}}
+\index{hfig@{hfig}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{hfig}{hfig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} hfig =figure(\textquotesingle{}Name\textquotesingle{},\textquotesingle{}i\+Cub Arm\textquotesingle{})}
+
+
+
+Definition at line 40 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_acb2377703f0c61135c5b216220c9e86a}\label{iKinArmView_8m_acb2377703f0c61135c5b216220c9e86a}} 
+\index{iKinArmView.m@{iKinArmView.m}!hg1@{hg1}}
+\index{hg1@{hg1}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{hg1}{hg1}}
+{\footnotesize\ttfamily hg1 =draw\+Arm(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},x,axpoint)}
+
+
+
+Definition at line 60 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a316486c932a3a1996ea6103513ba8278}\label{iKinArmView_8m_a316486c932a3a1996ea6103513ba8278}} 
+\index{iKinArmView.m@{iKinArmView.m}!hg2@{hg2}}
+\index{hg2@{hg2}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{hg2}{hg2}}
+{\footnotesize\ttfamily hg2 =hgtransform(\textquotesingle{}Parent\textquotesingle{},\mbox{\hyperlink{iKinGazeView_8m_af5e4d0630ef386a9a48b05cf1baa174d}{hax}})}
+
+
+
+Definition at line 69 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a49654e4709f40aecccada266daa32fc6}\label{iKinArmView_8m_a49654e4709f40aecccada266daa32fc6}} 
+\index{iKinArmView.m@{iKinArmView.m}!idx@{idx}}
+\index{idx@{idx}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily idx =\mbox{\hyperlink{iKinGazeView_8m_aed3a0cdb27889dc257dd40c606b13eb3}{evalin}}(\textquotesingle{}base\textquotesingle{},\textquotesingle{}idx\textquotesingle{})}
+
+
+
+Definition at line 170 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a79ce400f6845fba8953af6affcb020e7}\label{iKinArmView_8m_a79ce400f6845fba8953af6affcb020e7}} 
+\index{iKinArmView.m@{iKinArmView.m}!lim@{lim}}
+\index{lim@{lim}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{lim}{lim}}
+{\footnotesize\ttfamily lim =axis}
+
+
+
+Definition at line 51 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_ae22e677cb657434d87fd1504ab2a85c5}\label{iKinArmView_8m_ae22e677cb657434d87fd1504ab2a85c5}} 
+\index{iKinArmView.m@{iKinArmView.m}!modeOnce@{modeOnce}}
+\index{modeOnce@{modeOnce}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{modeOnce}{modeOnce}}
+{\footnotesize\ttfamily mode\+Once =true}
+
+
+
+Definition at line 76 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a58ab1fd68e97078232808206b850161b}\label{iKinArmView_8m_a58ab1fd68e97078232808206b850161b}} 
+\index{iKinArmView.m@{iKinArmView.m}!on@{on}}
+\index{on@{on}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{on}{on}}
+{\footnotesize\ttfamily hold on}
+
+
+
+Definition at line 43 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_adb0e2890594494f4d95ddbcfeff2f7ff}\label{iKinArmView_8m_adb0e2890594494f4d95ddbcfeff2f7ff}} 
+\index{iKinArmView.m@{iKinArmView.m}!P@{P}}
+\index{P@{P}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{P}{P}}
+{\footnotesize\ttfamily else P \{1\}.D =0}
+
+
+
+Definition at line 14 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a099b3b060154898840f0ebdfb46ec78f}\label{iKinArmView_8m_a099b3b060154898840f0ebdfb46ec78f}} 
+\index{iKinArmView.m@{iKinArmView.m}!q@{q}}
+\index{q@{q}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily q =zeros(10,1)}
+
+
+
+Definition at line 58 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a9717e7bbecb906637e86cef6da3d83c2}\label{iKinArmView_8m_a9717e7bbecb906637e86cef6da3d83c2}} 
+\index{iKinArmView.m@{iKinArmView.m}!return@{return}}
+\index{return@{return}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{return}{return}}
+{\footnotesize\ttfamily return}
+
+
+
+Definition at line 173 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a3ba4e5ca01ba62ba925034c719048c4e}\label{iKinArmView_8m_a3ba4e5ca01ba62ba925034c719048c4e}} 
+\index{iKinArmView.m@{iKinArmView.m}!sel@{sel}}
+\index{sel@{sel}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{sel}{sel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} sel =2\+:11}
+
+
+
+Definition at line 176 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_adc6e5733fc3c22f0a7b2914188c49c90}\label{iKinArmView_8m_adc6e5733fc3c22f0a7b2914188c49c90}} 
+\index{iKinArmView.m@{iKinArmView.m}!state@{state}}
+\index{state@{state}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily state =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(src,\textquotesingle{}Value\textquotesingle{})}
+
+
+
+Definition at line 143 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a3d8b144a4241e23274596990ff8e91d5}\label{iKinArmView_8m_a3d8b144a4241e23274596990ff8e91d5}} 
+\index{iKinArmView.m@{iKinArmView.m}!t@{t}}
+\index{t@{t}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily $\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$Initialize the Scope function \mbox{\hyperlink{stripchart_8m_a40336f492a26e16e58d1951aa8fc6d58}{local\+Init\+Scope}}(\mbox{\hyperlink{stripchart_8m_a0676dc009d7afc3c1b857a4758b4eec0}{parms}}) Set axes t}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=timer(\textcolor{stringliteral}{'Period'},0.05,\textcolor{stringliteral}{'ExecutionMode'},\textcolor{stringliteral}{'fixedRate'},...}
+\DoxyCodeLine{        \textcolor{stringliteral}{'TimerFcn'},@PlotArm,\textcolor{stringliteral}{'StopFcn'},@StopFcn,...}
+\DoxyCodeLine{        \textcolor{stringliteral}{'UserData'},\{\mbox{\hyperlink{iKinArmView_8m_af776dffcfccddf737592018cc4b8c4fa}{hfig}}, \mbox{\hyperlink{iKinArmView_8m_acb2377703f0c61135c5b216220c9e86a}{hg1}} \mbox{\hyperlink{iKinArmView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}}\})}
+
+\end{DoxyCode}
+
+
+Definition at line 72 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_aa2b8cb2330766e258b12c29d766fdb63}\label{iKinArmView_8m_aa2b8cb2330766e258b12c29d766fdb63}} 
+\index{iKinArmView.m@{iKinArmView.m}!UserData@{UserData}}
+\index{UserData@{UserData}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{UserData}{UserData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stripchart_8m_afb358f48b1646c750fb9da6c6585be2b}{end}} User\+Data =\mbox{\hyperlink{stripchart_8m_a7ef6fd9178b75a1ac2f21983d9e151ed}{get}}(\mbox{\hyperlink{iKinGazeView_8m_ac3ba245373340d52a2c58c357d77b6aa}{hfig}},\textquotesingle{}User\+Data\textquotesingle{})}
+
+
+
+Definition at line 141 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a0903a189cbe112bce4b75bbc7c50357c}\label{iKinArmView_8m_a0903a189cbe112bce4b75bbc7c50357c}} 
+\index{iKinArmView.m@{iKinArmView.m}!xd@{xd}}
+\index{xd@{xd}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{xd}{xd}}
+{\footnotesize\ttfamily xd =\mbox{[}0 0 0 0 0 0 0\mbox{]}}
+
+
+
+Definition at line 63 of file i\+Kin\+Arm\+View.\+m.
+
+\mbox{\Hypertarget{iKinArmView_8m_a4e4d95c851149a1349b4a2f2238d2e50}\label{iKinArmView_8m_a4e4d95c851149a1349b4a2f2238d2e50}} 
+\index{iKinArmView.m@{iKinArmView.m}!xd\_ml@{xd\_ml}}
+\index{xd\_ml@{xd\_ml}!iKinArmView.m@{iKinArmView.m}}
+\doxysubsubsection{\texorpdfstring{xd\_ml}{xd\_ml}}
+{\footnotesize\ttfamily xd\+\_\+ml =\mbox{[}0 0 0 0 0 0\mbox{]}}
+
+
+
+Definition at line 64 of file i\+Kin\+Arm\+View.\+m.
+

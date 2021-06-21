@@ -1,0 +1,318 @@
+\hypertarget{classHandNLP}{}\doxysection{Hand\+N\+LP Class Reference}
+\label{classHandNLP}\index{HandNLP@{HandNLP}}
+
+
+Inheritance diagram for Hand\+N\+LP\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{classHandNLP__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHandNLP_af0244315d1b7a8d992f9a7b4fab17b6a}{Hand\+N\+LP}} (const string \&hand)
+\item 
+virtual \mbox{\hyperlink{classHandNLP_a52cf52e6ce84bd546442ba4e5cce4924}{$\sim$\+Hand\+N\+LP}} ()
+\item 
+virtual bool \mbox{\hyperlink{classHandNLP_aaf186d1aa19987f77c3ae8b67d703ad2}{set\+Initial\+Joints}} (const Vector \&\mbox{\hyperlink{classHandNLP_a38d7779be45cfe48402ae2e3f276fce5}{joints}})
+\item 
+virtual bool \mbox{\hyperlink{classHandNLP_ab301fdd7652ee0ca3f6756767f3066ad}{set\+Targets}} (const deque$<$ Vector $>$ \&\mbox{\hyperlink{classHandNLP_a0d92753d49ed30345eb8f3442f356259}{targets}})
+\item 
+virtual Vector \mbox{\hyperlink{classHandNLP_aadfe8e4cc31a13932021c938d008a80b}{get\+Result}} () const
+\item 
+virtual deque$<$ Vector $>$ \mbox{\hyperlink{classHandNLP_ab6bb11b5a30eb9f9d58211e41033c8b2}{fkin}} (const Vector \&\mbox{\hyperlink{iKinGazeView_8m_a099b3b060154898840f0ebdfb46ec78f}{q}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classHandNLP_af00aede706b9baad9128b544d33b350a}{fkin}} (const Ipopt\+::\+Number $\ast$x, const bool new\+\_\+x)
+\item 
+bool \mbox{\hyperlink{classHandNLP_af34b505bcde37618057e23ca2201034b}{get\+\_\+nlp\+\_\+info}} (Ipopt\+::\+Index \&n, Ipopt\+::\+Index \&m, Ipopt\+::\+Index \&nnz\+\_\+jac\+\_\+g, Ipopt\+::\+Index \&nnz\+\_\+h\+\_\+lag, Index\+Style\+Enum \&index\+\_\+style)
+\item 
+bool \mbox{\hyperlink{classHandNLP_a97f2ab7e2ddf742a854cd4370cc7fbbd}{get\+\_\+bounds\+\_\+info}} (Ipopt\+::\+Index n, Ipopt\+::\+Number $\ast$x\+\_\+l, Ipopt\+::\+Number $\ast$x\+\_\+u, Ipopt\+::\+Index m, Ipopt\+::\+Number $\ast$g\+\_\+l, Ipopt\+::\+Number $\ast$g\+\_\+u)
+\item 
+bool \mbox{\hyperlink{classHandNLP_a551d931796747bcd957af646b22997fd}{get\+\_\+starting\+\_\+point}} (Ipopt\+::\+Index n, bool init\+\_\+x, Ipopt\+::\+Number $\ast$x, bool init\+\_\+z, Ipopt\+::\+Number $\ast$z\+\_\+L, Ipopt\+::\+Number $\ast$z\+\_\+U, Ipopt\+::\+Index m, bool init\+\_\+lambda, Ipopt\+::\+Number $\ast$lambda)
+\item 
+bool \mbox{\hyperlink{classHandNLP_ac7a74711a8c2f1a803f31e1093961a07}{eval\+\_\+f}} (Ipopt\+::\+Index n, const Ipopt\+::\+Number $\ast$x, bool new\+\_\+x, Ipopt\+::\+Number \&obj\+\_\+value)
+\item 
+bool \mbox{\hyperlink{classHandNLP_a136961d497140f837824b512d4f4dd38}{eval\+\_\+grad\+\_\+f}} (Ipopt\+::\+Index n, const Ipopt\+::\+Number $\ast$x, bool new\+\_\+x, Ipopt\+::\+Number $\ast$grad\+\_\+f)
+\item 
+bool \mbox{\hyperlink{classHandNLP_a9f4001f07708e428aecee3e5dbaef413}{eval\+\_\+g}} (Ipopt\+::\+Index n, const Ipopt\+::\+Number $\ast$x, bool new\+\_\+x, Ipopt\+::\+Index m, Ipopt\+::\+Number $\ast$g)
+\item 
+bool \mbox{\hyperlink{classHandNLP_abef25c4c22761383b08971c8695d8c92}{eval\+\_\+jac\+\_\+g}} (Ipopt\+::\+Index n, const Ipopt\+::\+Number $\ast$x, bool new\+\_\+x, Ipopt\+::\+Index m, Ipopt\+::\+Index nele\+\_\+jac, Ipopt\+::\+Index $\ast$i\+Row, Ipopt\+::\+Index $\ast$j\+Col, Ipopt\+::\+Number $\ast$values)
+\item 
+bool \mbox{\hyperlink{classHandNLP_adbc0bb5c7d90fdee36a1868da3da5f32}{eval\+\_\+h}} (Ipopt\+::\+Index n, const Ipopt\+::\+Number $\ast$x, bool new\+\_\+x, Ipopt\+::\+Number obj\+\_\+factor, Ipopt\+::\+Index m, const Ipopt\+::\+Number $\ast$lambda, bool new\+\_\+lambda, Ipopt\+::\+Index nele\+\_\+hess, Ipopt\+::\+Index $\ast$i\+Row, Ipopt\+::\+Index $\ast$j\+Col, Ipopt\+::\+Number $\ast$values)
+\item 
+void \mbox{\hyperlink{classHandNLP_a1809f862e8fe3b9fb400b6f65367b6cd}{finalize\+\_\+solution}} (Ipopt\+::\+Solver\+Return status, Ipopt\+::\+Index n, const Ipopt\+::\+Number $\ast$x, const Ipopt\+::\+Number $\ast$z\+\_\+L, const Ipopt\+::\+Number $\ast$z\+\_\+U, Ipopt\+::\+Index m, const Ipopt\+::\+Number $\ast$g, const Ipopt\+::\+Number $\ast$lambda, Ipopt\+::\+Number obj\+\_\+value, const Ipopt\+::\+Ipopt\+Data $\ast$ip\+\_\+data, Ipopt\+::\+Ipopt\+Calculated\+Quantities $\ast$ip\+\_\+cq)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+deque$<$ i\+Cub\+Finger $\ast$ $>$ \mbox{\hyperlink{classHandNLP_aec72abdcaab8f9f1591ea8461997db93}{fingers}}
+\item 
+deque$<$ i\+Kin\+Chain $\ast$ $>$ \mbox{\hyperlink{classHandNLP_a60b84452c70aec42112ad786457c6ad7}{chains}}
+\item 
+deque$<$ Vector $>$ \mbox{\hyperlink{classHandNLP_a0d92753d49ed30345eb8f3442f356259}{targets}}
+\item 
+deque$<$ Vector $>$ \mbox{\hyperlink{classHandNLP_aa70efb1f8e9d1e9933bbea715640ee45}{pee}}
+\item 
+deque$<$ Vector $>$ \mbox{\hyperlink{classHandNLP_a3c7faf3df6c6bfc35514860513bae180}{dist}}
+\item 
+deque$<$ Matrix $>$ \mbox{\hyperlink{classHandNLP_a73c26e05c8d0fc028454c98318ca06a7}{J}}
+\item 
+Vector \mbox{\hyperlink{classHandNLP_a38d7779be45cfe48402ae2e3f276fce5}{joints}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 40 of file main.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classHandNLP_af0244315d1b7a8d992f9a7b4fab17b6a}\label{classHandNLP_af0244315d1b7a8d992f9a7b4fab17b6a}} 
+\index{HandNLP@{HandNLP}!HandNLP@{HandNLP}}
+\index{HandNLP@{HandNLP}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{HandNLP()}{HandNLP()}}
+{\footnotesize\ttfamily Hand\+N\+L\+P\+::\+Hand\+N\+LP (\begin{DoxyParamCaption}\item[{const string \&}]{hand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 202 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a52cf52e6ce84bd546442ba4e5cce4924}\label{classHandNLP_a52cf52e6ce84bd546442ba4e5cce4924}} 
+\index{HandNLP@{HandNLP}!````~HandNLP@{$\sim$HandNLP}}
+\index{````~HandNLP@{$\sim$HandNLP}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{$\sim$HandNLP()}{~HandNLP()}}
+{\footnotesize\ttfamily virtual Hand\+N\+L\+P\+::$\sim$\+Hand\+N\+LP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 226 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHandNLP_ac7a74711a8c2f1a803f31e1093961a07}\label{classHandNLP_ac7a74711a8c2f1a803f31e1093961a07}} 
+\index{HandNLP@{HandNLP}!eval\_f@{eval\_f}}
+\index{eval\_f@{eval\_f}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{eval\_f()}{eval\_f()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::eval\+\_\+f (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Ipopt\+::\+Number \&}]{obj\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 131 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a9f4001f07708e428aecee3e5dbaef413}\label{classHandNLP_a9f4001f07708e428aecee3e5dbaef413}} 
+\index{HandNLP@{HandNLP}!eval\_g@{eval\_g}}
+\index{eval\_g@{eval\_g}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{eval\_g()}{eval\_g()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::eval\+\_\+g (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Ipopt\+::\+Index}]{m,  }\item[{Ipopt\+::\+Number $\ast$}]{g }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 165 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a136961d497140f837824b512d4f4dd38}\label{classHandNLP_a136961d497140f837824b512d4f4dd38}} 
+\index{HandNLP@{HandNLP}!eval\_grad\_f@{eval\_grad\_f}}
+\index{eval\_grad\_f@{eval\_grad\_f}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{eval\_grad\_f()}{eval\_grad\_f()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::eval\+\_\+grad\+\_\+f (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Ipopt\+::\+Number $\ast$}]{grad\+\_\+f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 142 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_adbc0bb5c7d90fdee36a1868da3da5f32}\label{classHandNLP_adbc0bb5c7d90fdee36a1868da3da5f32}} 
+\index{HandNLP@{HandNLP}!eval\_h@{eval\_h}}
+\index{eval\_h@{eval\_h}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{eval\_h()}{eval\_h()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::eval\+\_\+h (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Ipopt\+::\+Number}]{obj\+\_\+factor,  }\item[{Ipopt\+::\+Index}]{m,  }\item[{const Ipopt\+::\+Number $\ast$}]{lambda,  }\item[{bool}]{new\+\_\+lambda,  }\item[{Ipopt\+::\+Index}]{nele\+\_\+hess,  }\item[{Ipopt\+::\+Index $\ast$}]{i\+Row,  }\item[{Ipopt\+::\+Index $\ast$}]{j\+Col,  }\item[{Ipopt\+::\+Number $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 180 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_abef25c4c22761383b08971c8695d8c92}\label{classHandNLP_abef25c4c22761383b08971c8695d8c92}} 
+\index{HandNLP@{HandNLP}!eval\_jac\_g@{eval\_jac\_g}}
+\index{eval\_jac\_g@{eval\_jac\_g}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{eval\_jac\_g()}{eval\_jac\_g()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::eval\+\_\+jac\+\_\+g (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{bool}]{new\+\_\+x,  }\item[{Ipopt\+::\+Index}]{m,  }\item[{Ipopt\+::\+Index}]{nele\+\_\+jac,  }\item[{Ipopt\+::\+Index $\ast$}]{i\+Row,  }\item[{Ipopt\+::\+Index $\ast$}]{j\+Col,  }\item[{Ipopt\+::\+Number $\ast$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 172 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a1809f862e8fe3b9fb400b6f65367b6cd}\label{classHandNLP_a1809f862e8fe3b9fb400b6f65367b6cd}} 
+\index{HandNLP@{HandNLP}!finalize\_solution@{finalize\_solution}}
+\index{finalize\_solution@{finalize\_solution}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{finalize\_solution()}{finalize\_solution()}}
+{\footnotesize\ttfamily void Hand\+N\+L\+P\+::finalize\+\_\+solution (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Solver\+Return}]{status,  }\item[{Ipopt\+::\+Index}]{n,  }\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{const Ipopt\+::\+Number $\ast$}]{z\+\_\+L,  }\item[{const Ipopt\+::\+Number $\ast$}]{z\+\_\+U,  }\item[{Ipopt\+::\+Index}]{m,  }\item[{const Ipopt\+::\+Number $\ast$}]{g,  }\item[{const Ipopt\+::\+Number $\ast$}]{lambda,  }\item[{Ipopt\+::\+Number}]{obj\+\_\+value,  }\item[{const Ipopt\+::\+Ipopt\+Data $\ast$}]{ip\+\_\+data,  }\item[{Ipopt\+::\+Ipopt\+Calculated\+Quantities $\ast$}]{ip\+\_\+cq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 189 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_af00aede706b9baad9128b544d33b350a}\label{classHandNLP_af00aede706b9baad9128b544d33b350a}} 
+\index{HandNLP@{HandNLP}!fkin@{fkin}}
+\index{fkin@{fkin}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{fkin()}{fkin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Hand\+N\+L\+P\+::fkin (\begin{DoxyParamCaption}\item[{const Ipopt\+::\+Number $\ast$}]{x,  }\item[{const bool}]{new\+\_\+x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 53 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_ab6bb11b5a30eb9f9d58211e41033c8b2}\label{classHandNLP_ab6bb11b5a30eb9f9d58211e41033c8b2}} 
+\index{HandNLP@{HandNLP}!fkin@{fkin}}
+\index{fkin@{fkin}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{fkin()}{fkin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual deque$<$Vector$>$ Hand\+N\+L\+P\+::fkin (\begin{DoxyParamCaption}\item[{const Vector \&}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 269 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a97f2ab7e2ddf742a854cd4370cc7fbbd}\label{classHandNLP_a97f2ab7e2ddf742a854cd4370cc7fbbd}} 
+\index{HandNLP@{HandNLP}!get\_bounds\_info@{get\_bounds\_info}}
+\index{get\_bounds\_info@{get\_bounds\_info}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{get\_bounds\_info()}{get\_bounds\_info()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::get\+\_\+bounds\+\_\+info (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{Ipopt\+::\+Number $\ast$}]{x\+\_\+l,  }\item[{Ipopt\+::\+Number $\ast$}]{x\+\_\+u,  }\item[{Ipopt\+::\+Index}]{m,  }\item[{Ipopt\+::\+Number $\ast$}]{g\+\_\+l,  }\item[{Ipopt\+::\+Number $\ast$}]{g\+\_\+u }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 97 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_af34b505bcde37618057e23ca2201034b}\label{classHandNLP_af34b505bcde37618057e23ca2201034b}} 
+\index{HandNLP@{HandNLP}!get\_nlp\_info@{get\_nlp\_info}}
+\index{get\_nlp\_info@{get\_nlp\_info}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{get\_nlp\_info()}{get\_nlp\_info()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::get\+\_\+nlp\+\_\+info (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index \&}]{n,  }\item[{Ipopt\+::\+Index \&}]{m,  }\item[{Ipopt\+::\+Index \&}]{nnz\+\_\+jac\+\_\+g,  }\item[{Ipopt\+::\+Index \&}]{nnz\+\_\+h\+\_\+lag,  }\item[{Index\+Style\+Enum \&}]{index\+\_\+style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 87 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a551d931796747bcd957af646b22997fd}\label{classHandNLP_a551d931796747bcd957af646b22997fd}} 
+\index{HandNLP@{HandNLP}!get\_starting\_point@{get\_starting\_point}}
+\index{get\_starting\_point@{get\_starting\_point}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{get\_starting\_point()}{get\_starting\_point()}}
+{\footnotesize\ttfamily bool Hand\+N\+L\+P\+::get\+\_\+starting\+\_\+point (\begin{DoxyParamCaption}\item[{Ipopt\+::\+Index}]{n,  }\item[{bool}]{init\+\_\+x,  }\item[{Ipopt\+::\+Number $\ast$}]{x,  }\item[{bool}]{init\+\_\+z,  }\item[{Ipopt\+::\+Number $\ast$}]{z\+\_\+L,  }\item[{Ipopt\+::\+Number $\ast$}]{z\+\_\+U,  }\item[{Ipopt\+::\+Index}]{m,  }\item[{bool}]{init\+\_\+lambda,  }\item[{Ipopt\+::\+Number $\ast$}]{lambda }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 118 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_aadfe8e4cc31a13932021c938d008a80b}\label{classHandNLP_aadfe8e4cc31a13932021c938d008a80b}} 
+\index{HandNLP@{HandNLP}!getResult@{getResult}}
+\index{getResult@{getResult}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily virtual Vector Hand\+N\+L\+P\+::get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 263 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_aaf186d1aa19987f77c3ae8b67d703ad2}\label{classHandNLP_aaf186d1aa19987f77c3ae8b67d703ad2}} 
+\index{HandNLP@{HandNLP}!setInitialJoints@{setInitialJoints}}
+\index{setInitialJoints@{setInitialJoints}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{setInitialJoints()}{setInitialJoints()}}
+{\footnotesize\ttfamily virtual bool Hand\+N\+L\+P\+::set\+Initial\+Joints (\begin{DoxyParamCaption}\item[{const Vector \&}]{joints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 233 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_ab301fdd7652ee0ca3f6756767f3066ad}\label{classHandNLP_ab301fdd7652ee0ca3f6756767f3066ad}} 
+\index{HandNLP@{HandNLP}!setTargets@{setTargets}}
+\index{setTargets@{setTargets}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{setTargets()}{setTargets()}}
+{\footnotesize\ttfamily virtual bool Hand\+N\+L\+P\+::set\+Targets (\begin{DoxyParamCaption}\item[{const deque$<$ Vector $>$ \&}]{targets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 248 of file main.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classHandNLP_a60b84452c70aec42112ad786457c6ad7}\label{classHandNLP_a60b84452c70aec42112ad786457c6ad7}} 
+\index{HandNLP@{HandNLP}!chains@{chains}}
+\index{chains@{chains}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{chains}{chains}}
+{\footnotesize\ttfamily deque$<$i\+Kin\+Chain$\ast$$>$ Hand\+N\+L\+P\+::chains\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a3c7faf3df6c6bfc35514860513bae180}\label{classHandNLP_a3c7faf3df6c6bfc35514860513bae180}} 
+\index{HandNLP@{HandNLP}!dist@{dist}}
+\index{dist@{dist}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily deque$<$Vector$>$ Hand\+N\+L\+P\+::dist\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 48 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_aec72abdcaab8f9f1591ea8461997db93}\label{classHandNLP_aec72abdcaab8f9f1591ea8461997db93}} 
+\index{HandNLP@{HandNLP}!fingers@{fingers}}
+\index{fingers@{fingers}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{fingers}{fingers}}
+{\footnotesize\ttfamily deque$<$i\+Cub\+Finger$\ast$$>$ Hand\+N\+L\+P\+::fingers\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a73c26e05c8d0fc028454c98318ca06a7}\label{classHandNLP_a73c26e05c8d0fc028454c98318ca06a7}} 
+\index{HandNLP@{HandNLP}!J@{J}}
+\index{J@{J}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{J}{J}}
+{\footnotesize\ttfamily deque$<$Matrix$>$ Hand\+N\+L\+P\+::J\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 49 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a38d7779be45cfe48402ae2e3f276fce5}\label{classHandNLP_a38d7779be45cfe48402ae2e3f276fce5}} 
+\index{HandNLP@{HandNLP}!joints@{joints}}
+\index{joints@{joints}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{joints}{joints}}
+{\footnotesize\ttfamily Vector Hand\+N\+L\+P\+::joints\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_aa70efb1f8e9d1e9933bbea715640ee45}\label{classHandNLP_aa70efb1f8e9d1e9933bbea715640ee45}} 
+\index{HandNLP@{HandNLP}!pee@{pee}}
+\index{pee@{pee}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{pee}{pee}}
+{\footnotesize\ttfamily deque$<$Vector$>$ Hand\+N\+L\+P\+::pee\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+\mbox{\Hypertarget{classHandNLP_a0d92753d49ed30345eb8f3442f356259}\label{classHandNLP_a0d92753d49ed30345eb8f3442f356259}} 
+\index{HandNLP@{HandNLP}!targets@{targets}}
+\index{targets@{targets}!HandNLP@{HandNLP}}
+\doxysubsubsection{\texorpdfstring{targets}{targets}}
+{\footnotesize\ttfamily deque$<$Vector$>$ Hand\+N\+L\+P\+::targets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file main.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/icub-\/contrib/icub-\/contrib/fingers-\/ik/\mbox{\hyperlink{fingers-ik_2main_8cpp}{main.\+cpp}}\end{DoxyCompactItemize}
